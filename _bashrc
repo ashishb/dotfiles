@@ -1,0 +1,28 @@
+# PS1="\[\e]2;\u@\h:\w\a\e[35m\]\h:\W$ \[\e[0m\] "       # Enable color prompt w/fancy terminal title
+export PS1="\e[1;36m \w $ \e[m"
+# export PS1="\e[0;36m \w$ \e[m"
+# export PS1="\w $ "
+export CLICOLOR=yes                                   # Enable color ls output
+export TERM=xterm-color                               # Flag terminal as color-capable
+#export TERM=xterm                                    # There may be key binding issues using xterm-color with other *nix and screen.
+#                                                       #Try this if you experience this problem
+export LESS=X                                         # Disable annoying screen clear after "less"
+if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi    # Enable X11 tunneling through ssh
+alias ssh='ssh -Y'                                    # force X11 tunneling through ssh
+
+export PATH=$PATH:$HOME/Tools:$HOME/AndroidTools
+alias dex2jar=$HOME/AndroidTools/dex2jar-0.0.7.8-SNAPSHOT/dex2jar.sh
+alias burp="java -jar $HOME/Tools/burpsuite_v1.3.03.jar"
+# alias jd-gui='open /Applications/JD-GUI.app/'
+alias printcert="keytool -printcert -file"
+# alias android_screenshot="java -jar ~ashishbhatia/AndroidTools/AndroidScreenCapture_1.1/AShot-1.1.jar"
+
+# These are for compiling android code.
+# export NDK=$HOME/android-sdk-mac_x86/android-ndk-r8b
+# SYSROOT=$NDK/platforms/android-14/arch-arm
+# export ANDROID_CC="${NDK}/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc
+#   --sysroot=$SYSROOT " #-B /usr/local/google/android_src_code/system/core/include"
+
+# Mac style pbcopy and pbpaste.
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
