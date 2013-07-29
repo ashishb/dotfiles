@@ -1,7 +1,7 @@
 # PS1="\[\e]2;\u@\h:\w\a\e[35m\]\h:\W$ \[\e[0m\] "       # Enable color prompt w/fancy terminal title
-export PS1="\e[1;36m \w $ \e[m"
+# export PS1="\e[1;36m \w $ \e[m"
 # export PS1="\e[0;36m \w$ \e[m"
-# export PS1="\w $ "
+export PS1="\w $ "
 export CLICOLOR=yes                                   # Enable color ls output
 export TERM=xterm-color                               # Flag terminal as color-capable
 #export TERM=xterm                                    # There may be key binding issues using xterm-color with other *nix and screen.
