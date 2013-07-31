@@ -11,6 +11,9 @@ if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi    # Enable X11 tunneling thr
 alias ssh='ssh -Y'                                    # force X11 tunneling through ssh
 
 export PATH=$PATH:$HOME/Tools:$HOME/AndroidTools
+export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
+export PATH=$PATH:$HOME/android_sdk/tools
+
 alias dex2jar=$HOME/AndroidTools/dex2jar-0.0.7.8-SNAPSHOT/dex2jar.sh
 alias burp="java -jar $HOME/Tools/burpsuite_v1.3.03.jar"
 # alias jd-gui='open /Applications/JD-GUI.app/'

@@ -5,6 +5,8 @@
 	editor = vim
 [merge]
 	tool = vimdiff
+[push]
+	default = simple
 
 [color]
 	branch = auto
