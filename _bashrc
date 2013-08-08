@@ -14,10 +14,11 @@ export PATH=$PATH:$HOME/Tools:$HOME/AndroidTools
 export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
 export PATH=$PATH:$HOME/android_sdk/tools
 
-alias dex2jar=$HOME/AndroidTools/dex2jar-0.0.7.8-SNAPSHOT/dex2jar.sh
-alias burp="java -jar $HOME/Tools/burpsuite_v1.3.03.jar"
-# alias jd-gui='open /Applications/JD-GUI.app/'
+alias dex2jar=$HOME/AndroidTools/dex2jar-0.0.9.15/dex2jar.sh
+alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
+alias jd-gui="$HOME/AndroidTools/jd-gui/jd-gui"
 alias printcert="keytool -printcert -file"
+alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore alias_name"
 # alias android_screenshot="java -jar ~ashishbhatia/AndroidTools/AndroidScreenCapture_1.1/AShot-1.1.jar"
 
 # These are for compiling android code.
