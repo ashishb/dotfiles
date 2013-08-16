@@ -13,3 +13,8 @@ match ErrorMsg '\%>80v.\+'
 "highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 "set colorcolumn=81
 set background=dark
+"Show matching parentheses
+set showmatch
+set title
+" Use F2 to toggle paste mode.
+set pastetoggle=<F2>
