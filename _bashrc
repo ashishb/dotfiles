@@ -31,3 +31,10 @@ alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore 
 # Mac style pbcopy and pbpaste.
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+
+# Save gnome session on exit.
+dconf write /org/gnome/gnome-session/auto-save-session true
+# Show date and day in the clock.
+gsettings set com.canonical.indicator.datetime show-clock true
+gsettings set com.canonical.indicator.datetime show-day true
+gsettings set com.canonical.indicator.datetime show-date true
