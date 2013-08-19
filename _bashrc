@@ -29,8 +29,8 @@ alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore 
 #   --sysroot=$SYSROOT " #-B /usr/local/google/android_src_code/system/core/include"
 
 # Mac style pbcopy and pbpaste.
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+xsel && alias pbcopy='xsel --clipboard --input'
+xsel && alias pbpaste='xsel --clipboard --output'
 
 # Save gnome session on exit.
 dconf write /org/gnome/gnome-session/auto-save-session true
