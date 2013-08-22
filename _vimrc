@@ -15,6 +15,5 @@ match ErrorMsg '\%>80v.\+'
 set background=dark
 "Show matching parentheses
 set showmatch
-set title
 " Use F2 to toggle paste mode.
 set pastetoggle=<F2>
