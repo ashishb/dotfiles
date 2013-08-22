@@ -28,13 +28,13 @@ alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore 
 # export ANDROID_CC="${NDK}/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc
 #   --sysroot=$SYSROOT " #-B /usr/local/google/android_src_code/system/core/include"
 
-# Mac style pbcopy and pbpaste.
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+# Mac style pbcopy and pbpaste on linux.
+command -v xsel 1>/dev/null && alias pbcopy='xsel --clipboard --input' &&
+	alias pbpaste='xsel --clipboard --output'
 
 # Save gnome session on exit.
-dconf write /org/gnome/gnome-session/auto-save-session true
+command -v dconf 1>dev/null && dconf write /org/gnome/gnome-session/auto-save-session true
 # Show date and day in the clock.
-gsettings set com.canonical.indicator.datetime show-clock true
-gsettings set com.canonical.indicator.datetime show-day true
-gsettings set com.canonical.indicator.datetime show-date true
+command -v gsettings && gsettings set com.canonical.indicator.datetime show-clock true &&
+	gsettings set com.canonical.indicator.datetime show-day true &&
+	gsettings set com.canonical.indicator.datetime show-date true
