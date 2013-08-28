@@ -17,3 +17,10 @@ set background=dark
 set showmatch
 " Use F2 to toggle paste mode.
 set pastetoggle=<F2>
+" Auto complete functions.
+set cf
+" Aut complete vim commands.
+set wildmenu
+set wildmode=list:longest,full
+" Turn off annoying bell.
+set visualbell
