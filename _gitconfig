@@ -6,7 +6,7 @@
 [merge]
 	tool = vimdiff
 [push]
-	default = simple
+	default = upstream
 
 [color]
 	branch = auto
