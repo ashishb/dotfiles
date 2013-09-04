@@ -19,3 +19,10 @@ set showmatch
 set pastetoggle=<F2>
 " NERD Tree mapped to F3.
 nmap <silent> <special> <F3> :NERDTreeToggle<RETURN>
+" Auto complete functions.
+set cf
+" Aut complete vim commands.
+set wildmenu
+set wildmode=list:longest,full
+" Turn off annoying bell.
+set visualbell
