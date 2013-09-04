@@ -17,3 +17,5 @@ set background=dark
 set showmatch
 " Use F2 to toggle paste mode.
 set pastetoggle=<F2>
+" Start NERDTree on startup
+autocmd vimenter * NERDTree
