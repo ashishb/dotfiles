@@ -14,6 +14,7 @@ export PATH=$PATH:$HOME/Tools:$HOME/AndroidTools
 export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
 export PATH=$PATH:$HOME/android_sdk/tools
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Android related aliases.
 alias dex2jar=$HOME/AndroidTools/dex2jar-0.0.9.15/dex2jar.sh
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
@@ -28,9 +29,16 @@ alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore 
 # export ANDROID_CC="${NDK}/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc
 #   --sysroot=$SYSROOT " #-B /usr/local/google/android_src_code/system/core/include"
 
+# An interesting bash prompt.
+source $DIR/50_prompt.sh
 # Mac style pbcopy and pbpaste on linux.
 command -v xsel 1>/dev/null && alias pbcopy='xsel --clipboard --input' &&
 	alias pbpaste='xsel --clipboard --output'
+export GREP_OPTIONS='--color=auto'
+# SSH auto-completion based on entries in known_hosts.
+if [[ -e ~/.ssh/known_hosts ]]; then
+  complete -o default -W "$(cat ~/.ssh/known_hosts | sed 's/[, ].*//' | sort | uniq | grep -v '[0-9]')" ssh scp stfp
+fi
 
 # Save gnome session on exit.
 command -v dconf 1>/dev/null && dconf write /org/gnome/gnome-session/auto-save-session true
