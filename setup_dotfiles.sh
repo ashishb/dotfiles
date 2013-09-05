@@ -1,5 +1,5 @@
-DIR=`dirname $BASH_SOURCE{0}`
-DIR=`readlink -f $DIR`
+# Works on both Mac and GNU/Linux.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Generates colored output.
 function special_echo {
