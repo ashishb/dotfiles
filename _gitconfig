@@ -10,7 +10,7 @@
 	log = true
 	tool = vimdiff
 [push]
-	default = matching
+	default = simple
 [color]
 	branch = auto
 	diff = false
