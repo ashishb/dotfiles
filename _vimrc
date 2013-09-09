@@ -26,3 +26,10 @@ set wildmenu
 set wildmode=list:longest,full
 " Turn off annoying bell.
 set visualbell
+" Set the status line.
+set statusline=%f         " Path to the file
+set statusline+=%=        " Switch to the right side
+set statusline+=%l        " Current line
+set statusline+=/         " Separator
+set statusline+=%L        " Total lines
+
