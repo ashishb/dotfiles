@@ -27,9 +27,15 @@ set wildmode=list:longest,full
 " Turn off annoying bell.
 set visualbell
 " Set the status line.
-set statusline=%f         " Path to the file
-set statusline+=%=        " Switch to the right side
-set statusline+=%l        " Current line
-set statusline+=/         " Separator
-set statusline+=%L        " Total lines
+" set statusline=%f         " Path to the file
+" set statusline+=%=        " Switch to the right side
+" set statusline+=%l        " Current line
+" set statusline+=/         " Separator
+" set statusline+=%L        " Total lines
 
+set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
+" Always show statusline
+set laststatus=2
+" Use 256 colours (Use this setting only if your terminal supports 256
+" colours)
+set t_Co=256
