@@ -30,7 +30,10 @@ set wildmode=list:longest,full
 " Turn off annoying bell.
 set visualbell
 
+" For GNU/Linux
 set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
+" For Mac
+set rtp+=/Library//Python/2.7/site-packages/powerline/bindings/vim
 " Always show statusline
 set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256
