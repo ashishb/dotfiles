@@ -11,22 +11,32 @@
 	tool = vimdiff
 [push]
 	default = simple
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
 [color]
+	ui = auto
 	branch = auto
-	diff = false
+	diff = auto
 	status = auto
 [color "branch"]
-	current = yellow reverse
+	current = yellow black
 	local = yellow
-	remote = green
+	remote = magenta
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red
-	new = cyan
+  meta = yellow bold
+  frag = magenta bold
+  old = red reverse
+  new = green reverse
+  whitespace = white reverse
 [color "status"]
 	added = yellow
 	changed = green
-	untracked = cyan
+	untracked = cyan reverse
+	branch = magenta
 
 
