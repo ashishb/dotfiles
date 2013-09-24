@@ -6,9 +6,12 @@ export CLICOLOR=yes                                   # Enable color ls output
 export TERM=xterm-color                               # Flag terminal as color-capable
 #export TERM=xterm                                    # There may be key binding issues using xterm-color with other *nix and screen.
 #                                                       #Try this if you experience this problem
-export LESS=X                                         # Disable annoying screen clear after "less"
-if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi    # Enable X11 tunneling through ssh
-alias ssh='ssh -Y'                                    # force X11 tunneling through ssh
+# http://excid3.com/blog/how-to-fix-esc-in-your-terminal/#.UkHeamSZ3d6
+export LESS="-eirMX"
+# Enable X11 tunneling through ssh
+if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi
+# force X11 tunneling through ssh
+alias ssh='ssh -Y'
 
 export PATH=$PATH:$HOME/Tools:$HOME/AndroidTools
 export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
