@@ -1,4 +1,7 @@
 set ts=2
+" Sets the text width in the file to 80 characters.
+" Leads to automatic line breaks after 80 characters.
+set tw=80
 set shiftwidth=2
 "This is for python code.
 set foldmethod=indent
@@ -26,12 +29,6 @@ set wildmenu
 set wildmode=list:longest,full
 " Turn off annoying bell.
 set visualbell
-" Set the status line.
-" set statusline=%f         " Path to the file
-" set statusline+=%=        " Switch to the right side
-" set statusline+=%l        " Current line
-" set statusline+=/         " Separator
-" set statusline+=%L        " Total lines
 
 " For GNU/Linux
 set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
