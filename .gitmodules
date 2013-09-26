@@ -4,9 +4,9 @@
 [submodule "jedi"]
 	path = _vim/bundle/jedi-vim/jedi
 	url = https://github.com/davidhalter/jedi.git
-[submodule "_vim/bundle/fugitive"]
+[submodule "fugitive"]
 	path = _vim/bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
-[submodule "_vim/bundle/syntastic/"]
+[submodule "syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
