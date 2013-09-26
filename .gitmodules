@@ -1,0 +1,7 @@
+[submodule "vundle"]
+	path = _vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+
+[submodule "jedi"]
+	path = _vim/bundle/jedi-vim/jedi
+	url = https://github.com/davidhalter/jedi.git

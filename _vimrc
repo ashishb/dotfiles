@@ -41,5 +41,5 @@ set laststatus=2
 set t_Co=256
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'davidhalter/jedi-vim'
+"call vundle#rc()
+"Bundle 'davidhalter/jedi-vim'
