@@ -44,5 +44,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'davidhalter/jedi-vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/syntastic'
 let g:jedi#popup_on_dot = 0
 let g:jedi#use_splits_not_buffers = "bottom"
