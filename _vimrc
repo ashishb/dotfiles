@@ -50,6 +50,7 @@ Bundle 'tpope/vim-fugitive'
 " Syntax checking.
 Bundle 'scrooloose/syntastic'
 " For snippets.
+" vim-addon-mw-utils and tlib_vim are needed by snipmate.
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
