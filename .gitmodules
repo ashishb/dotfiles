@@ -4,14 +4,14 @@
 [submodule "jedi"]
 	path = _vim/bundle/jedi-vim/jedi
 	url = https://github.com/davidhalter/jedi.git
-[submodule "fugitive"]
-	path = _vim/bundle/fugitive
+[submodule "vim-fugitive"]
+	path = _vim/bundle/vim-fugitive
 	url = http://github.com/tpope/vim-fugitive.git
 [submodule "syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "_vim/bundle/snipmate"]
-	path = _vim/bundle/snipmate
+[submodule "_vim/bundle/vim-snipmate"]
+	path = _vim/bundle/vim-snipmate
 	url = https://github.com/msanders/snipmate.vim.git
 [submodule "vim-addon-mw-utils"]
 	path = _vim/bundle/vim-addon-mw-utils
