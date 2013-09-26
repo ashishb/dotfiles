@@ -16,10 +16,12 @@ function! SyntaxCheckers_python_pylint_IsAvailable()
     return s:pylint_new >= 0
 endfunction
 
+" Disable W0312 which complaints about use of tabs instead of spaces (since some
+" of repos I work with have that).
 function! SyntaxCheckers_python_pylint_GetLocList()
     let makeprg = syntastic#makeprg#build({
         \ 'exe': 'pylint',
-        \ 'args': (s:pylint_new ? '--msg-template="{path}:{line}: [{msg_id}] {msg}" -r n' : '-f parseable -r n -i y'),
+        \ 'args': (s:pylint_new ? '--disable=W0312 --msg-template="{path}:{line}: [{msg_id}] {msg}" -r n' : '--disable=W0312 -f parseable -r n -i y'),
         \ 'filetype': 'python',
         \ 'subchecker': 'pylint' })
 
