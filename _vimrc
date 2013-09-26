@@ -39,3 +39,7 @@ set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256
 " colours)
 set t_Co=256
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'davidhalter/jedi-vim'
