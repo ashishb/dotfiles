@@ -43,7 +43,13 @@ set t_Co=256
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'davidhalter/jedi-vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
 let g:jedi#popup_on_dot = 0
 let g:jedi#use_splits_not_buffers = "bottom"
+" Git wrapper for vim.
+Bundle 'tpope/vim-fugitive'
+" Syntax checking.
+Bundle 'scrooloose/syntastic'
+" For snippets.
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
