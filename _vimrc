@@ -41,5 +41,8 @@ set laststatus=2
 set t_Co=256
 
 set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-"Bundle 'davidhalter/jedi-vim'
+call vundle#rc()
+Bundle 'davidhalter/jedi-vim'
+Bundle 'tpope/vim-fugitive'
+let g:jedi#popup_on_dot = 0
+let g:jedi#use_splits_not_buffers = "bottom"
