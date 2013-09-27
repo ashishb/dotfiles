@@ -1,32 +1,33 @@
 [user]
-	email = ashishbhatia.ab@gmail.com
-	name = Ashish Bhatia
+  email = ashishbhatia.ab@gmail.com
+  name = Ashish Bhatia
 [core]
-	editor = vim
-	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+  editor = vim
+  # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
+  whitespace = space-before-tab,indent-with-non-tab,trailing-space
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
-	log = true
-	tool = vimdiff
+  log = true
+  tool = vimdiff
 [push]
-	default = simple
+  default = simple
 [alias]
   st = status
   ci = commit
   br = branch
   co = checkout
-  df = diff
+  df = diff --color-words
   lg = log -p
+  hist = log -20 --pretty=format:"%C(yellow)%h%Creset\\%C(green)%ar%C(cyan)%d\\ %Creset%s%C(yellow)\\ [%cn]" --graph --decorate --all
 [color]
-	ui = auto
-	branch = auto
-	diff = auto
-	status = auto
+  ui = auto
+  branch = auto
+  diff = auto
+  status = auto
 [color "branch"]
-	current = yellow black
-	local = yellow
-	remote = magenta
+  current = yellow black
+  local = yellow
+  remote = magenta
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
@@ -34,9 +35,9 @@
   new = green reverse
   whitespace = white reverse
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan reverse
-	branch = magenta
+  added = yellow
+  changed = green
+  untracked = cyan reverse
+  branch = magenta
 
 
