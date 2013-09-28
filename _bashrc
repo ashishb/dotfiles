@@ -12,6 +12,11 @@ export LESS="-eirMX"
 if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi
 # force X11 tunneling through ssh
 alias ssh='ssh -Y'
+# Tree
+if [ ! -x "$(which tree 2>/dev/null)" ]
+then
+  alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+fi
 
 export PATH=$PATH:$HOME/Tools:$HOME/AndroidTools
 export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
