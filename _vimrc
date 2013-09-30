@@ -22,6 +22,12 @@ set showmatch
 set pastetoggle=<F2>
 " NERD Tree mapped to F3.
 nmap <silent> <special> <F3> :NERDTreeToggle<RETURN>
+let NERDChristmasTree=1
+let NERDTreeHighlightCursorline=1
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
+
 " Auto complete functions.
 set cf
 " Aut complete vim commands.
@@ -71,3 +77,7 @@ Bundle "SearchComplete"
 Bundle "YankRing.vim"
 " Allows arbitrary navigation using \\w-followed-by-highlighted-char.
 Bundle "Lokaltog/vim-easymotion"
+" Not used for now.
+" " Enable language checking with LanguageToolCheck command.
+" Bundle "LanguageTool"
+" let g:languagetool_jar=$HOME . "/.vim/LanguageTool-2.2/languagetool-standalone.jar"
