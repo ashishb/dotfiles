@@ -59,3 +59,15 @@ Bundle 'scrooloose/syntastic'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
+" Enable rainbow-colored parentheses.
+Bundle "kien/rainbow_parentheses.vim"
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+" Enable tab based auto-completion in search command.
+Bundle "SearchComplete"
+" Shows the yanks with YRshow command.
+Bundle "YankRing.vim"
+" Allows arbitrary navigation using \\w-followed-by-highlighted-char.
+Bundle "Lokaltog/vim-easymotion"
