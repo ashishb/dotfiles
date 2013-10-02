@@ -16,7 +16,7 @@
   ci = commit
   br = branch
   co = checkout
-  df = diff --color-words
+  df = diff --color-words --word-diff-regex=.
   lg = log -p
   hist = log -20 --pretty=format:"%C(yellow)%h%Creset\\%C(green)%ar%C(cyan)%d\\ %Creset%s%C(yellow)\\ [%cn]" --graph --decorate --all
 [color]
