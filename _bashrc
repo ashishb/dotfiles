@@ -24,7 +24,7 @@ export PATH=$PATH:$HOME/android_sdk/tools
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Android related aliases.
-alias dex2jar=$HOME/AndroidTools/dex2jar-0.0.9.15/dex2jar.sh
+alias dex2jar=$HOME/tools/android/dex2jar-0.0.9.15/d2j-dex2jar.sh
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
 alias jd-gui="$HOME/AndroidTools/jd-gui/jd-gui"
 alias printcert="keytool -printcert -file"
