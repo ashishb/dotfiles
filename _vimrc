@@ -79,6 +79,8 @@ Bundle "SearchComplete"
 Bundle "YankRing.vim"
 " Allows arbitrary navigation using \\w-followed-by-highlighted-char.
 Bundle "Lokaltog/vim-easymotion"
+" Show indentation clearly.
+Bundle 'Yggdroot/indentLine'
 " Not used for now.
 " " Enable language checking with LanguageToolCheck command.
 " Bundle "LanguageTool"
