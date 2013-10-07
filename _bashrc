@@ -18,7 +18,6 @@ then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 
-export PATH=$PATH:$HOME/Tools:$HOME/AndroidTools
 export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
 export PATH=$PATH:$HOME/android_sdk/tools
 
@@ -29,6 +28,7 @@ alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
 alias dex2jar=$HOME/tools/android/dex2jar-0.0.9.15/d2j-dex2jar.sh
 if [ "$(uname)" == "Darwin" ]; then
 	alias jd-gui="/Applications/JD-GUI.app/Contents/MacOS/jd-gui"
+	alias jad="$HOME/tools/android/jad158g.mac.intel/jad"
 else
 	alias jd-gui="$HOME/AndroidTools/jd-gui/jd-gui"
 fi
