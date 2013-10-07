@@ -36,10 +36,12 @@ set wildmode=list:longest,full
 " Turn off annoying bell.
 set visualbell
 
-" Install power line by doing sudo easy_install powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" Install power line by doing sudo easy_install powerline.
+" This setup is required only on Linux and not on Mac.
+let s:uname = system("echo -n \"$(uname)\"")
+if !v:shell_error && s:uname == "Linux"
+	python from powerline.vim import setup as powerline_setup; powerline_setup(); del powerline_setup
+endif
 
 " For GNU/Linux
 set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
