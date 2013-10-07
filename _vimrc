@@ -29,7 +29,7 @@ let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 
 " Auto complete functions.
-set completefunc
+set cf
 " Aut complete vim commands.
 set wildmenu
 set wildmode=list:longest,full
