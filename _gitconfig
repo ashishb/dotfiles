@@ -5,6 +5,8 @@
   editor = vim
   # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
   whitespace = space-before-tab,indent-with-non-tab,trailing-space
+[diff]
+	mnemonicprefix = true
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
