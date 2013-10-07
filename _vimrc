@@ -1,15 +1,15 @@
-set ts=2
+set tabstop=2
 " Sets the text width in the file to 80 characters.
 " Leads to automatic line breaks after 80 characters.
-set tw=80
+set textwidth=80
 set shiftwidth=2
 "This is for python code.
 set foldmethod=indent
 set foldlevel=20
-set noet
+set noexpandtab
 set hlsearch
 set incsearch
-set nu
+set number
 syntax on
 filetype indent plugin on
 match ErrorMsg '\%>80v.\+'
@@ -29,7 +29,7 @@ let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 
 " Auto complete functions.
-set cf
+set completefunc
 " Aut complete vim commands.
 set wildmenu
 set wildmode=list:longest,full
