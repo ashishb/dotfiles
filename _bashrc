@@ -12,6 +12,17 @@ export LESS="-eirMX"
 if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi
 # force X11 tunneling through ssh
 alias ssh='ssh -Y'
+# Some more aliases.
+alias ..='cd ..'
+# Pretty printed python code.
+alias c="pygmentize -O style=monokai -f console256 -g"
+alias d="du -h -d=1"
+alias df="df -h"
+alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias publicip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+alias localip="ipconfig getifaddr en0"
+
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]
 then
@@ -24,6 +35,8 @@ export PATH=$PATH:$HOME/android_sdk/tools
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Android reverse-engineering related aliases.
+alias aapt="$HOME/tools/android/aapt"
+alias apktool="java -jar $HOME/tools/android/apktool.jar"
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
 alias dex2jar=$HOME/tools/android/dex2jar-0.0.9.15/d2j-dex2jar.sh
 if [ "$(uname)" == "Darwin" ]; then
@@ -54,6 +67,10 @@ export GREP_OPTIONS='--color=auto'
 if [[ -e ~/.ssh/known_hosts ]]; then
   complete -o default -W "$(cat ~/.ssh/known_hosts | sed 's/[, ].*//' | sort | uniq | grep -v '[0-9]')" ssh scp stfp
 fi
+
+# Larger bash history (default is 500)
+export HISTFILESIZE=10000
+export HISTSIZE=10000
 
 # Save gnome session on exit.
 command -v dconf 1>/dev/null && dconf write /org/gnome/gnome-session/auto-save-session true
