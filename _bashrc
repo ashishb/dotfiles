@@ -50,6 +50,10 @@ alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore 
 alias android_screenshot="java -jar $HOME/tools/android/AndroidScreenCapture_1.1/AShot-1.1.jar"
 # adb auto-completion.
 source $DIR/adb.bash
+# git auto-completion.
+source $DIR/_git-completion.bash
+# An interesting bash prompt.
+source $DIR/50_prompt.sh
 
 # These are for compiling android code.
 # export NDK=$HOME/android-sdk-mac_x86/android-ndk-r8b
@@ -57,8 +61,6 @@ source $DIR/adb.bash
 # export ANDROID_CC="${NDK}/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc
 #   --sysroot=$SYSROOT " #-B /usr/local/google/android_src_code/system/core/include"
 
-# An interesting bash prompt.
-source $DIR/50_prompt.sh
 # Mac style pbcopy and pbpaste on linux.
 command -v xsel 1>/dev/null && alias pbcopy='xsel --clipboard --input' &&
 	alias pbpaste='xsel --clipboard --output'
