@@ -9,6 +9,7 @@ sudo apt-get install python-dev
 sudo apt-get install pylint
 sudo apt-get install python-pip
 sudo apt-get install libmysqlclient-dev  # Needed for powerline.
+sudo easy_install Pygments
 sudo easy_install powerline
 # Install Google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
