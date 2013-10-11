@@ -29,10 +29,10 @@ then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
 export PATH=$PATH:$HOME/android_sdk/tools
-
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export PATH=$PATH:$DIR/scripts
 
 # Android reverse-engineering related aliases.
 alias aapt="$HOME/tools/android/aapt"
