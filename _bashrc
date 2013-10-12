@@ -1,15 +1,17 @@
-# PS1="\[\e]2;\u@\h:\w\a\e[35m\]\h:\W$ \[\e[0m\] "       # Enable color prompt w/fancy terminal title
-# export PS1="\e[1;36m \w $ \e[m"
-# export PS1="\e[0;36m \w$ \e[m"
+#### Bash customization. ####
 export PS1="\w $ "
 export CLICOLOR=yes                                   # Enable color ls output
 export TERM=xterm-color                               # Flag terminal as color-capable
-#export TERM=xterm                                    # There may be key binding issues using xterm-color with other *nix and screen.
-#                                                       #Try this if you experience this problem
-# http://excid3.com/blog/how-to-fix-esc-in-your-terminal/#.UkHeamSZ3d6
+export GREP_OPTIONS='--color=auto'
+# Ref: http://excid3.com/blog/how-to-fix-esc-in-your-terminal/#.UkHeamSZ3d6
 export LESS="-eirMX"
+# Larger bash history (default is 500)
+export HISTFILESIZE=10000
+export HISTSIZE=10000
 # Enable X11 tunneling through ssh
 if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi
+
+#### Aliases ####
 # force X11 tunneling through ssh
 alias ssh='ssh -Y'
 # Some more aliases.
@@ -22,19 +24,19 @@ alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 alias publicip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias localip="ipconfig getifaddr en0"
-
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]
 then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 
+#### Add some paths to $PATH. ####
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
 export PATH=$PATH:$HOME/android_sdk/tools
 export PATH=$PATH:$DIR/scripts
 
-# Android reverse-engineering related aliases.
+#### Android reverse-engineering related aliases. ####
 alias aapt="$HOME/tools/android/aapt"
 alias apktool="java -jar $HOME/tools/android/apktool.jar"
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
@@ -48,35 +50,34 @@ fi
 alias printcert="keytool -printcert -file"
 alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore alias_name"
 alias android_screenshot="java -jar $HOME/tools/android/AndroidScreenCapture_1.1/AShot-1.1.jar"
-# adb auto-completion.
-source $DIR/adb.bash
-# git auto-completion.
-source $DIR/_git-completion.bash
-# An interesting bash prompt.
-source $DIR/50_prompt.sh
-
+# Mac style pbcopy and pbpaste on linux.
+command -v xsel 1>/dev/null &&
+  alias pbcopy='xsel --clipboard --input' &&
+	alias pbpaste='xsel --clipboard --output'
 # These are for compiling android code.
 # export NDK=$HOME/android-sdk-mac_x86/android-ndk-r8b
 # SYSROOT=$NDK/platforms/android-14/arch-arm
 # export ANDROID_CC="${NDK}/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc
 #   --sysroot=$SYSROOT " #-B /usr/local/google/android_src_code/system/core/include"
 
-# Mac style pbcopy and pbpaste on linux.
-command -v xsel 1>/dev/null && alias pbcopy='xsel --clipboard --input' &&
-	alias pbpaste='xsel --clipboard --output'
-export GREP_OPTIONS='--color=auto'
+#### Source more scripts. ####
+# adb auto-completion.
+source $DIR/adb.bash
+# git auto-completion.
+source $DIR/_git-completion.bash
+# An interesting bash prompt.
+source $DIR/50_prompt.sh
 # SSH auto-completion based on entries in known_hosts.
 if [[ -e ~/.ssh/known_hosts ]]; then
   complete -o default -W "$(cat ~/.ssh/known_hosts | sed 's/[, ].*//' | sort | uniq | grep -v '[0-9]')" ssh scp stfp
 fi
 
-# Larger bash history (default is 500)
-export HISTFILESIZE=10000
-export HISTSIZE=10000
-
+#### Ubuntu specific settings. ####
 # Save gnome session on exit.
-command -v dconf 1>/dev/null && dconf write /org/gnome/gnome-session/auto-save-session true
+command -v dconf 1>/dev/null &&
+ dconf write /org/gnome/gnome-session/auto-save-session true
 # Show date and day in the clock in Gnome.
-command -v gsettings 1>/dev/null && gsettings set com.canonical.indicator.datetime show-clock true &&
+command -v gsettings 1>/dev/null &&
+	gsettings set com.canonical.indicator.datetime show-clock true &&
 	gsettings set com.canonical.indicator.datetime show-day true &&
 	gsettings set com.canonical.indicator.datetime show-date true
