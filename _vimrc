@@ -13,8 +13,6 @@ set number
 syntax on
 filetype indent plugin on
 match ErrorMsg '\%>80v.\+'
-"highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
-"set colorcolumn=81
 set background=dark
 "Show matching parentheses
 set showmatch
@@ -55,6 +53,7 @@ set t_Co=256
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+" Python auto-completion plugin.
 Bundle 'davidhalter/jedi-vim'
 let g:jedi#popup_on_dot = 0
 let g:jedi#use_splits_not_buffers = "bottom"
