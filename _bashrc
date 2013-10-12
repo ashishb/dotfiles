@@ -64,7 +64,7 @@ command -v xsel 1>/dev/null &&
 # adb auto-completion.
 source $DIR/adb.bash
 # git auto-completion.
-source $DIR/_git-completion.bash
+source $DIR/git-completion.bash
 # An interesting bash prompt.
 source $DIR/50_prompt.sh
 # SSH auto-completion based on entries in known_hosts.
