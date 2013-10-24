@@ -66,6 +66,8 @@ Bundle 'scrooloose/syntastic'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
+" An awesome collection of snippets.
+Bundle "honza/vim-snippets"
 " Enable rainbow-colored parentheses.
 Bundle "kien/rainbow_parentheses.vim"
 au VimEnter * RainbowParenthesesToggle
@@ -86,3 +88,4 @@ Bundle 'Yggdroot/indentLine'
 " let g:languagetool_jar=$HOME . "/.vim/LanguageTool-2.2/languagetool-standalone.jar"
 " Bundle for CSS coloring.
 Bundle "skammer/vim-css-color"
+Bundle "LargeFile"
