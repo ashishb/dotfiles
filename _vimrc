@@ -88,4 +88,3 @@ Bundle 'Yggdroot/indentLine'
 " let g:languagetool_jar=$HOME . "/.vim/LanguageTool-2.2/languagetool-standalone.jar"
 " Bundle for CSS coloring.
 Bundle "skammer/vim-css-color"
-Bundle "LargeFile"
