@@ -1,5 +1,3 @@
-let b:did_ftplugin = 1
-
 if !has('python') && !has('python3')
     finish
 endif
@@ -8,19 +6,6 @@ endif
 " ------------------------------------------------------------------------
 
 if g:jedi#auto_initialization
-    if g:jedi#completions_enabled
-        setlocal omnifunc=jedi#completions
-
-        " map ctrl+space for autocompletion
-        if g:jedi#completions_command == "<C-Space>"
-            " in terminals, <C-Space> sometimes equals <Nul>
-            inoremap <expr> <Nul> jedi#complete_string(0)
-        endif
-        if g:jedi#completions_command != ""
-            execute "inoremap <expr> <buffer> ".g:jedi#completions_command." jedi#complete_string(0)"
-        endif
-    endif
-
     " goto / get_definition / usages
     if g:jedi#goto_assignments_command != ''
         execute "noremap <buffer>".g:jedi#goto_assignments_command." :call jedi#goto_assignments()<CR>"
