@@ -22,3 +22,6 @@
 [submodule "vim-snippets"]
 	path = _vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "bashrc_includes/z"]
+	path = bashrc_includes/z
+	url = https://github.com/rupa/z
