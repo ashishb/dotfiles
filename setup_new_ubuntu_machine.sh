@@ -4,6 +4,7 @@ sudo apt-get install curl
 # Install dev tools.
 sudo apt-get install xsel
 sudo apt-get install git
+sudo apt-get install whois
 sudo apt-get install vim
 sudo apt-get install python-dev
 sudo apt-get install pylint
