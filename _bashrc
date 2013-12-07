@@ -5,9 +5,16 @@ export TERM=xterm-color                               # Flag terminal as color-c
 export GREP_OPTIONS='--color=auto'
 # Ref: http://excid3.com/blog/how-to-fix-esc-in-your-terminal/#.UkHeamSZ3d6
 export LESS="-eirMX"
+
+## Bash History customization.
+# avoid duplicates..
+export HISTCONTROL=ignoredups:erasedups  
+# append (not ovewrite) history entries..
+shopt -s histappend
 # Larger bash history (default is 500)
 export HISTFILESIZE=10000
 export HISTSIZE=10000
+
 # Enable X11 tunneling through ssh
 if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi
 
