@@ -1,7 +1,7 @@
 #### Bash customization. ####
 export PS1="\w $ "
-export CLICOLOR=yes                                   # Enable color ls output
-export TERM=xterm-color                               # Flag terminal as color-capable
+export CLICOLOR=yes     # Enable color ls output
+export TERM=xterm-color # Flag terminal as color-capable
 export GREP_OPTIONS='--color=auto'
 # Ref: http://excid3.com/blog/how-to-fix-esc-in-your-terminal/#.UkHeamSZ3d6
 export LESS="-eirMX"
