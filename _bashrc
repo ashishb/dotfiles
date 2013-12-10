@@ -5,6 +5,11 @@ export TERM=xterm-color                               # Flag terminal as color-c
 export GREP_OPTIONS='--color=auto'
 # Ref: http://excid3.com/blog/how-to-fix-esc-in-your-terminal/#.UkHeamSZ3d6
 export LESS="-eirMX"
+# Show auto-completion on first tab (default is second tab).
+bind 'set show-all-if-ambiguous on'
+# When completing cd and rmdir, only dirs should be possible option (default is
+# all files on Mac).
+complete -d cd rmdir
 
 ## Bash History customization.
 # avoid duplicates..
