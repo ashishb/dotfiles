@@ -10,6 +10,7 @@ sudo apt-get install python-dev
 sudo apt-get install pylint
 sudo apt-get install python-pip
 sudo apt-get install nmap
+sudo apt-get remove thunderbird  # I don't need thunderbird.
 sudo apt-get install zip  # I am surprised, how this can be missing.
 sudo apt-get install libmysqlclient-dev  # Needed for powerline.
 sudo easy_install Pygments
