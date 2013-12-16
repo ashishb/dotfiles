@@ -61,6 +61,7 @@ let g:jedi#use_splits_not_buffers = "bottom"
 Bundle 'tpope/vim-fugitive'
 " Syntax checking.
 Bundle 'scrooloose/syntastic'
+let g:syntastic_java_javac_classpath = '/Users/ashishbhatia/android_sdk/./platforms/android-19/android.jar'
 " For snippets.
 " vim-addon-mw-utils and tlib_vim are needed by snipmate.
 Bundle "MarcWeber/vim-addon-mw-utils"
