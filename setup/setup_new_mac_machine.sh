@@ -19,5 +19,5 @@ brew install terminal-notifier
 # brew-cask converts brew into a package manager for mac packages.
 brew install brew-cask
 brew cask install google-chrome
-brew cask install xqartz  # For running X server based apps on Mac.
+brew cask install xquartz  # For running X server based apps on Mac.
 brew cask install wireshark
