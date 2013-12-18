@@ -96,3 +96,5 @@ Bundle "skammer/vim-css-color"
 " Displays CTags in side bar.
 Bundle "majutsushi/tagbar"
 nmap <F8> :TagbarToggle<CR>
+Bundle "altercation/vim-colors-solarized"
+colorscheme solarized
