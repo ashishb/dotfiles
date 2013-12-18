@@ -20,6 +20,8 @@ export PATH=$PATH:$DIR/scripts
 source $BASHRC_INCLUDES/bash_history_customization.sh
 # Better auto complete.
 source $BASHRC_INCLUDES/bash_better_autocomplete.sh
+# brew auto-completion (if brew is present).
+command brew 1>/dev/null 2>&1 && source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 # adb auto-completion.
 source $BASHRC_INCLUDES/adb.bash
 # git auto-completion.
@@ -32,4 +34,3 @@ source $BASHRC_INCLUDES/android_reverse_engineering_related_aliases.sh
 source $BASHRC_INCLUDES/50_prompt.sh
 # Source 'z' - easy jumping around without providing full path names.
 source $BASHRC_INCLUDES/z/z.sh
-
