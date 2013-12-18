@@ -22,8 +22,8 @@ special_echo "Overwriting $HOME/.vim"
 echo "source $DIR/_vimrc" > $HOME/.vimrc
 
 # Not working.
-# echo "Setting $HOME/.vim to link to $DIR/_vim directory"
-# ln -s $DIR/_vim $HOME/.vim
+echo "Setting $HOME/.vim to link to $DIR/_vim directory"
+ln -s $DIR/_vim $HOME/.vim
 
 echo "Overwriting $HOME/.screenrc"
 echo "source $DIR/_screenrc" > $HOME/.screenrc

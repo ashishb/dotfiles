@@ -17,9 +17,9 @@ export PATH=$PATH:$DIR/scripts
 
 #### Source more scripts. ####
 # Bash history customizations.
-source $BASHRC_INCLUDES/bash_history_customization.sh
+source $BASHRC_INCLUDES/bash_history_customization.bash
 # Better auto complete.
-source $BASHRC_INCLUDES/bash_better_autocomplete.sh
+source $BASHRC_INCLUDES/better_autocomplete.bash
 # brew auto-completion (if brew is present).
 command brew 1>/dev/null 2>&1 && source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 # adb auto-completion.
@@ -27,10 +27,10 @@ source $BASHRC_INCLUDES/adb.bash
 # git auto-completion.
 source $BASHRC_INCLUDES/git-completion.bash
 # Custom aliases to improve productivity.
-source $BASHRC_INCLUDES/custom_aliases.sh
+source $BASHRC_INCLUDES/custom_aliases.bash
 # Custom aliases for android reverse engineering.
-source $BASHRC_INCLUDES/android_reverse_engineering_related_aliases.sh
+source $BASHRC_INCLUDES/android_reverse_engineering_related_aliases.bash
 # An interesting bash prompt.
-source $BASHRC_INCLUDES/50_prompt.sh
+source $BASHRC_INCLUDES/50_prompt.bash
 # Source 'z' - easy jumping around without providing full path names.
 source $BASHRC_INCLUDES/z/z.sh
