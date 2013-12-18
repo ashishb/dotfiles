@@ -6,7 +6,7 @@ set shiftwidth=2
 "This is for python code.
 set foldmethod=indent
 set foldlevel=20
-set noexpandtab
+set expandtab
 set hlsearch
 set incsearch
 set number
@@ -18,6 +18,10 @@ set background=dark
 set showmatch
 " Use F2 to toggle paste mode.
 set pastetoggle=<F2>
+" Enable per-directory .vimrc files and disable unsafe commands in them
+set exrc
+" Commented since this does not seem to work due to plugins.
+" set secure
 " NERD Tree mapped to F3.
 nmap <silent> <special> <F3> :NERDTreeToggle<RETURN>
 let NERDChristmasTree=1
