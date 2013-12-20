@@ -98,3 +98,4 @@ Bundle "majutsushi/tagbar"
 nmap <F8> :TagbarToggle<CR>
 Bundle "altercation/vim-colors-solarized"
 colorscheme solarized
+Bundle "eventualbuddha/vim-protobuf"
