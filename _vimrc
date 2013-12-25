@@ -99,3 +99,8 @@ nmap <F8> :TagbarToggle<CR>
 Bundle "altercation/vim-colors-solarized"
 colorscheme solarized
 Bundle "eventualbuddha/vim-protobuf"
+Bundle "rmanalan/jshint.vim"
+Bundle "pangloss/vim-javascript"
+Bundle "nathanaelkane/vim-indent-guides"
+let g:indent_guides_enable_on_vim_startup = 1
+Bundle "airblade/vim-gitgutter"
