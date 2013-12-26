@@ -9,7 +9,10 @@ set foldlevel=20
 set expandtab
 set hlsearch
 set incsearch
+" Show line numbers.
 set number
+" show context above/below cursorline.
+set scrolloff=3
 syntax on
 filetype indent plugin on
 match ErrorMsg '\%>80v.\+'
