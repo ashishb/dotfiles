@@ -22,3 +22,4 @@ brew cask install google-chrome
 brew cask install xquartz  # For running X server based apps on Mac.
 brew cask install wireshark
 brew cask install sophos-antivirus  # Free AV protection for Mac.
+brew cask install lightpaper  # Mark-down editor.
