@@ -15,9 +15,9 @@ sudo apt-get install zip  # I am surprised, how this can be missing.
 sudo apt-get install libmysqlclient-dev  # Needed for powerline.
 # Use pip instead of easy_install.
 # http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
-sudo pip Pygments
-sudo pip powerline
-sudo pip pdbpp  # A powerful improvement to pdb CLI.
+sudo pip install Pygments
+sudo pip install powerline
+sudo pip install pdbpp  # A powerful improvement to pdb CLI.
 # Install Google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
