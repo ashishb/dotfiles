@@ -1,6 +1,6 @@
 ## Bash History customizations.
 # Avoid duplicates.
-export HISTCONTROL=ignoredups:erasedups  
+export HISTCONTROL=ignoredups:erasedups
 # Append (not ovewrite) history entries.
 shopt -s histappend
 # Larger bash history (default is 500)
