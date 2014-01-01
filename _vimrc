@@ -21,7 +21,7 @@ set background=dark
 set showmatch
 " Use F2 to toggle paste mode.
 set pastetoggle=<F2>
-" Enable per-directory .vimrc files and disable unsafe commands in them
+" Enable per-directory .vimrc files and disable unsafe commands in them.
 set exrc
 " Commented since this does not seem to work due to plugins.
 " set secure
