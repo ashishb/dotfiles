@@ -46,7 +46,7 @@ set visualbell
 " This setup is required only on Linux and not on Mac.
 let s:uname = system("echo -n \"$(uname)\"")
 if !v:shell_error && s:uname == "Linux"
-	python from powerline.vim import setup as powerline_setup; powerline_setup(); del powerline_setup
+  python from powerline.vim import setup as powerline_setup; powerline_setup(); del powerline_setup
 endif
 
 " For GNU/Linux
