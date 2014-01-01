@@ -32,7 +32,8 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
-
+ " Map \\<Enter> to hide highlight.
+map <silent> <leader><cr> :noh<cr>
 " Auto complete functions.
 set cf
 " Aut complete vim commands.
@@ -100,10 +101,21 @@ Bundle "skammer/vim-css-color"
 Bundle "majutsushi/tagbar"
 nmap <F8> :TagbarToggle<CR>
 Bundle "altercation/vim-colors-solarized"
-colorscheme solarized
+" solarized looks good on Mac (not on Linux)
+if s:uname == "Darwin"
+  colorscheme solarized
+endif
 Bundle "eventualbuddha/vim-protobuf"
 Bundle "rmanalan/jshint.vim"
 Bundle "pangloss/vim-javascript"
 Bundle "nathanaelkane/vim-indent-guides"
 let g:indent_guides_enable_on_vim_startup = 1
 Bundle "airblade/vim-gitgutter"
+" Commented since none of this seems to work for now.
+" " For android development.
+" Bundle "robo"
+" Bundle "bpowell/vim-android"
+" "Added by android-vim:
+" set tags+=/Users/ashishbhatia/.vim/tags
+" autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+" let g:SuperTabDefaultCompletionType = 'context'
