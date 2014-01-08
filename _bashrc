@@ -1,4 +1,5 @@
 #### Bash customization. ####
+export EDITOR="vim"
 export PS1="\w $ "
 export CLICOLOR=yes     # Enable color ls output
 export TERM=xterm-color # Flag terminal as color-capable
@@ -26,6 +27,8 @@ command brew help 1>/dev/null 2>&1 && source `brew --repository`/Library/Contrib
 source $BASHRC_INCLUDES/adb.bash
 # git auto-completion.
 source $BASHRC_INCLUDES/git-completion.bash
+# p4 auto-completion
+source $BASHRC_INCLUDES/p4_autocomplete.bash
 # Custom aliases to improve productivity.
 source $BASHRC_INCLUDES/custom_aliases.bash
 # Custom aliases for android reverse engineering.
