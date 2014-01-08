@@ -104,6 +104,8 @@ Bundle "altercation/vim-colors-solarized"
 " solarized looks good on Mac (not on Linux)
 if s:uname == "Darwin"
   colorscheme solarized
+else
+  colorscheme default
 endif
 Bundle "eventualbuddha/vim-protobuf"
 Bundle "rmanalan/jshint.vim"
