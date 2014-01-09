@@ -11,6 +11,8 @@ alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 alias publicip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias localip="ipconfig getifaddr en0"
+# List all make targets.
+alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\1/p'"
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]
 then
