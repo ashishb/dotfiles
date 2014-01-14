@@ -19,12 +19,15 @@ fi
 # Mac style pbcopy and pbpaste on linux.
 command -v xsel 1>/dev/null &&
   alias pbcopy='xsel --clipboard --input' &&
-	alias pbpaste='xsel --clipboard --output'
+  alias pbpaste='xsel --clipboard --output'
 
 # Mac-specific settings.
 if [[ `uname -s` == "Darwin" ]]; then
-	# Lock the screen (when going away from keyboard)
-	alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-	alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update"
+  # Lock the screen (when going away from keyboard)
+  alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+  # Update everything.
+  alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update"
+  # Set the iTerm tab title to current dir.
+  export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 fi
 
