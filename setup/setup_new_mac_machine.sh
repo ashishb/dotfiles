@@ -33,3 +33,5 @@ brew cask install wireshark
 brew cask install sophos-antivirus  # Free AV protection for Mac.
 brew cask install lightpaper  # Mark-down editor.
 brew cask install bartender  # Clutter control from menu bar.
+# Use long press cmd button on any mac app to see shortcuts.
+brew cask install cheatsheet
