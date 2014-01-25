@@ -2,6 +2,9 @@
 set -e
 # pip is not installed by default on mac.
 easy_install pip
+pip install pylint
+pip install Pygments
+pip install pdbpp  # A powerful improvement to pdb CLI.
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 # Install GNU core utilities (those that come with OS X are outdated)
