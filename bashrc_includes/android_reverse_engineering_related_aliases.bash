@@ -13,6 +13,7 @@ fi
 alias printcert="keytool -printcert -file"
 alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore alias_name"
 alias android_screenshot="java -jar $HOME/tools/android/AndroidScreenCapture_1.1/AShot-1.1.jar"
+alias get_android_id='adb shell content query --uri content://settings/secure --projection name:value | grep android_id'
 # These are for compiling android code.
 # export NDK=$HOME/android-sdk-mac_x86/android-ndk-r8b
 # SYSROOT=$NDK/platforms/android-14/arch-arm
