@@ -37,3 +37,5 @@ source $BASHRC_INCLUDES/android_reverse_engineering_related_aliases.bash
 source $BASHRC_INCLUDES/50_prompt.bash
 # Source 'z' - easy jumping around without providing full path names.
 source $BASHRC_INCLUDES/z/z.sh
+# Source local aliases.
+touch $BASHRC_INCLUDES/local_aliases.bash && source $BASHRC_INCLUDES/local_aliases.bash

@@ -5,9 +5,7 @@ dotfiles
 
 Some config files
 
-1. 50_prompt.sh - a git friendly prompt.
-
-2. _bashrc - bashrc file (it primarily sources files in bashrc_includes)
+2. _bashrc - bashrc file (it primarily sources files in bashrc includes)
 
 3. _gitconfig - git config file
 
@@ -24,7 +22,9 @@ Some config files
 
 9. _vim - vim config dir, it contains several vim related stuff
 
+10. setup - contains one time setup scripts for Mac, GNU/Linux and Nexus 5.
 
+11. bashrc_includes - contains several bash improvements (git friendly prompt, adb auto completion, p4 auto completion, git auto completion, android reverse engineering aliases etc.)
 
 
 

@@ -2,6 +2,9 @@
 set -e
 # pip is not installed by default on mac.
 easy_install pip
+pip install pylint
+pip install Pygments
+pip install pdbpp  # A powerful improvement to pdb CLI.
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 # Install GNU core utilities (those that come with OS X are outdated)
@@ -39,3 +42,5 @@ brew cask install bartender  # Clutter control from menu bar.
 # This does not look as useful as I expected.
 # brew cask install slate   # XMonand like window manager for Mac.
 # TODO(ashishb): Add cask for Gyazo.
+# Use long press cmd button on any mac app to see shortcuts.
+brew cask install cheatsheet

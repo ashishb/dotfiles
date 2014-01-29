@@ -7,7 +7,6 @@ sudo apt-get install git
 sudo apt-get install whois
 sudo apt-get install vim
 sudo apt-get install python-dev
-sudo apt-get install pylint
 sudo apt-get install python-pip
 sudo apt-get install nmap
 sudo apt-get remove thunderbird  # I don't need thunderbird.
@@ -15,6 +14,7 @@ sudo apt-get install zip  # I am surprised, how this can be missing.
 sudo apt-get install libmysqlclient-dev  # Needed for powerline.
 # Use pip instead of easy_install.
 # http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
+sudo pip install pylint
 sudo pip install Pygments
 sudo pip install powerline
 sudo pip install pdbpp  # A powerful improvement to pdb CLI.
