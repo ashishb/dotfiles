@@ -20,6 +20,9 @@ brew install imagemagick
 brew install gibo
 brew install ctags
 brew install hexedit
+# Fix:
+# https://stackoverflow.com/questions/19215590/why-cant-i-install-any-gems-on-my-mac
+brew tap raggi/ale && brew install openssl-osx-ca
 # Allows generation from notification from command line.
 brew install terminal-notifier
 # brew-cask converts brew into a package manager for mac packages.
@@ -33,3 +36,6 @@ brew cask install wireshark
 brew cask install sophos-antivirus  # Free AV protection for Mac.
 brew cask install lightpaper  # Mark-down editor.
 brew cask install bartender  # Clutter control from menu bar.
+# This does not look as useful as I expected.
+# brew cask install slate   # XMonand like window manager for Mac.
+# TODO(ashishb): Add cask for Gyazo.
