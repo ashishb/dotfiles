@@ -42,13 +42,6 @@ set wildmode=list:longest,full
 " Turn off annoying bell.
 set visualbell
 
-" Install power line by doing sudo easy_install powerline.
-" This setup is required only on Linux and not on Mac.
-let s:uname = system("echo -n \"$(uname)\"")
-if !v:shell_error && s:uname == "Linux"
-  python from powerline.vim import setup as powerline_setup; powerline_setup(); del powerline_setup
-endif
-
 " For GNU/Linux
 set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
 " For Mac
@@ -61,6 +54,8 @@ set t_Co=256
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+" Use airline (powerline installation is weird and rarely works).
+Bundle 'bling/vim-airline'
 " Python auto-completion plugin.
 Bundle 'davidhalter/jedi-vim'
 let g:jedi#popup_on_dot = 0
@@ -102,6 +97,7 @@ Bundle "majutsushi/tagbar"
 nmap <F8> :TagbarToggle<CR>
 Bundle "altercation/vim-colors-solarized"
 " solarized looks good on Mac (not on Linux)
+let s:uname = system("echo -n \"$(uname)\"")
 if s:uname == "Darwin"
   colorscheme solarized
 else

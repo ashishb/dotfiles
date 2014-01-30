@@ -11,12 +11,12 @@ sudo apt-get install python-pip
 sudo apt-get install nmap
 sudo apt-get remove thunderbird  # I don't need thunderbird.
 sudo apt-get install zip  # I am surprised, how this can be missing.
-sudo apt-get install libmysqlclient-dev  # Needed for powerline.
+# sudo apt-get install libmysqlclient-dev  # Needed for powerline.
+# sudo pip install powerline
 # Use pip instead of easy_install.
 # http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
 sudo pip install pylint
 sudo pip install Pygments
-sudo pip install powerline
 sudo pip install pdbpp  # A powerful improvement to pdb CLI.
 # Install Google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

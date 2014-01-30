@@ -30,6 +30,7 @@ brew tap phinze/cask
 brew install brew-cask
 brew cask install google-chrome
 brew cask install iterm2
+brew cask install java  # Latest version of Sun java.
 brew cask install quicksilver # Quicksilver is better than Spotlight.
 brew cask install xquartz  # For running X server based apps on Mac.
 brew cask install wireshark
