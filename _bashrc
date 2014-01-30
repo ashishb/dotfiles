@@ -29,6 +29,8 @@ source $BASHRC_INCLUDES/adb.bash
 source $BASHRC_INCLUDES/git-completion.bash
 # p4 auto-completion
 source $BASHRC_INCLUDES/p4_autocomplete.bash
+# Maven (mvn) auto-completion.
+source $BASHRC_INCLUDES/maven-bash-completion/bash_completion.bash
 # Custom aliases to improve productivity.
 source $BASHRC_INCLUDES/custom_aliases.bash
 # Custom aliases for android reverse engineering.
