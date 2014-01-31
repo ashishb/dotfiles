@@ -15,6 +15,7 @@ brew install findutils
 # Install latest version of Bash.
 brew install bash
 brew install wget
+brew install ssh-copy-id  # Easy way to set up key based login.
 # Install sshpass (unofficial since homebrew admins won't allow this formula in
 # the official repo).
 brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
