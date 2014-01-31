@@ -1,5 +1,6 @@
 # Android reverse-engineering related aliases.
 export ANDROID_HOME=$HOME/android_sdk
+export ANDROID_SDK_ROOT=$HOME/android_sdk
 alias aapt="$HOME/tools/android/aapt"
 alias apktool="java -jar $HOME/tools/android/apktool.jar"
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
