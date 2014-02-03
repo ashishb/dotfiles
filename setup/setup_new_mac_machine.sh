@@ -24,6 +24,8 @@ brew install imagemagick
 brew install gibo
 brew install ctags
 brew install hexedit
+brew install android-sdk
+brew install android-ndk
 # Allows generation from notification from command line.
 brew install terminal-notifier
 # brew-cask converts brew into a package manager for mac packages.
