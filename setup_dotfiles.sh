@@ -28,6 +28,11 @@ ln -s $DIR/_vim $HOME/.vim
 echo "Overwriting $HOME/.screenrc"
 echo "source $DIR/_screenrc" > $HOME/.screenrc
 
+echo "Overwriting $HOME/.ssh/config"
+touch $DIR/_sshconfig
+mkdir $HOME/.ssh
+ln -s $DIR/_sshconfig ~/.ssh/config
+
 echo "Overwriting up $HOME/.gitconfig"
 echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig
 

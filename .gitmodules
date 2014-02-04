@@ -25,3 +25,6 @@
 [submodule "bashrc_includes/z"]
 	path = bashrc_includes/z
 	url = https://github.com/rupa/z
+[submodule "bashrc_includes/maven-bash-completion"]
+	path = bashrc_includes/maven-bash-completion
+	url = https://github.com/juven/maven-bash-completion
