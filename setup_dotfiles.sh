@@ -29,6 +29,7 @@ echo "Overwriting $HOME/.screenrc"
 echo "source $DIR/_screenrc" > $HOME/.screenrc
 
 echo "Overwriting $HOME/.ssh/config"
+touch $DIR/_sshconfig
 mkdir $HOME/.ssh
 ln -s $DIR/_sshconfig ~/.ssh/config
 

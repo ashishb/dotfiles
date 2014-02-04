@@ -21,3 +21,4 @@ _vim/bundle/vim-protobuf/
 _vim/bundle/vim-snipmate/
 _vim/bundle/vim-snippets/
 bashrc_includes/local_aliases.bash
+_sshconfig
