@@ -51,6 +51,7 @@ brew tap homebrew/binary
 # Android development and reverse engineering related installs.
 brew install android-sdk
 brew install android-ndk
+brew install ant  # For building android projects.
 brew install apktool
 brew install dex2jar  # For android reverse engineering.
 # Some day, this formula will make it into homebrew repo,
