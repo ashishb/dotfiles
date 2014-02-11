@@ -8,6 +8,7 @@ sudo apt-get install whois
 sudo apt-get install vim
 sudo apt-get install python-dev
 sudo apt-get install python-pip
+sudo apt-get install ant
 sudo apt-get install nmap
 sudo apt-get remove thunderbird  # I don't need thunderbird.
 sudo apt-get install zip  # I am surprised, how this can be missing.

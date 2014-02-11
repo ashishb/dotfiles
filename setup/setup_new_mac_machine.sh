@@ -27,8 +27,6 @@ brew install hexedit
 # Fix:
 # https://stackoverflow.com/questions/19215590/why-cant-i-install-any-gems-on-my-mac
 brew tap raggi/ale && brew install openssl-osx-ca
-brew install android-sdk
-brew install android-ndk
 # Allows generation from notification from command line.
 brew install terminal-notifier
 # brew-cask converts brew into a package manager for mac packages.
@@ -48,3 +46,15 @@ brew cask install bartender  # Clutter control from menu bar.
 # TODO(ashishb): Add cask for Gyazo.
 # Use long press cmd button on any mac app to see shortcuts.
 brew cask install cheatsheet
+brew tap homebrew/binary
+
+# Android development and reverse engineering related installs.
+brew install android-sdk
+brew install android-ndk
+brew install ant  # For building android projects.
+brew install apktool
+brew install dex2jar  # For android reverse engineering.
+# Some day, this formula will make it into homebrew repo,
+# till then refer the file directly.
+brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb
+brew cask install jd-gui  # For java decompilation.
