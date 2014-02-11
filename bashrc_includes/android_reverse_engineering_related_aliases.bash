@@ -20,6 +20,19 @@ alias printcert="keytool -printcert -file"
 alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore alias_name"
 alias android_screenshot="java -jar $HOME/tools/android/AndroidScreenCapture_1.1/AShot-1.1.jar"
 alias get_android_id='adb shell content query --uri content://settings/secure --projection name:value | grep android_id'
+function update_android_id(){
+  # Update the android id.
+  # TODO(ashishb): Add a different query for devices where sqlite3 is not present
+  # but content binary is present.
+  adb shell sqlite3 \
+    /data/data/com.android.providers.settings/databases/settings.db \
+    "update 'secure' set value=\"${1}\" where name='android_id'"
+  # Now soft_reboot.
+  adb shell setprop ctl.restart surfaceflinger
+  adb shell setprop ctl.restart zygote
+}
+
+
 if [[ `uname -s` == "Darwin" ]]; then
   # These are for compiling native android code.
   # Based on brew install android-ndk.
