@@ -1,11 +1,15 @@
 set -e
-# Install curl
-sudo apt-get -y install curl
+
+# For Oracle/ Sun JDK 6.
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
 # Install dev tools.
 sudo apt-get -y install ant
+sudo apt-get -y install curl
 sudo apt-get -y install git
 sudo apt-get -y install libxss1  # Needed by Google-chrome.
 sudo apt-get -y install nmap
+sudo apt-get install oracle-java6-installer  # Needed for android.
 sudo apt-get -y install python-dev
 sudo apt-get -y install python-pip
 sudo apt-get -y install ssh
