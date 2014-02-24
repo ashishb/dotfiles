@@ -16,7 +16,6 @@ set scrolloff=3
 syntax on
 filetype indent plugin on
 match ErrorMsg '\%>80v.\+'
-set background=dark
 "Show matching parentheses
 set showmatch
 " Use F2 to toggle paste mode.
@@ -103,6 +102,7 @@ if s:uname == "Darwin"
 else
   colorscheme default
 endif
+set background=dark
 Bundle "eventualbuddha/vim-protobuf"
 Bundle "rmanalan/jshint.vim"
 Bundle "pangloss/vim-javascript"
