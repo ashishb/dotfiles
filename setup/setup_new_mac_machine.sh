@@ -27,27 +27,29 @@ brew install hexedit
 # Fix:
 # https://stackoverflow.com/questions/19215590/why-cant-i-install-any-gems-on-my-mac
 brew tap raggi/ale && brew install openssl-osx-ca
-# Allows generation from notification from command line.
-brew install terminal-notifier
+# Allows generation from notification from command line (not that useful).
+# brew install terminal-notifier
 # brew-cask converts brew into a package manager for mac packages.
 brew tap phinze/cask
 brew install brew-cask
+brew tap homebrew/binary
+
+# Useful OS X softwares.
+# brew cask install bartender  # Clutter control from menu bar.
 brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
+# Use long press cmd button on any mac app to see shortcuts.
+brew cask install cheatsheet
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
-brew cask install quicksilver # Quicksilver is better than Spotlight.
-brew cask install xquartz  # For running X server based apps on Mac.
-brew cask install wireshark
-brew cask install sophos-antivirus  # Free AV protection for Mac.
 brew cask install lightpaper  # Mark-down editor.
-# brew cask install bartender  # Clutter control from menu bar.
+brew cask install quicksilver # Quicksilver is better than Spotlight.
 # This does not look as useful as I expected.
 # brew cask install slate   # XMonand like window manager for Mac.
+brew cask install sophos-antivirus  # Free AV protection for Mac.
+brew cask install xquartz  # For running X server based apps on Mac.
+brew cask install wireshark
 # TODO(ashishb): Add cask for Gyazo.
-# Use long press cmd button on any mac app to see shortcuts.
-brew cask install cheatsheet
-brew tap homebrew/binary
 
 # Android development and reverse engineering related installs.
 brew install android-sdk
