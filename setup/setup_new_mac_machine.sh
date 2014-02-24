@@ -32,6 +32,7 @@ brew install terminal-notifier
 # brew-cask converts brew into a package manager for mac packages.
 brew tap phinze/cask
 brew install brew-cask
+brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
@@ -40,7 +41,7 @@ brew cask install xquartz  # For running X server based apps on Mac.
 brew cask install wireshark
 brew cask install sophos-antivirus  # Free AV protection for Mac.
 brew cask install lightpaper  # Mark-down editor.
-brew cask install bartender  # Clutter control from menu bar.
+# brew cask install bartender  # Clutter control from menu bar.
 # This does not look as useful as I expected.
 # brew cask install slate   # XMonand like window manager for Mac.
 # TODO(ashishb): Add cask for Gyazo.
