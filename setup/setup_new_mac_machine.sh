@@ -40,6 +40,7 @@ brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
 # Use long press cmd button on any mac app to see shortcuts.
 brew cask install cheatsheet
 brew cask install google-chrome
+brew cask install google-music  # Unofficial native app.
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
 brew cask install lightpaper  # Mark-down editor.
@@ -61,4 +62,3 @@ brew install dex2jar  # For android reverse engineering.
 # till then refer the file directly.
 brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb
 brew cask install jd-gui  # For java decompilation.
-brew cask install google-music
