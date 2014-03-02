@@ -11,6 +11,9 @@
   # Include summaries of merged commits in newly created merge commit messages
   log = true
   tool = vimdiff
+[grep]
+  extendRegexp = true
+  lineNumber = true
 [push]
   default = simple
 [alias]
