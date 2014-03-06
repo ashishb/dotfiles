@@ -33,6 +33,9 @@ touch $DIR/_sshconfig
 mkdir $HOME/.ssh
 ln -s $DIR/_sshconfig ~/.ssh/config
 
+echo "Overwriting $HOME/.inpurtc"
+ln -s $DIR/_inputrc ~/.inputrc
+
 echo "Overwriting up $HOME/.gitconfig"
 echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig
 
