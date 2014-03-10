@@ -14,6 +14,8 @@ set number
 " show context above/below cursorline.
 set scrolloff=3
 syntax on
+" watch for file changes
+set autoread
 filetype indent plugin on
 match ErrorMsg '\%>80v.\+'
 "Show matching parentheses
