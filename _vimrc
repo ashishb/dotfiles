@@ -52,7 +52,7 @@ set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256
 " colours)
 set t_Co=256
-
+cnoremap sudow w !sudo tee % >/dev/null
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " Use airline (powerline installation is weird and rarely works).
