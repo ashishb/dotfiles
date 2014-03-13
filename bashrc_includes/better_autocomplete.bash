@@ -5,7 +5,10 @@ shopt -s no_empty_cmd_completion
 # SSH auto-completion based on entries in known_hosts.
 if [[ -e ~/.ssh/known_hosts ]]; then
   # complete -o default -W "$(cat ~/.ssh/known_hosts | sed 's/[, ].*//' | sort | uniq | grep -v '[0-9]')" ssh scp sftp
-  complete -o default -W "$(cat ~/.ssh/config | grep 'Host ' | sort | uniq | cut -d' ' -f2)" ssh scp sftp
+  complete -o default -W \
+      "echo $(cat ~/.ssh/config | grep 'Host ' | sort | uniq | cut -d' ' -f2) \
+      $(cat ~/.ssh/known_hosts  | cut -d ' ' -f1 | grep ',' | cut -d ',' -f1)" \
+      ssh scp sftp
 fi
 # When completing cd and rmdir, only dirs should be possible option (default is
 # all files on Mac).
