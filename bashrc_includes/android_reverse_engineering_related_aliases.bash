@@ -35,3 +35,6 @@ function update_android_id(){
   adb shell setprop ctl.restart surfaceflinger
   adb shell setprop ctl.restart zygote
 }
+
+# TODO(ashishb): Add jadx tool to the list.
+# https://github.com/skylot/jadx
