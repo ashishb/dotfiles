@@ -16,6 +16,11 @@ export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
 export PATH=$PATH:$HOME/android_sdk/tools
 export PATH=$PATH:$DIR/scripts
 
+# A function to change title (works in iTerm).
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
+
 #### Source more scripts. ####
 # Bash history customizations.
 source $BASHRC_INCLUDES/bash_history_customization.bash
