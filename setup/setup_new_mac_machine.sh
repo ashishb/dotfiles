@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 # pip is not installed by default on mac.
-easy_install pip
-pip install pylint
-pip install Pygments
-pip install pdbpp  # A powerful improvement to pdb CLI.
+sudo easy_install pip
+sudo pip install pylint
+sudo pip install Pygments
+sudo pip install pdbpp  # A powerful improvement to pdb CLI.
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 # Install GNU core utilities (those that come with OS X are outdated)
@@ -47,7 +47,7 @@ brew cask install lightpaper  # Mark-down editor.
 brew cask install quicksilver # Quicksilver is better than Spotlight.
 # This does not look as useful as I expected.
 # brew cask install slate   # XMonand like window manager for Mac.
-brew cask install sophos-antivirus  # Free AV protection for Mac.
+brew cask install sophos-anti-virus-home-edition  # Free AV protection for Mac.
 brew cask install xquartz  # For running X server based apps on Mac.
 brew cask install wireshark
 # TODO(ashishb): Add cask for Gyazo.
