@@ -5,7 +5,7 @@ if [ "$(uname)" == "Darwin" ]; then
   alias jd-gui="open -a jd-gui"
   # These are for compiling native android code.
   # Based on brew install android-ndk.
-  export ANDROID_NDK_HOME=/usr/local/Cellar/android-ndk/r9c/
+  export ANDROID_NDK_HOME=`brew --prefix android-ndk`
   SYSROOT=${ANDROID_NDK_HOME}/platforms/android-14/arch-arm
   alias \
     ANDROID_CC="${ANDROID_NDK_HOME}/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc --sysroot=$SYSROOT " #-B /usr/local/google/android_src_code/system/core/include"

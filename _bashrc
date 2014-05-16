@@ -24,6 +24,9 @@ function title {
 #### Source more scripts. ####
 # Bash history customizations.
 source $BASHRC_INCLUDES/bash_history_customization.bash
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
 # Better auto complete.
 source $BASHRC_INCLUDES/better_autocomplete.bash
 # brew auto-completion (if brew is present).

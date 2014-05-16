@@ -14,6 +14,7 @@ brew install coreutils
 brew install findutils
 # Install latest version of Bash.
 brew install bash
+brew install bash-completion
 brew install wget
 brew install ssh-copy-id  # Easy way to set up key based login.
 # Install sshpass (unofficial since homebrew admins won't allow this formula in
