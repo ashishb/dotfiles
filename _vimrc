@@ -119,3 +119,4 @@ Bundle "airblade/vim-gitgutter"
 " set tags+=/Users/ashishbhatia/.vim/tags
 " autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 " let g:SuperTabDefaultCompletionType = 'context'
+Bundle "akhaku/vim-java-unused-imports"
