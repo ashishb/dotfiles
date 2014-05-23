@@ -6,9 +6,12 @@ if [ "$(uname)" == "Darwin" ]; then
   # These are for compiling native android code.
   # Based on brew install android-ndk.
   export ANDROID_NDK_HOME=`brew --prefix android-ndk`
-  SYSROOT=${ANDROID_NDK_HOME}/platforms/android-14/arch-arm
-  alias \
-    ANDROID_CC="${ANDROID_NDK_HOME}/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc --sysroot=$SYSROOT " #-B /usr/local/google/android_src_code/system/core/include"
+  SYSROOT_ARM=${ANDROID_NDK_HOME}/platforms/android-14/arch-arm
+  SYSROOT_X86=${ANDROID_NDK_HOME}/platforms/android-14/arch-x86
+  ARM_GCC="${ANDROID_NDK_HOME}/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc"
+  X86_GCC="${ANDROID_NDK_HOME}/toolchains/x86-4.8/prebuilt/darwin-x86/bin/i686-linux-android-gcc"
+  alias ANDROID_CC="$ARM_GCC --sysroot=$SYSROOT_ARM " #-B /usr/local/google/android_src_code/system/core/include"
+  alias ANDROID_CC_X86="$X86_GCC --sysroot=$SYSROOT_X86 "
 else
   export ANDROID_HOME=$HOME/android_sdk
   # On mac, these are installed via homebrew.
