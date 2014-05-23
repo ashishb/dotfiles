@@ -63,3 +63,4 @@ brew install dex2jar  # For android reverse engineering.
 # till then refer the file directly.
 brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb
 brew cask install jd-gui  # For java decompilation.
+brew cask install genymotion  # Emulator for android.
