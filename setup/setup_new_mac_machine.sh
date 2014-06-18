@@ -41,7 +41,7 @@ brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
 # Use long press cmd button on any mac app to see shortcuts.
 brew cask install cheatsheet
 brew cask install google-chrome
-brew cask install google-music  # Unofficial native app.
+brew cask install music-manager  # Unofficial native app for Google Music.
 brew cask install instabridge  # Wireless password manager.
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
