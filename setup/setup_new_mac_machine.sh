@@ -47,6 +47,7 @@ brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
 brew cask install lightpaper  # Mark-down editor.
 brew cask install quicksilver # Quicksilver is better than Spotlight.
+brew cask install skype
 # This does not look as useful as I expected.
 # brew cask install slate   # XMonand like window manager for Mac.
 brew cask install sophos-anti-virus-home-edition  # Free AV protection for Mac.
