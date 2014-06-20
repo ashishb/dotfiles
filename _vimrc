@@ -33,7 +33,7 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
- " Map \\<Enter> to hide highlight.
+" Map \\<Enter> to hide highlight.
 map <silent> <leader><cr> :noh<cr>
 " Auto complete functions.
 set cf
@@ -64,8 +64,8 @@ let g:jedi#use_splits_not_buffers = "bottom"
 " Git wrapper for vim.
 Bundle 'tpope/vim-fugitive'
 " Syntax checking.
-Bundle 'scrooloose/syntastic'
-let g:syntastic_java_javac_classpath = '/Users/ashishbhatia/android_sdk/./platforms/android-19/android.jar'
+" Bundle 'scrooloose/syntastic'
+" let g:syntastic_java_javac_classpath = '/usr/local/Cellar/android-sdk/22.6.2/platforms/android-19/android.jar'
 " For snippets.
 " vim-addon-mw-utils and tlib_vim are needed by snipmate.
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -85,8 +85,6 @@ Bundle "SearchComplete"
 Bundle "YankRing.vim"
 " Allows arbitrary navigation using \\w-followed-by-highlighted-char.
 Bundle "Lokaltog/vim-easymotion"
-" Show indentation clearly.
-Bundle 'Yggdroot/indentLine'
 " Not used for now.
 " " Enable language checking with LanguageToolCheck command.
 " Bundle "LanguageTool"
@@ -105,11 +103,14 @@ else
   colorscheme default
 endif
 set background=dark
+" Show indentation clearly.
+Bundle 'Yggdroot/indentLine'
 Bundle "eventualbuddha/vim-protobuf"
 Bundle "rmanalan/jshint.vim"
 Bundle "pangloss/vim-javascript"
 Bundle "nathanaelkane/vim-indent-guides"
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 1
 Bundle "airblade/vim-gitgutter"
 " Commented since none of this seems to work for now.
 " " For android development.
@@ -117,6 +118,8 @@ Bundle "airblade/vim-gitgutter"
 " Bundle "bpowell/vim-android"
 " "Added by android-vim:
 " set tags+=/Users/ashishbhatia/.vim/tags
+Bundle 'vim-scripts/javacomplete'
 " autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 " let g:SuperTabDefaultCompletionType = 'context'
+autocmd Filetype java setlocal omnifunc=javacomplete#CompleteParamsInfo
 Bundle "akhaku/vim-java-unused-imports"
