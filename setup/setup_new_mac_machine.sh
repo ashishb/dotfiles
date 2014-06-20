@@ -41,11 +41,12 @@ brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
 # Use long press cmd button on any mac app to see shortcuts.
 brew cask install cheatsheet
 brew cask install google-chrome
-brew cask install music-manager  # Unofficial native app for Google Music.
 brew cask install instabridge  # Wireless password manager.
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
 brew cask install lightpaper  # Mark-down editor.
+brew cask install music-manager  # Google music manager for OS X.
+brew cask install radiant-player  # Unofficial native app for Google Music.
 brew cask install quicksilver # Quicksilver is better than Spotlight.
 brew cask install skype
 # This does not look as useful as I expected.
