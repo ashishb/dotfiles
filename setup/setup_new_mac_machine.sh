@@ -7,6 +7,7 @@ sudo pip install Pygments
 sudo pip install pdbpp  # A powerful improvement to pdb CLI.
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
+brew install ack  # A replacement for grep.
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -67,4 +68,5 @@ brew install dex2jar  # For android reverse engineering.
 # till then refer the file directly.
 brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb
 brew cask install jd-gui  # For java decompilation.
+brew cask install virtualbox  # Needed for GenyMotion.
 brew cask install genymotion  # Emulator for android.
