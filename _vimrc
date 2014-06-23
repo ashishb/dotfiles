@@ -123,3 +123,6 @@ Bundle 'vim-scripts/javacomplete'
 " let g:SuperTabDefaultCompletionType = 'context'
 autocmd Filetype java setlocal omnifunc=javacomplete#CompleteParamsInfo
 Bundle "akhaku/vim-java-unused-imports"
+" JSON syntax coloring.
+au BufNewFile,BufRead *.json set filetype=json
+Bundle "elzr/vim-json"
