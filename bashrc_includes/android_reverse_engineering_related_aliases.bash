@@ -20,7 +20,6 @@ else
 fi
 
 export ANDROID_SDK_ROOT=$ANDROID_HOME
-alias aapt="$HOME/tools/android/aapt"
 alias apktool="java -jar $HOME/tools/android/apktool.jar"
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
 alias printcert="keytool -printcert -file"
