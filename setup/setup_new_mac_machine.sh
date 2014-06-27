@@ -56,6 +56,7 @@ brew cask install sophos-anti-virus-home-edition  # Free AV protection for Mac.
 brew cask install spotify  # An amazing music streaming service.
 brew cask install xquartz  # For running X server based apps on Mac.
 brew cask install wireshark
+brew cask install zipeg  # A zip file reader for Mac.
 # TODO(ashishb): Add cask for Gyazo.
 
 # Android development and reverse engineering related installs.
