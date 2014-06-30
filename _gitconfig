@@ -4,6 +4,8 @@
   whitespace = space-before-tab,indent-with-non-tab,trailing-space
 [diff]
 	mnemonicprefix = true
+[difftool]
+	prompt = false
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
