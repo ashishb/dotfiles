@@ -109,8 +109,10 @@ Bundle "eventualbuddha/vim-protobuf"
 Bundle "rmanalan/jshint.vim"
 Bundle "pangloss/vim-javascript"
 Bundle "nathanaelkane/vim-indent-guides"
+let g:indentLine_char = '|'
 let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 1
+let g:indent_guides_auto_colors = 0
+let g:indentLine_color_light = 1
 Bundle "airblade/vim-gitgutter"
 " Commented since none of this seems to work for now.
 " " For android development.
@@ -125,4 +127,6 @@ autocmd Filetype java setlocal omnifunc=javacomplete#CompleteParamsInfo
 Bundle "akhaku/vim-java-unused-imports"
 " JSON syntax coloring.
 au BufNewFile,BufRead *.json set filetype=json
+" Smali syntax coloring
+au BufNewFile,BufRead *.smali set filetype=smali
 Bundle "elzr/vim-json"
