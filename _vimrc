@@ -114,6 +114,13 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indentLine_color_light = 1
 Bundle "airblade/vim-gitgutter"
+" Fix for gitgutter on solarized theme
+" https://github.com/airblade/vim-gitgutter/issues/164
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=darkgreen
+highlight GitGutterChange ctermfg=yellow
+highlight GitGutterDelete ctermfg=red
+highlight GitGutterChangeDelete ctermfg=yellow
 " Commented since none of this seems to work for now.
 " " For android development.
 " Bundle "robo"
@@ -130,3 +137,4 @@ au BufNewFile,BufRead *.json set filetype=json
 " Smali syntax coloring
 au BufNewFile,BufRead *.smali set filetype=smali
 Bundle "elzr/vim-json"
+Bundle "tpope/vim-markdown"
