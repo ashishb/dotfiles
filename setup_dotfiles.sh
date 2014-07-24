@@ -39,3 +39,5 @@ ln -s $DIR/_inputrc ~/.inputrc
 echo "Overwriting up $HOME/.gitconfig"
 echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig
 
+echo "Configuring global gitignore file"
+git config --global core.excludesfile $DIR/_gitignore
