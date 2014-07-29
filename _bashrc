@@ -37,6 +37,8 @@ source $BASHRC_INCLUDES/adb.bash
 source $BASHRC_INCLUDES/git-completion.bash
 # p4 auto-completion
 source $BASHRC_INCLUDES/p4_autocomplete.bash
+# gradle auto-completion
+source $BASHRC_INCLUDES/gradle_autocomplete.bash
 export P4DIFF=vimdiff p4 diff  # Use vimdiff for P4 diff.
 # Maven (mvn) auto-completion.
 source $BASHRC_INCLUDES/maven-bash-completion/bash_completion.bash
