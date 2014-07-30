@@ -42,6 +42,8 @@ set wildmenu
 set wildmode=list:longest,full
 " Turn off annoying bell.
 set visualbell
+" https://stackoverflow.com/questions/3534028/mac-terminal-vim-will-only-use-backspace-when-at-the-end-of-a-line
+set backspace=indent,eol,start
 
 " For GNU/Linux
 set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
