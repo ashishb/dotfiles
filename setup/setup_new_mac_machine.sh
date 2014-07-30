@@ -27,6 +27,7 @@ brew install ssh-copy-id  # Easy way to set up key based login.
 # Install sshpass (unofficial since homebrew admins won't allow this formula in
 # the official repo).
 brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
+brew install vim  # Better than default vim.
 brew install wget
 # Fix:
 # https://stackoverflow.com/questions/19215590/why-cant-i-install-any-gems-on-my-mac
