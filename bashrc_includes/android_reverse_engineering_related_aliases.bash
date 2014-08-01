@@ -1,11 +1,12 @@
 # Android reverse-engineering related aliases.
 if [ "$(uname)" == "Darwin" ]; then
   # Based on brew installs.
-  export ANDROID_HOME=/usr/local/opt/android-sdk
+  export ANDROID_HOME=`brew --prefix android-sdk`
   alias jd-gui="open -a jd-gui"
   # These are for compiling native android code.
   # Based on brew install android-ndk.
   export ANDROID_NDK_HOME=`brew --prefix android-ndk`
+  export PATH=$PATH:$ANDROID_NDK_HOME
   SYSROOT_ARM=${ANDROID_NDK_HOME}/platforms/android-14/arch-arm
   SYSROOT_X86=${ANDROID_NDK_HOME}/platforms/android-14/arch-x86
   ARM_GCC="${ANDROID_NDK_HOME}/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc"
