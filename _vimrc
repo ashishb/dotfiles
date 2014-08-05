@@ -140,3 +140,7 @@ au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.smali set filetype=smali
 Bundle "elzr/vim-json"
 Bundle "tpope/vim-markdown"
+" Groovy syntax highlighting
+Bundle "vim-scripts/groovy.vim"
+" gradle syntax highlighting
+au BufNewFile,BufRead *.gradle set filetype=groovy
