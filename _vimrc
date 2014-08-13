@@ -11,6 +11,10 @@ set hlsearch
 set incsearch
 " Show line numbers.
 set number
+" Enable mouse.
+set mouse=a
+" Use system clipboard.
+set clipboard=unnamed
 " show context above/below cursorline.
 set scrolloff=3
 syntax on
