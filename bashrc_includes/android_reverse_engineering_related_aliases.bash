@@ -7,6 +7,8 @@ if [ "$(uname)" == "Darwin" ]; then
   # Based on brew install android-ndk.
   export ANDROID_NDK_HOME=`brew --prefix android-ndk`
   export PATH=$PATH:$ANDROID_NDK_HOME
+  # For gradle wrapper.
+  export PATH=$PATH:$ANDROID_SDK_HOME/tools/templates/gradle/wrapper
   SYSROOT_ARM=${ANDROID_NDK_HOME}/platforms/android-14/arch-arm
   SYSROOT_X86=${ANDROID_NDK_HOME}/platforms/android-14/arch-x86
   ARM_GCC="${ANDROID_NDK_HOME}/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc"
