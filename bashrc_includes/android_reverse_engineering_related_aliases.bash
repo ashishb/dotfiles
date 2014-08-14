@@ -1,10 +1,9 @@
 # Android reverse-engineering related aliases.
 if [ "$(uname)" == "Darwin" ]; then
-  # Based on brew installs.
-  export ANDROID_HOME=`brew --prefix android-sdk`
   alias jd-gui="open -a jd-gui"
   # These are for compiling native android code.
-  # Based on brew install android-ndk.
+  # Based on brew installs of android-sdk and android-ndk.
+  export ANDROID_SDK_HOME=`brew --prefix android-sdk`
   export ANDROID_NDK_HOME=`brew --prefix android-ndk`
   export PATH=$PATH:$ANDROID_NDK_HOME
   # For gradle wrapper.
@@ -16,7 +15,7 @@ if [ "$(uname)" == "Darwin" ]; then
   alias ANDROID_CC="$ARM_GCC --sysroot=$SYSROOT_ARM " #-B /usr/local/google/android_src_code/system/core/include"
   alias ANDROID_CC_X86="$X86_GCC --sysroot=$SYSROOT_X86 "
 else
-  export ANDROID_HOME=$HOME/android_sdk
+  export ANDROID_SDK_HOME=$HOME/android_sdk
   # On mac, these are installed via homebrew.
   # TODO(ashishb): On GNU/Linux, install it using some package manager as well.
   alias apktool="java -jar $HOME/tools/android/apktool.jar"
@@ -24,7 +23,6 @@ else
   alias jd-gui="$HOME/AndroidTools/jd-gui/jd-gui"
 fi
 
-export ANDROID_SDK_ROOT=$ANDROID_HOME
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
 alias printcert="keytool -printcert -file"
 alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore alias_name"
