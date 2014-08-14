@@ -48,6 +48,7 @@ brew cask install google-chrome
 brew cask install instabridge  # Wireless password manager.
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
+brew cask install kindle  # Kindle reader for Mac.
 brew cask install lightpaper  # Mark-down editor.
 brew cask install music-manager  # Google music manager for OS X.
 brew cask install radiant-player  # Unofficial native app for Google Music.
