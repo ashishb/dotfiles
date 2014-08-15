@@ -4,6 +4,8 @@ if [ "$(uname)" == "Darwin" ]; then
   # These are for compiling native android code.
   # Based on brew installs of android-sdk and android-ndk.
   export ANDROID_SDK_HOME=`brew --prefix android-sdk`
+  # Gradle needs this.
+  export ANDROID_HOME=${ANDROID_SDK_HOME}
   export ANDROID_NDK_HOME=`brew --prefix android-ndk`
   export PATH=$PATH:$ANDROID_NDK_HOME
   # For gradle wrapper.
