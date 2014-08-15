@@ -1,3 +1,4 @@
+# vi: ft=sh
 #### Bash customization. ####
 export EDITOR="vim"
 export PS1="\w $ "
@@ -8,12 +9,11 @@ export GREP_OPTIONS='--color=auto'
 export LESS="-eirMX"
 # Enable X11 tunneling through ssh
 if [ -z $DISPLAY ]; then export DISPLAY=":0.0"; fi
+export P4DIFF=vimdiff p4 diff  # Use vimdiff for P4 diff.
 
 #### Add some paths to $PATH. ####
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASHRC_INCLUDES=$DIR/bashrc_includes
-export PATH=$PATH:$HOME/android_sdk/build-tools:$HOME/android_sdk/platform-tools
-export PATH=$PATH:$HOME/android_sdk/tools
 export PATH=$PATH:$DIR/scripts
 
 # A function to change title (works in iTerm).
@@ -27,6 +27,9 @@ source $BASHRC_INCLUDES/bash_history_customization.bash
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+# Ref: http://robertmuth.blogspot.com/2012/08/better-bash-scripting-in-15-minutes.html
+set -o nounset
 # Better auto complete.
 source $BASHRC_INCLUDES/better_autocomplete.bash
 # brew auto-completion (if brew is present).
@@ -39,16 +42,18 @@ source $BASHRC_INCLUDES/git-completion.bash
 source $BASHRC_INCLUDES/p4_autocomplete.bash
 # gradle auto-completion
 source $BASHRC_INCLUDES/gradle_autocomplete.bash
-export P4DIFF=vimdiff p4 diff  # Use vimdiff for P4 diff.
 # Maven (mvn) auto-completion.
 source $BASHRC_INCLUDES/maven-bash-completion/bash_completion.bash
 # Custom aliases to improve productivity.
 source $BASHRC_INCLUDES/custom_aliases.bash
 # Custom aliases for android reverse engineering.
 source $BASHRC_INCLUDES/android_reverse_engineering_related_aliases.bash
+# Source local aliases.
+touch $BASHRC_INCLUDES/local_aliases.bash && source $BASHRC_INCLUDES/local_aliases.bash
+set +o nounset
+
+# Keep these two files out of nounset (I will fix them some day).
 # An interesting bash prompt.
 source $BASHRC_INCLUDES/50_prompt.bash
 # Source 'z' - easy jumping around without providing full path names.
 source $BASHRC_INCLUDES/z/z.sh
-# Source local aliases.
-touch $BASHRC_INCLUDES/local_aliases.bash && source $BASHRC_INCLUDES/local_aliases.bash
