@@ -24,8 +24,12 @@ function title {
 #### Source more scripts. ####
 # Bash history customizations.
 source $BASHRC_INCLUDES/bash_history_customization.bash
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+
+# For homebrew on Mac.
+if [[ `uname -s` == "Darwin" ]]; then
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      . $(brew --prefix)/etc/bash_completion
+  fi
 fi
 
 # Ref: http://robertmuth.blogspot.com/2012/08/better-bash-scripting-in-15-minutes.html
