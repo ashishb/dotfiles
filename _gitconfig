@@ -1,3 +1,4 @@
+# vi: ft=gitconfig
 [core]
   editor = vim
   # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
@@ -16,6 +17,7 @@
 [push]
   default = simple
 [pull]
+	conflictstyle = diff3
 	rebase = true
 [alias]
   st = status
@@ -45,5 +47,3 @@
   changed = green
   untracked = cyan reverse
   branch = magenta
-
-
