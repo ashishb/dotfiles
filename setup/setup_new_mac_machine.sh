@@ -63,6 +63,15 @@ brew cask install wireshark
 brew cask install zipeg  # A zip file reader for Mac.
 # TODO(ashishb): Add cask for Gyazo.
 
+# Install fonts.
+brew tap caskroom/fonts
+fonts=(
+    font-source-code-pro
+    font-roboto
+)
+echo "Installing fonts..."
+brew cask install ${fonts[@]}
+
 # Android development and reverse engineering related installs.
 brew install android-sdk
 brew install android-ndk
