@@ -5,11 +5,17 @@ sudo easy_install pip
 sudo pip install pylint
 sudo pip install Pygments
 sudo pip install pdbpp  # A powerful improvement to pdb CLI.
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
+# Check for Homebrew,
+# Install if we don't have it
+if test ! $(which brew); then
+    echo "Installing homebrew..."
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+# Update homebrew recipes
+brew update
 brew install ack  # A replacement for grep.
-# Install latest version of Bash.
-brew install bash
+brew install bash # Install latest version of Bash.
 brew install bash-completion
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -84,3 +90,4 @@ brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb
 brew cask install jd-gui  # For java decompilation.
 brew cask install virtualbox  # Needed for GenyMotion.
 brew cask install genymotion  # Emulator for android.
+brew cleanup
