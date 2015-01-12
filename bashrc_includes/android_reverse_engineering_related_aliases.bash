@@ -28,8 +28,10 @@ fi
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
 alias printcert="keytool -printcert -file"
 alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore alias_name"
-alias android_screenshot="java -jar $HOME/tools/android/AndroidScreenCapture_1.1/AShot-1.1.jar"
-alias get_android_id='adb shell content query --uri content://settings/secure --projection name:value | grep android_id'
+alias android_screendump="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g'"
+alias android_get_id='adb shell content query --uri content://settings/secure --projection name:value | grep android_id'
+alias android_locale_change="adb shell am start -n 'com.android.settings/.Settings\$LocalePickerActivity'"
+
 function update_android_id(){
   # Update the android id.
   # TODO(ashishb): Add a different query for devices where sqlite3 is not present
@@ -44,3 +46,36 @@ function update_android_id(){
 
 # TODO(ashishb): Add jadx tool to the list.
 # https://github.com/skylot/jadx
+
+# Source: https://gist.github.com/tyvsmith/6056422
+function dex-method-count() {
+  cat $1 | head -c 92 | tail -c 4 | hexdump -e '1/4 "%d\n"'
+}
+ 
+function dex-method-count-by-package() {
+  dir=$(mktemp -d -t dex)
+  baksmali $1 -o $dir
+  for pkg in `find $dir/* -type d`; do
+    smali $pkg -o $pkg/classes.dex
+    count=$(dex-method-count $pkg/classes.dex)
+    name=$(echo ${pkg:(${#dir} + 1)} | tr '/' '.')
+    echo -e "$count\t$name"
+  done
+  rm -rf $dir
+}
+ 
+function dex-field-count(){
+  cat $1 | head -c 84 | tail -c 4 | hexdump -e '1/4 "%d\n"'
+}
+ 
+function dex-field-count-by-package() {
+  dir=$(mktemp -d -t dex)
+  baksmali $1 -o $dir
+  for pkg in `find $dir/* -type d`; do
+    smali $pkg -o $pkg/classes.dex
+    count=$(dex-field-count $pkg/classes.dex)
+    name=$(echo ${pkg:(${#dir} + 1)} | tr '/' '.')
+    echo -e "$count\t$name"
+  done
+  rm -rf $dir
+}
