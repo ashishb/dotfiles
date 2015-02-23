@@ -46,6 +46,7 @@ brew install brew-cask
 brew tap homebrew/binary
 
 # Useful OS X softwares.
+brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
 # brew cask install bartender  # Clutter control from menu bar.
 brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
 # Use long press cmd button on any mac app to see shortcuts.
