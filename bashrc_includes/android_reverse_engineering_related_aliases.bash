@@ -25,7 +25,7 @@ else
   alias jd-gui="$HOME/AndroidTools/jd-gui/jd-gui"
 fi
 
-alias burp="java -jar $HOME/Tools/burpsuite_free_v1.5.jar"
+alias burp="java -jar $HOME/Tools/burpsuite_free_v1.6.jar"
 alias printcert="keytool -printcert -file"
 alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore alias_name"
 alias android_screendump="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g'"
