@@ -41,8 +41,7 @@ brew tap raggi/ale && brew install openssl-osx-ca
 # Allows generation from notification from command line (not that useful).
 # brew install terminal-notifier
 # brew-cask converts brew into a package manager for mac packages.
-brew tap phinze/cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 brew tap homebrew/binary
 
 # Useful OS X softwares.
