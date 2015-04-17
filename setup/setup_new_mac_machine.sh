@@ -79,7 +79,7 @@ echo "Installing fonts..."
 brew cask install ${fonts[@]}
 
 # Android development and reverse engineering related installs.
-brew install android-sdk
+brew install android-sdk && android update sdk --no-ui --filter 'platform-tools'
 brew install android-ndk
 brew install ant  # For building android projects.
 brew install apktool
