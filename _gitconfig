@@ -10,10 +10,21 @@
 	email = ashishbhatia.ab@gmail.com
 [diff]
 	mnemonicprefix = true
+	tool = p4mergetool
+[difftool "p4mergetool"]
+    prompt = false
+	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
+[difftool]
+	prompt = false
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
-  tool = vimdiff
+  tool = p4mergetool
+[mergetool "p4mergetool"]
+	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustExitCode = false
+[mergetool]
+	keepBackup = false
 [grep]
   extendRegexp = true
   lineNumber = true
