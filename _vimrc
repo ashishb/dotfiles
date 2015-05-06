@@ -120,6 +120,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indentLine_color_light = 1
 Bundle "airblade/vim-gitgutter"
+let g:gitgutter_max_signs=10000
 " Fix for gitgutter on solarized theme
 " https://github.com/airblade/vim-gitgutter/issues/164
 highlight clear SignColumn
@@ -129,14 +130,16 @@ highlight GitGutterDelete ctermfg=red
 highlight GitGutterChangeDelete ctermfg=yellow
 " Commented since none of this seems to work for now.
 " " For android development.
+" Robo is probably obsolete and broken.
 " Bundle "robo"
 " Bundle "bpowell/vim-android"
 " "Added by android-vim:
 " set tags+=/Users/ashishbhatia/.vim/tags
-Bundle 'vim-scripts/javacomplete'
+" Bundle 'vim-scripts/javacomplete'
 " autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 " let g:SuperTabDefaultCompletionType = 'context'
-autocmd Filetype java setlocal omnifunc=javacomplete#CompleteParamsInfo
+" autocmd Filetype java setlocal omnifunc=javacomplete#CompleteParamsInfo
+" setlocal completefunc=javacomplete#CompleteParamsInfo 
 Bundle "akhaku/vim-java-unused-imports"
 " JSON syntax coloring.
 au BufNewFile,BufRead *.json set filetype=json
@@ -148,3 +151,15 @@ Bundle "tpope/vim-markdown"
 Bundle "vim-scripts/groovy.vim"
 " gradle syntax highlighting
 au BufNewFile,BufRead *.gradle set filetype=groovy
+" aidl syntax highlighting
+au BufNewFile,BufRead *.aidl set filetype=java 
+" Highlight trailing whitespace.
+highlight ExtraWhitespace ctermbg=red guibg=red
+" let g:vjde_completion_key='<c-space>' 
+" let g:vjde_install_path='/Users/ashishb/src/dotfiles/_vim/bundle/Vim-JDE/'
+" Bundle "Vim-JDE"
+" Bundle "Valloric/YouCompleteMe"
+Bundle "naseer/logcat"
+au BufNewFile,BufRead *.logcat set filetype=logcat
+au FileType gitcommit set tw=72
+au FileType gitcommit set spell
