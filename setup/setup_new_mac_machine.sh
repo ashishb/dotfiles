@@ -43,6 +43,8 @@ brew tap raggi/ale && brew install openssl-osx-ca
 # brew-cask converts brew into a package manager for mac packages.
 brew install caskroom/cask/brew-cask
 brew tap homebrew/binary
+# Unstable softwares, right from HEAD of some other repo.
+brew tap brew homebrew/homebrew-head-only
 
 # Useful OS X softwares.
 brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
