@@ -18,6 +18,9 @@ set clipboard=unnamed
 " show context above/below cursorline.
 set scrolloff=3
 syntax on
+" The new regex engine crashes with syntax on, force old engine for now.
+" https://www.reddit.com/r/vim/comments/22cxmp/vim_74_crashes_when_syntax_is_turned_on/cglpo5u
+set regexpengine=1
 " watch for file changes
 set autoread
 filetype indent plugin on
@@ -85,8 +88,10 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+" Disable SearchComplete - it is buggy and interferes with ability to arrow
+" up/down the search histroy.
 " Enable tab based auto-completion in search command.
-Bundle "SearchComplete"
+" Bundle "SearchComplete"
 " Shows the yanks with YRshow command.
 Bundle "YankRing.vim"
 " Allows arbitrary navigation using \\w-followed-by-highlighted-char.
