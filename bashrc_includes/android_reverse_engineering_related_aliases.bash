@@ -25,6 +25,7 @@ else
   alias jd-gui="$HOME/AndroidTools/jd-gui/jd-gui"
 fi
 
+export ANDROID_HVPROTO=ddm  # For Hierarchy viewer
 alias burp="java -jar $HOME/Tools/burpsuite_free_v1.6.jar"
 alias printcert="keytool -printcert -file"
 alias signapk="jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore alias_name"
