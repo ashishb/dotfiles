@@ -52,6 +52,8 @@ brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
 brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
 # Use long press cmd button on any mac app to see shortcuts.
 brew cask install cheatsheet
+# Offline documentation browser
+brew cask install dash
 brew cask install google-chrome
 brew cask install instabridge  # Wireless password manager.
 brew cask install iterm2
