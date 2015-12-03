@@ -166,5 +166,5 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 " Bundle "Valloric/YouCompleteMe"
 Bundle "naseer/logcat"
 au BufNewFile,BufRead *.logcat set filetype=logcat
-au FileType gitcommit set tw=72
+Bundle "tpope/vim-git"
 au FileType gitcommit set spell
