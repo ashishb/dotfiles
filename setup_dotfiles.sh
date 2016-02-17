@@ -39,5 +39,11 @@ ln -s $DIR/_inputrc ~/.inputrc
 echo "Overwriting up $HOME/.gitconfig"
 echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig
 
+FILE="$HOME/.gradle/gradle.properties"
+echo "Overwriting $FILE"
+mkdir $HOME/.gradle
+ln -s $DIR/gradle.properties $FILE
+
+
 echo "Configuring global gitignore file"
 git config --global core.excludesfile $DIR/_gitignore
