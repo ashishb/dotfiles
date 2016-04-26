@@ -39,8 +39,8 @@ HOMEBREW_NO_ANALYTICS=1
 set -o nounset
 # Better auto complete.
 source $BASHRC_INCLUDES/better_autocomplete.bash
-# brew auto-completion (if brew is present).
-command brew help 1>/dev/null 2>&1 && source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+# Not required anymore - brew auto-completion (if brew is present).
+# command brew help 1>/dev/null 2>&1 && source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 # adb auto-completion.
 source $BASHRC_INCLUDES/adb.bash
 # Disable this for now, it is causing terminal to hang
