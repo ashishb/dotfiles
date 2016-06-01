@@ -33,6 +33,7 @@ alias android_screendump="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g'"
 alias android_get_id='adb shell content query --uri content://settings/secure --projection name:value | grep android_id'
 alias android_locale_change="adb shell am start -n 'com.android.settings/.Settings\$LocalePickerActivity'"
 alias android_dev_options="adb shell am start -n com.android.settings/.DevelopmentSettings"
+alias adbt="adb logcat -v time"
 
 function update_android_id(){
   # Update the android id.
