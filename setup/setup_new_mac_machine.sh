@@ -55,22 +55,24 @@ brew cask install cheatsheet
 # Offline documentation browser
 brew cask install dash
 brew cask install google-chrome
+brew cask install helium  # Web browser on top of all other windows
 brew cask install instabridge  # Wireless password manager.
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
-brew cask install kindle  # Kindle reader for Mac.
-brew cask install lightpaper  # Mark-down editor.
-brew cask install music-manager  # Google music manager for OS X.
-brew cask install radiant-player  # Unofficial native app for Google Music.
-brew cask install quicksilver # Quicksilver is better than Spotlight.
+brew cask install kindle  # Kindle reader
+brew cask install lightpaper  # Mark-down editor
+brew cask install music-manager  # Google music manager
+brew cask install radiant-player  # Unofficial native app for Google Music
+brew cask install quicksilver # Quicksilver is better than Spotlight
 brew cask install skype
 # This does not look as useful as I expected.
-# brew cask install slate   # XMonand like window manager for Mac.
-brew cask install sophos-anti-virus-home-edition  # Free AV protection for Mac.
-brew cask install spotify  # An amazing music streaming service.
-brew cask install xquartz  # For running X server based apps on Mac.
+# brew cask install slate   # XMonand like window manager
+brew cask install sophos-anti-virus-home-edition  # Free AV protection
+brew cask install spectacle  # Window manager
+brew cask install spotify  # An amazing music streaming service
+brew cask install xquartz  # For running X server based apps
 brew cask install wireshark
-brew cask install zipeg  # A zip file reader for Mac.
+brew cask install zipeg  # A zip file reader
 # TODO(ashishb): Add cask for Gyazo.
 
 # Install fonts.
