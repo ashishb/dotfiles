@@ -35,6 +35,9 @@ fi
 # Disable homrew analytics (https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md)
 HOMEBREW_NO_ANALYTICS=1
 
+# Hide Java icon (https://bia.is/android-dev-tip-hide-that-annoying-java-icon/)
+export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
+
 # Ref: http://robertmuth.blogspot.com/2012/08/better-bash-scripting-in-15-minutes.html
 set -o nounset
 # Better auto complete.
