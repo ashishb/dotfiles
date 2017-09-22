@@ -3,10 +3,10 @@ if [ "$(uname)" == "Darwin" ]; then
   alias jd-gui="open -a jd-gui"
   # These are for compiling native android code.
   # Based on brew installs of android-sdk and android-ndk.
-  export ANDROID_SDK_HOME=`brew --prefix android-sdk`
+  export ANDROID_SDK_HOME=`echo $(brew --cellar)/android-sdk`
   # Gradle needs this.
   export ANDROID_HOME=${ANDROID_SDK_HOME}
-  export ANDROID_NDK_HOME=`brew --prefix android-ndk`
+  export ANDROID_NDK_HOME=`echo $(brew --cellar)/android-ndk`
   export PATH=$PATH:$ANDROID_NDK_HOME
   # For gradle wrapper.
   export PATH=$PATH:$ANDROID_SDK_HOME/tools/templates/gradle/wrapper
