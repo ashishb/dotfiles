@@ -17,7 +17,7 @@ brew update
 brew install ack  # A replacement for grep.
 brew install bash # Install latest version of Bash.
 brew install bash-completion
-# Install GNU core utilities (those that come with OS X are outdated)
+# Install GNU core utilities (those that come with macOS are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
 brew install ctags
@@ -46,7 +46,7 @@ brew tap homebrew/binary
 # Unstable softwares, right from HEAD of some other repo.
 brew tap brew homebrew/homebrew-head-only
 
-# Useful OS X softwares.
+# Useful macOS softwares.
 brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
 # brew cask install bartender  # Clutter control from menu bar.
 brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
