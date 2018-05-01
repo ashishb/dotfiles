@@ -102,4 +102,7 @@ brew cask install virtualbox  # Needed for GenyMotion.
 brew cask install genymotion  # Emulator for android.
 brew cask install battery-time-remaining
 # Create a cask for http://froyosoft.com/soundbooster.php
+# Create a cask for xtype
+# http://mac.softpedia.com/get/Utilities/Presto-app4mac.shtml - a free and good text auto-expander for Mac
+brew cask install pycharm-ce
 brew cleanup
