@@ -47,26 +47,28 @@ brew tap homebrew/binary
 brew tap brew homebrew/homebrew-head-only
 
 # Useful OS X softwares.
+brew cask install google-chrome 
 brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
 # brew cask install bartender  # Clutter control from menu bar.
-brew cask install bettertouchtool  # A tool for adding shortcuts to apps.
-# Use long press cmd button on any mac app to see shortcuts.
-brew cask install cheatsheet
-# Offline documentation browser
-brew cask install dash
+# brew cask install bettertouchtool  # A tool for adding shortcuts to apps. I use Spectacle now.
+# brew cask install cheatsheet # Use long press cmd button on any mac app to see shortcuts. I don't use this anymore.
+# brew cask install dash # Offline documentation browser (I don't use it anymore)
 brew cask install google-chrome
+brew cask install google-backup-and-sync  # New name for Google Drive
 brew cask install helium  # Web browser on top of all other windows
 brew cask install instabridge  # Wireless password manager.
+brew cask install caskroom/cask/iterm2 
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
 brew cask install kindle  # Kindle reader
 brew cask install lightpaper  # Mark-down editor
 brew cask install music-manager  # Google music manager
 brew cask install radiant-player  # Unofficial native app for Google Music
-brew cask install quicksilver # Quicksilver is better than Spotlight
+# brew cask install quicksilver # Quicksilver is better than Spotlight. I use alfred now.
+brew cask install alfred
 brew cask install skype
 # This does not look as useful as I expected.
-# brew cask install slate   # XMonand like window manager
+# brew cask install slate   # XMonand like window manager. I prefer spectacle now.
 brew cask install sophos-anti-virus-home-edition  # Free AV protection
 brew cask install spectacle  # Window manager
 brew cask install spotify  # An amazing music streaming service
@@ -85,15 +87,18 @@ echo "Installing fonts..."
 brew cask install ${fonts[@]}
 
 # Android development and reverse engineering related installs.
-brew cask install android-sdk && android update sdk --no-ui --filter 'platform-tools'
-brew cask install android-ndk
-brew install ant  # For building android projects.
+brew cask install android-studio
+# brew cask install android-sdk && android update sdk --no-ui --filter 'platform-tools' # Not required anymore since they are part of Android Studio.
+# brew cask install android-ndk # Not required anymore since they are part of Android Studio.
+# brew install ant  # For building android projects. Not required anymore, since Android uses gradle.
 brew install apktool
 brew install dex2jar  # For android reverse engineering.
 # Some day, this formula will make it into homebrew repo,
 # till then refer the file directly.
 brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb
-brew cask install jd-gui  # For java decompilation.
+brew install caskroom/cask/jd-gui # For java decompilation.
 brew cask install virtualbox  # Needed for GenyMotion.
 brew cask install genymotion  # Emulator for android.
+brew cask install battery-time-remaining
+# Create a cask for http://froyosoft.com/soundbooster.php
 brew cleanup
