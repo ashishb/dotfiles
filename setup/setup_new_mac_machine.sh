@@ -69,7 +69,8 @@ brew cask install alfred
 brew cask install skype
 # This does not look as useful as I expected.
 # brew cask install slate   # XMonand like window manager. I prefer spectacle now.
-brew cask install sophos-anti-virus-home-edition  # Free AV protection
+# brew cask install sophos-anti-virus-home-edition  # Free Anti-virus protection. Cask is not working anymore.
+brew cask install avast-security  # Free Anti-virus protection
 brew cask install spectacle  # Window manager
 brew cask install spotify  # An amazing music streaming service
 brew cask install xquartz  # For running X server based apps
