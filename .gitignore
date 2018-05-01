@@ -25,5 +25,7 @@ _vim/bundle/vim-markdown/
 _vim/bundle/vim-protobuf/
 _vim/bundle/vim-snipmate/
 _vim/bundle/vim-snippets/
+_vim/bundle/logcat/
+_vim/bundle/vim-git/
 bashrc_includes/local_aliases.bash
 _sshconfig
