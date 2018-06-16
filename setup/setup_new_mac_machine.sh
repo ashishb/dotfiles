@@ -55,7 +55,7 @@ brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
 # brew cask install dash # Offline documentation browser (I don't use it anymore)
 brew cask install google-chrome
 brew cask install google-backup-and-sync  # New name for Google Drive
-brew cask install helium  # Web browser on top of all other windows
+brew cask install jadengeller-helium  # Web browser on top of all other windows
 brew cask install instabridge  # Wireless password manager.
 brew cask install caskroom/cask/iterm2 
 brew cask install iterm2
@@ -89,6 +89,7 @@ brew cask install ${fonts[@]}
 
 # Android development and reverse engineering related installs.
 brew cask install android-studio
+brew install pidcat  # An amazing alternative to logcat
 # brew cask install android-sdk && android update sdk --no-ui --filter 'platform-tools' # Not required anymore since they are part of Android Studio.
 # brew cask install android-ndk # Not required anymore since they are part of Android Studio.
 # brew install ant  # For building android projects. Not required anymore, since Android uses gradle.
