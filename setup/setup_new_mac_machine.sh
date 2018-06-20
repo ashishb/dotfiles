@@ -27,7 +27,8 @@ brew install findutils
 brew install gibo
 brew install hexedit
 brew install imagemagick
-brew install lighthttpd  # Needed for running "git instaweb".
+# This is not available anymore.
+# brew install lighthttpd  # Needed for running "git instaweb".
 brew install nmap
 brew install ssh-copy-id  # Easy way to set up key based login.
 # Install sshpass (unofficial since homebrew admins won't allow this formula in
@@ -40,11 +41,17 @@ brew install wget
 brew tap raggi/ale && brew install openssl-osx-ca
 # Allows generation from notification from command line (not that useful).
 # brew install terminal-notifier
+
+# This is not required anymore as per https://github.com/Homebrew/homebrew-core/issues/131
 # brew-cask converts brew into a package manager for mac packages.
-brew install caskroom/cask/brew-cask
-brew tap homebrew/binary
+# brew install caskroom/cask/brew-cask
+
+# Deprecated since all formulae has been migrated
+# brew tap homebrew/binary
+
+# Deprecated since all formulae has been migrated
 # Unstable softwares, right from HEAD of some other repo.
-brew tap brew homebrew/homebrew-head-only
+# brew tap brew homebrew/homebrew-head-only
 
 # Useful OS X softwares.
 brew cask install google-chrome 
