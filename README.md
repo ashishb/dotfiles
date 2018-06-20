@@ -24,5 +24,29 @@ Some config files
 
 11. `bashrc_includes` - contains several bash improvements (git friendly prompt, adb auto completion, p4 auto completion, git auto completion, android reverse engineering aliases etc.)
 
+## Usage
 
+### For setting up Mac OS:
 
+```bash
+git clone https://github.com/ashishb/dotfiles && \
+cd dotfiles && \
+git submodule update --init && \
+bash setup_dotfiles.sh && \
+bash setup/setup_new_mac_machine.sh && \
+bash setup/_macos && \
+vim -c VundleUpdate
+```
+
+### For setting up GNU/Linux:
+
+```bash
+git clone https://github.com/ashishb/dotfiles && \
+cd dotfiles && \
+git submodule update --init && \
+bash setup_dotfiles.sh && \
+bash setup/setup_new_ubuntu_machine.sh && \
+vim -c VundleUpdate`
+```
+
+Note: My GNU/Linux setup script is definitely stale since I have not using GNU/Linux for a while.
