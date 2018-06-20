@@ -61,7 +61,7 @@ brew cask install caskroom/cask/iterm2
 brew cask install iterm2
 brew cask install java  # Latest version of Sun java.
 brew cask install kindle  # Kindle reader
-brew cask install lightpaper  # Mark-down editor
+brew cask install macdown  # Mark-down editor
 brew cask install music-manager  # Google music manager
 brew cask install radiant-player  # Unofficial native app for Google Music
 # brew cask install quicksilver # Quicksilver is better than Spotlight. I use alfred now.
