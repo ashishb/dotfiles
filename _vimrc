@@ -65,7 +65,8 @@ cnoremap sudow w !sudo tee % >/dev/null
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " Use airline (powerline installation is weird and rarely works).
-Bundle 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Python auto-completion plugin.
 Bundle 'davidhalter/jedi-vim'
 let g:jedi#popup_on_dot = 0
@@ -168,3 +169,14 @@ Bundle "naseer/logcat"
 au BufNewFile,BufRead *.logcat set filetype=logcat
 Bundle "tpope/vim-git"
 au FileType gitcommit set spell
+Plugin 'jparise/vim-graphql'
+
+Plugin 'udalov/kotlin-vim'
+au BufNewFile,BufRead *.kt set filetype=kotlin
+au BufNewFile,BufRead *.kts set filetype=kotlin
+
+" Ignore whitespaces in vimdiff
+if &diff
+    " diff mode
+    set diffopt+=iwhite
+endif
