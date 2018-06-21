@@ -36,8 +36,11 @@ ln -s $DIR/_sshconfig ~/.ssh/config
 echo "Overwriting $HOME/.inpurtc"
 ln -s $DIR/_inputrc ~/.inputrc
 
-echo "Overwriting up $HOME/.gitconfig"
+echo "Overwriting $HOME/.gitconfig"
 echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig
+
+echo "Appending $HOME/.hgrc"
+echo "%include $DIR/_hgrc" >> $HOME/.hgrc
 
 FILE="$HOME/.gradle/gradle.properties"
 echo "Overwriting $FILE"
