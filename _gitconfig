@@ -7,7 +7,7 @@
   whitespace = space-before-tab,indent-with-non-tab,trailing-space
 [user]
 	name = Ashish Bhatia
-	email = ashishbhatia.ab@gmail.com
+	email = ashishb@ashishb.net
 [diff]
 	mnemonicprefix = true
 	tool = p4mergetool
