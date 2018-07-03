@@ -55,12 +55,12 @@ brew tap raggi/ale && brew install openssl-osx-ca
 
 # Useful OS X softwares.
 brew cask install google-chrome 
-brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
+# Too bulky to use, install it only when required.
+# brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
 # brew cask install bartender  # Clutter control from menu bar.
 # brew cask install bettertouchtool  # A tool for adding shortcuts to apps. I use Spectacle now.
 # brew cask install cheatsheet # Use long press cmd button on any mac app to see shortcuts. I don't use this anymore.
 # brew cask install dash # Offline documentation browser (I don't use it anymore)
-brew cask install google-chrome
 brew cask install google-backup-and-sync  # New name for Google Drive
 brew cask install jadengeller-helium  # Web browser on top of all other windows
 brew cask install instabridge  # Wireless password manager.
@@ -71,19 +71,27 @@ brew cask install kindle  # Kindle reader
 brew cask install macdown  # Mark-down editor
 brew cask install music-manager  # Google music manager
 brew cask install radiant-player  # Unofficial native app for Google Music
-# brew cask install quicksilver # Quicksilver is better than Spotlight. I use alfred now.
+# I moved to Alfred. Alfred is better than QuickSilver.
+# brew cask install quicksilver # Quicksilver is better than Spotlight. 
 brew cask install alfred
 brew cask install skype
-# This does not look as useful as I expected.
-# brew cask install slate   # XMonand like window manager. I prefer spectacle now.
-# brew cask install sophos-anti-virus-home-edition  # Free Anti-virus protection. Cask is not working anymore.
-brew cask install avast-security  # Free Anti-virus protection
+# I prefer spectacle now.
+# brew cask install slate   # XMonand like window manager. 
 brew cask install spectacle  # Window manager
+# Cask is not working anymore. I moved to avast
+# brew cask install sophos-anti-virus-home-edition  # Free Anti-virus protection
+brew cask install avast-security  # Free Anti-virus protection
 brew cask install spotify  # An amazing music streaming service
 brew cask install xquartz  # For running X server based apps
 brew cask install wireshark
 brew cask install zipeg  # A zip file reader
-# TODO(ashishb): Add cask for Gyazo.
+# TODO(ashishb): Add cask for Gyazo, an app for taking and uploading screenshots.
+
+brew cask install battery-time-remaining
+# Create a cask for http://froyosoft.com/soundbooster.php
+brew cask install pycharm-ce
+# TODO(ashishb) Create a cask for xtype
+# http://mac.softpedia.com/get/Utilities/Presto-app4mac.shtml - a free and good text auto-expander for Mac
 
 # Install fonts.
 brew tap caskroom/fonts
@@ -97,20 +105,18 @@ brew cask install ${fonts[@]}
 # Android development and reverse engineering related installs.
 brew cask install android-studio
 brew install pidcat  # An amazing alternative to logcat
-# brew cask install android-sdk && android update sdk --no-ui --filter 'platform-tools' # Not required anymore since they are part of Android Studio.
+# Not required anymore since they are part of Android Studio.
+# brew cask install android-sdk && android update sdk --no-ui --filter 'platform-tools' 
 # brew cask install android-ndk # Not required anymore since they are part of Android Studio.
-# brew install ant  # For building android projects. Not required anymore, since Android uses gradle.
-brew install apktool
+# Not required anymore, since Android uses gradle.
+# brew install ant  # For building android projects.
+brew install apktool  # For android reverse engineering.
 brew install dex2jar  # For android reverse engineering.
 # Some day, this formula will make it into homebrew repo,
 # till then refer the file directly.
-brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb
+brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb  # For java decompilation.
 brew install caskroom/cask/jd-gui # For java decompilation.
-brew cask install virtualbox  # Needed for GenyMotion.
-brew cask install genymotion  # Emulator for android.
-brew cask install battery-time-remaining
-# Create a cask for http://froyosoft.com/soundbooster.php
-# Create a cask for xtype
-# http://mac.softpedia.com/get/Utilities/Presto-app4mac.shtml - a free and good text auto-expander for Mac
-brew cask install pycharm-ce
+# Android emulator is good enough now, therefore, I won't be using genymotion anymore.
+# brew cask install virtualbox  # Needed for GenyMotion.
+# brew cask install genymotion  # Emulator for android.
 brew cleanup
