@@ -1,0 +1,6 @@
+[alias]
+bm = bookmarks
+st = status
+ci = commit
+co = checkout
+lg = log -p
