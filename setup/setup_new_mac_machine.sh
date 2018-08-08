@@ -21,6 +21,8 @@ brew install bash-completion
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
 brew install ctags
+# This is useful for extracting EXIF data out of images
+brew install exiftool
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 # .gitignore boilerplate code (example: "gibo python textmate").
