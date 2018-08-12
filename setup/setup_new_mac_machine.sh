@@ -38,6 +38,8 @@ brew install ssh-copy-id  # Easy way to set up key based login.
 brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
 brew install vim  # Better than default vim.
 brew install wget
+brew install jq # For JSON parsing in shell
+
 # Fix:
 # https://stackoverflow.com/questions/19215590/why-cant-i-install-any-gems-on-my-mac
 brew tap raggi/ale && brew install openssl-osx-ca
