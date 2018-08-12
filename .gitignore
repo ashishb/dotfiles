@@ -27,5 +27,9 @@ _vim/bundle/vim-snipmate/
 _vim/bundle/vim-snippets/
 _vim/bundle/logcat/
 _vim/bundle/vim-git/
+_vim/bundle/kotlin-vim/
+_vim/bundle/vim-airline-themes/
+_vim/bundle/vim-graphql/
+_vim/bundle/vim-solidity/
 bashrc_includes/local_aliases.bash
 _sshconfig
