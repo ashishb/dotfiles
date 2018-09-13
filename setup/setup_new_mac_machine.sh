@@ -85,7 +85,8 @@ brew cask install spectacle  # Window manager
 # Cask is not working anymore. I moved to avast
 # brew cask install sophos-anti-virus-home-edition  # Free Anti-virus protection
 brew cask install avast-security  # Free Anti-virus protection
-brew cask install spotify  # An amazing music streaming service
+# Not using it anymore.
+# brew cask install spotify  # An amazing music streaming service
 brew cask install xquartz  # For running X server based apps
 brew cask install wireshark
 brew cask install zipeg  # A zip file reader
