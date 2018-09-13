@@ -1,7 +1,7 @@
 set tabstop=2
 " Sets the text width in the file to 80 characters.
 " Leads to automatic line breaks after 80 characters.
-set textwidth=80
+" set textwidth=80
 set shiftwidth=2
 "This is for python code.
 set foldmethod=indent
@@ -24,7 +24,8 @@ set regexpengine=1
 " watch for file changes
 set autoread
 filetype indent plugin on
-match ErrorMsg '\%>80v.\+'
+" Show redline beyond 80 characters
+" match ErrorMsg '\%>80v.\+'
 "Show matching parentheses
 set showmatch
 " Use F2 to toggle paste mode.
@@ -110,7 +111,7 @@ Bundle "altercation/vim-colors-solarized"
 " solarized looks good on Mac (not on Linux)
 let s:uname = system("echo -n \"$(uname)\"")
 if s:uname == "Darwin"
-  colorscheme solarized
+  "colorscheme solarized
 else
   colorscheme default
 endif
@@ -120,7 +121,7 @@ Bundle 'Yggdroot/indentLine'
 Bundle "eventualbuddha/vim-protobuf"
 Bundle "rmanalan/jshint.vim"
 Bundle "pangloss/vim-javascript"
-Bundle "nathanaelkane/vim-indent-guides"
+" Bundle "nathanaelkane/vim-indent-guides"
 let g:indentLine_char = '|'
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
