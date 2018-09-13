@@ -70,7 +70,6 @@ brew cask install jadengeller-helium  # Web browser on top of all other windows
 brew cask install instabridge  # Wireless password manager.
 brew cask install caskroom/cask/iterm2 
 brew cask install iterm2
-brew cask install java  # Latest version of Sun java.
 brew cask install kindle  # Kindle reader
 brew cask install macdown  # Mark-down editor
 brew cask install music-manager  # Google music manager
@@ -107,6 +106,8 @@ fonts=(
 echo "Installing fonts..."
 brew cask install ${fonts[@]}
 
+# Android tools need Java 8 to run.
+brew cask install java8
 # Android development and reverse engineering related installs.
 brew cask install android-studio
 brew install pidcat  # An amazing alternative to logcat
