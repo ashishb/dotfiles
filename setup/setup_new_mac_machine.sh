@@ -16,7 +16,12 @@ if test ! $(which brew); then
 brew update
 brew install ack  # A replacement for grep.
 brew install bash # Install latest version of Bash.
-brew install bash-completion
+# Configure the new version to be default
+# Source: https://github.com/mathiasbynens/dotfiles/issues/544#issuecomment-104935642
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash
+# Install new version of bash completion for this
+brew install bash-completion@2
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
