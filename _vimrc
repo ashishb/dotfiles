@@ -183,6 +183,8 @@ au BufNewFile,BufRead *.jad set filetype=java
 " Solidity
 Plugin 'tomlion/vim-solidity'
 au BufNewFile,BufRead *.sol set filetype=solidity
+" Typescript
+Plugin 'leafgarland/typescript-vim'
 
 " Ignore whitespaces in vimdiff
 if &diff
