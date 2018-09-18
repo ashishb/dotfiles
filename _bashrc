@@ -55,6 +55,8 @@ source $BASHRC_INCLUDES/p4_autocomplete.bash
 source $BASHRC_INCLUDES/gradle_autocomplete.bash
 # Maven (mvn) auto-completion.
 source $BASHRC_INCLUDES/maven-bash-completion/bash_completion.bash
+# Yarn auto-completion
+source $BASHRC_INCLUDES/yarn-completion/yarn-completion.bash
 # Custom aliases to improve productivity.
 source $BASHRC_INCLUDES/custom_aliases.bash
 # Custom aliases for android reverse engineering.
