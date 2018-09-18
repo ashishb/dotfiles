@@ -31,5 +31,6 @@ _vim/bundle/kotlin-vim/
 _vim/bundle/vim-airline-themes/
 _vim/bundle/vim-graphql/
 _vim/bundle/vim-solidity/
+_vim/bundle/typescript-vim/
 bashrc_includes/local_aliases.bash
 _sshconfig
