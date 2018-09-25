@@ -116,6 +116,8 @@ brew cask install java8
 # Android development and reverse engineering related installs.
 brew cask install android-studio
 brew install pidcat  # An amazing alternative to logcat
+# PNG compressor
+brew install zopfli
 # Not required anymore since they are part of Android Studio.
 # brew cask install android-sdk && android update sdk --no-ui --filter 'platform-tools' 
 # brew cask install android-ndk # Not required anymore since they are part of Android Studio.
