@@ -16,6 +16,7 @@ if test ! $(which brew); then
 brew update
 brew install ack  # A replacement for grep.
 brew install bash # Install latest version of Bash.
+brew install shellcheck  # Linter for shell scripts
 # Configure the new version to be default
 # Source: https://github.com/mathiasbynens/dotfiles/issues/544#issuecomment-104935642
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
@@ -33,6 +34,8 @@ brew install findutils
 # .gitignore boilerplate code (example: "gibo python textmate").
 brew install gibo
 brew install hexedit
+# Do I need this?
+# brew install jsonpp
 brew install imagemagick
 # This is not available anymore.
 # brew install lighthttpd  # Needed for running "git instaweb".
@@ -73,12 +76,12 @@ brew cask install google-chrome
 brew cask install google-backup-and-sync  # New name for Google Drive
 brew cask install jadengeller-helium  # Web browser on top of all other windows
 brew cask install instabridge  # Wireless password manager.
-brew cask install caskroom/cask/iterm2 
 brew cask install iterm2
 brew cask install kindle  # Kindle reader
 brew cask install macdown  # Mark-down editor
 brew cask install music-manager  # Google music manager
 brew cask install radiant-player  # Unofficial native app for Google Music
+brew cask install diffmerge  # File diffing GUI
 # I moved to Alfred. Alfred is better than QuickSilver.
 # brew cask install quicksilver # Quicksilver is better than Spotlight. 
 brew cask install alfred
@@ -128,7 +131,7 @@ brew install dex2jar  # For android reverse engineering.
 # Some day, this formula will make it into homebrew repo,
 # till then refer the file directly.
 brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb  # For java decompilation.
-brew install caskroom/cask/jd-gui # For java decompilation.
+brew cask install jd-gui # For java decompilation.
 # Android emulator is good enough now, therefore, I won't be using genymotion anymore.
 # brew cask install virtualbox  # Needed for GenyMotion.
 # brew cask install genymotion  # Emulator for android.
