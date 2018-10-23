@@ -185,6 +185,9 @@ Plugin 'tomlion/vim-solidity'
 au BufNewFile,BufRead *.sol set filetype=solidity
 " Typescript
 Plugin 'leafgarland/typescript-vim'
+au BufNewFile,BufRead *.ts set filetype=typescript
+au BufNewFile,BufRead *.tsx set filetype=typescript
+
 
 " Ignore whitespaces in vimdiff
 if &diff
