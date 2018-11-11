@@ -128,9 +128,8 @@ brew install zopfli
 # brew install ant  # For building android projects.
 brew install apktool  # For android reverse engineering.
 brew install dex2jar  # For android reverse engineering.
-# Some day, this formula will make it into homebrew repo,
-# till then refer the file directly.
-brew install https://raw2.github.com/lookfirst/homebrew-binary/master/jad.rb  # For java decompilation.
+brew install jadx  # Java decompiler
+brew cask install jad  # Java decompiler
 brew cask install jd-gui # For java decompilation.
 # Android emulator is good enough now, therefore, I won't be using genymotion anymore.
 # brew cask install virtualbox  # Needed for GenyMotion.
