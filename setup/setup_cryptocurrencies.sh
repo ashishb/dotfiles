@@ -2,6 +2,9 @@
 brew install golang
 # Parity (Ethereum client) is written in this
 brew install cmake rust
+# Solidity compiler
+brew tap ethereum/ethereum
+brew install solidity
 # Truffle for testing and deploying Solidity contracts
 npm install -g truffle
 # Web3 for Ethereum
