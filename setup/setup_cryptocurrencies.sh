@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
 # Google's Go Language
 brew install golang
 # Parity (Ethereum client) is written in this
