@@ -1,4 +1,4 @@
-# Dotfiles
+# Dotfiles [![](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)
 
 
 1. `setup_dotfiles.sh` - Automate the dotfiles setup with this one (Warning: the
@@ -49,4 +49,4 @@ bash setup/setup_new_ubuntu_machine.sh && \
 vim -c VundleUpdate`
 ```
 
-Note: My GNU/Linux setup script is definitely stale since I have not using GNU/Linux for a while.
+Note: My GNU/Linux setup script is stale since I have not using GNU/Linux for a while.
