@@ -16,6 +16,7 @@ npm install -g web3
 npm install -g solhint
 # Use Type script in lieu of Javascript for code maintainability
 npm install -g typescript
+npm install -g tslist  # Type script linter
 
 # brew install kubernetes-cli
 # brew install kubernetes-helm
