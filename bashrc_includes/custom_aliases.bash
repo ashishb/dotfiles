@@ -17,6 +17,27 @@ alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\
 # Usage: kotin_run foo.kt <args-list> to compile foo.kt into foo.kt.jar and run it with the optional <args-list>
 ktr () { kotlinc "$1" -include-runtime -d "$1".jar && java -jar "$1".jar "${@:2}"; }
 
+function ghurl()
+{
+  domain='http://github.com' &&
+  repo=$(git config --get remote.origin.url | cut -d: -f2 | cut -d. -f1) &&
+  # Fallback to master branch
+  remoteBranch=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || echo 'master') &&
+  # Remove origin prefix
+  remoteBranch=${remoteBranch#origin/} &&
+  currentDir=$PWD &&
+  gitTopLevel=$(git rev-parse --show-toplevel) &&
+  # Remove git base directory from the path.
+  pathRelativeToBaseRepo=${currentDir#${gitTopLevel}}/${1} &&
+  # echo Remote branch is ${remoteBranch} &&
+  # echo current Dir is ${currentDir} &&
+  # echo gitTopLevel is ${gitTopLevel} &&
+  # echo pathRelativeToBaseRepo is ${pathRelativeToBaseRepo}
+  url=${domain}/${repo}/tree/${remoteBranch}/${pathRelativeToBaseRepo} &&
+  # echo url is ${url} &&
+  open ${url}
+}
+
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]
 then
