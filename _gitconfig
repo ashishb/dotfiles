@@ -10,10 +10,9 @@
 	email = ashishb@ashishb.net
 [diff]
 	mnemonicprefix = true
-	tool = p4mergetool
-[difftool "p4mergetool"]
-    prompt = false
-	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
+  tool = diffmerge
+[difftool "diffmerge"]
+	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
 [merge]
@@ -41,6 +40,7 @@
   df = diff --color-words --word-diff-regex=.
   lg = log -p
   hist = log -20 --pretty=format:"%C(yellow)%h%Creset\\%C(green)%ar%C(cyan)%d\\ %Creset%s%C(yellow)\\ [%cn]" --graph --decorate --all
+  stashpullpop = !git stash && git pull origin master && git stash  pop
 [color]
   ui = auto
   branch = auto
