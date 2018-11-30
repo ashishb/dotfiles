@@ -17,10 +17,14 @@ alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\
 # Usage: kotin_run foo.kt <args-list> to compile foo.kt into foo.kt.jar and run it with the optional <args-list>
 ktr () { kotlinc "$1" -include-runtime -d "$1".jar && java -jar "$1".jar "${@:2}"; }
 
+# Usage: ghurl <filename>, will open the file on github.com. Respects branch name and repo name.
+# Filename can contain a fragment like "#L11" to highlight line 11 or "L22-L34" to hightlight from
+# line 22 to line 34.
 function ghurl()
 {
   domain='http://github.com' &&
-  repo=$(git config --get remote.origin.url | cut -d: -f2 | cut -d. -f1) &&
+  # Get the repo name and remove ".git" from the end
+  repo=$(git config --get remote.origin.url | cut -d: -f2 | rev | cut -d. -f2- | rev) &&
   # Fallback to master branch
   remoteBranch=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || echo 'master') &&
   # Remove origin prefix
