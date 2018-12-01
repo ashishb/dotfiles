@@ -21,3 +21,9 @@ npm install -g tslist  # Type script linter
 # brew install kubernetes-cli
 # brew install kubernetes-helm
 
+
+# Good places to learn
+# https://medium.com/coinmonks/an-analysis-of-a-couple-ethereum-honeypot-contracts-5c07c95b0a8d
+# https://chainshot.com
+# https://cryptozombies.io
+# https://capturetheether.com/
