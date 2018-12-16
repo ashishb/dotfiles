@@ -27,3 +27,13 @@ npm install -g tslist  # Type script linter
 # https://chainshot.com
 # https://cryptozombies.io
 # https://capturetheether.com/
+# https://github.com/OpenZeppelin/ethernaut
+
+# Debugger
+# https://medium.com/tenderly/how-to-debug-solidity-smart-contracts-with-tenderly-and-truffle-da995cfe098f
+
+# Pakala symbolic executor
+# https://www.palkeo.com/en/projets/ethereum/pakala.html
+
+# Attack tool
+# https://github.com/b-mueller/scrooge-mcetherface
