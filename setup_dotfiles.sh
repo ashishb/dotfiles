@@ -33,7 +33,7 @@ echo "source $DIR/_screenrc" > $HOME/.screenrc
 
 echo "Overwriting $HOME/.ssh/config"
 touch $DIR/_sshconfig
-mkdir $HOME/.ssh
+mkdir $HOME/.ssh || true
 ln -s $DIR/_sshconfig ~/.ssh/config
 
 echo "Overwriting $HOME/.inpurtc"
@@ -47,7 +47,7 @@ echo "%include $DIR/_hgrc" >> $HOME/.hgrc
 
 FILE="$HOME/.gradle/gradle.properties"
 echo "Overwriting $FILE"
-mkdir $HOME/.gradle
+mkdir $HOME/.gradle || true
 ln -s $DIR/gradle.properties $FILE
 
 

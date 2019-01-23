@@ -15,6 +15,7 @@ matrix:
     #   dist: trusty
     #   sudo: false
     #   script:
+    #     - set -e
     #     - bash setup_dotfiles.sh
     #     - bash setup/setup_new_ubuntu_machine.sh
     #     - vim -c VundleUpdate
@@ -23,6 +24,7 @@ matrix:
       os: osx
       sudo: false
       script:
+        - set -e
         - bash setup_dotfiles.sh
         - bash setup/setup_new_mac_machine.sh
         - bash setup/_macos
