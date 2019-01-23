@@ -3,6 +3,8 @@ set -euo pipefail
 
 # pip is not installed by default on mac.
 sudo easy_install pip
+# Upgrade pip to the latest version
+sudo pip install --upgrade pip
 sudo pip install pylint
 sudo pip install Pygments
 sudo pip install pdbpp  # A powerful improvement to pdb CLI.
@@ -12,7 +14,7 @@ sudo pip install pdbpp  # A powerful improvement to pdb CLI.
 if test ! $(which brew); then
     echo "Installing homebrew..."
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    fi
+fi
 # Update homebrew recipes
 brew update
 brew install ack  # A replacement for grep.
@@ -21,12 +23,17 @@ brew install shellcheck  # Linter for shell scripts
 # Configure the new version to be default
 # Source: https://github.com/mathiasbynens/dotfiles/issues/544#issuecomment-104935642
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-chsh -s /usr/local/bin/bash
+# This requires password and won't work on Travis CI
+# Source: https://docs.travis-ci.com/user/environment-variables/#default-environment-variables
+if test ! ${CI}; then
+    chsh -s /usr/local/bin/bash
+fi
 # Install new version of bash completion for this
 brew install bash-completion@2
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
+# coreutils is already installed on Travis CI. Don't fail if we fail to install this.
+brew install coreutils || true
 brew install ctags
 # This is useful for extracting EXIF data out of images
 brew install exiftool
@@ -44,9 +51,10 @@ brew install nmap
 brew install ssh-copy-id  # Easy way to set up key based login.
 # Install sshpass (unofficial since homebrew admins won't allow this formula in
 # the official repo).
-brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
+brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
 brew install vim  # Better than default vim.
-brew install wget
+# wget is already installed on Travis CI
+brew install wget || true
 brew install jq # For JSON parsing in shell
 
 # Fix:
@@ -66,6 +74,8 @@ brew tap raggi/ale && brew install openssl-osx-ca
 # Unstable softwares, right from HEAD of some other repo.
 # brew tap brew homebrew/homebrew-head-only
 
+brew tap caskroom/cask
+brew tap homebrew/cask-versions  # For Java 8
 # Useful OS X softwares.
 brew cask install google-chrome 
 # Too bulky to use, install it only when required.
@@ -75,8 +85,12 @@ brew cask install google-chrome
 # brew cask install cheatsheet # Use long press cmd button on any mac app to see shortcuts. I don't use this anymore.
 # brew cask install dash # Offline documentation browser (I don't use it anymore)
 brew cask install google-backup-and-sync  # New name for Google Drive
-brew cask install jadengeller-helium  # Web browser on top of all other windows
-brew cask install instabridge  # Wireless password manager.
+# # For some reason, this installation fails on Travis CI: https://travis-ci.org/ashishb/dotfiles/builds/483579495
+if test ! ${CI}; then
+    brew cask install instabridge  # Wireless password manager.
+fi
+# Great tool but the cask has been deleted - https://github.com/JadenGeller/Helium/issues/207
+# brew cask install jadengeller-helium  # Web browser on top of all other windows
 brew cask install iterm2
 brew cask install kindle  # Kindle reader
 brew cask install macdown  # Mark-down editor
@@ -100,7 +114,8 @@ brew cask install wireshark
 brew cask install zipeg  # A zip file reader
 # TODO(ashishb): Add cask for Gyazo, an app for taking and uploading screenshots.
 
-brew cask install battery-time-remaining
+# Not available anymore
+# brew cask install battery-time-remaining
 # Create a cask for http://froyosoft.com/soundbooster.php
 brew cask install pycharm-ce
 # TODO(ashishb) Create a cask for xtype
