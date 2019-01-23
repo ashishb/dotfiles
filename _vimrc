@@ -152,12 +152,17 @@ Bundle "akhaku/vim-java-unused-imports"
 au BufNewFile,BufRead *.json set filetype=json
 " Smali syntax coloring
 au BufNewFile,BufRead *.smali set filetype=smali
-Bundle "elzr/vim-json"
+" Disable for now, since it makes the syntax convoluted by hiding various
+" elements like double-quotes
+" Bundle "elzr/vim-json"
 Bundle "tpope/vim-markdown"
-" Groovy syntax highlighting
-Bundle "vim-scripts/groovy.vim"
-" gradle syntax highlighting
-au BufNewFile,BufRead *.gradle set filetype=groovy
+
+" Disable this since it is slow.
+" " Groovy syntax highlighting
+" Bundle "vim-scripts/groovy.vim"
+" " gradle syntax highlighting
+" au BufNewFile,BufRead *.gradle set filetype=groovy
+
 " aidl syntax highlighting
 au BufNewFile,BufRead *.aidl set filetype=java 
 " Highlight trailing whitespace.
