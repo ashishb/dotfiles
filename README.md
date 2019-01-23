@@ -35,7 +35,7 @@ git submodule update --init && \
 bash setup_dotfiles.sh && \
 bash setup/setup_new_mac_machine.sh && \
 bash setup/_macos && \
-vim -c VundleUpdate
+vim +BundleInstall +qall
 ```
 
 ### For setting up GNU/Linux:
@@ -46,7 +46,7 @@ cd dotfiles && \
 git submodule update --init && \
 bash setup_dotfiles.sh && \
 bash setup/setup_new_ubuntu_machine.sh && \
-vim -c VundleUpdate`
+vim +BundleInstall +qall
 ```
 
 Note: My GNU/Linux setup script is stale since I have not using GNU/Linux for a while.

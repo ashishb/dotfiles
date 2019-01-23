@@ -15,18 +15,20 @@ matrix:
     #   dist: trusty
     #   sudo: false
     #   script:
+    #     - set -e
     #     - bash setup_dotfiles.sh
     #     - bash setup/setup_new_ubuntu_machine.sh
-    #     - vim -c VundleUpdate
+    #     - vim +BundleInstall +qall
 
     - name: Test on Mac OS X
       os: osx
-      sudo: false
+      sudo: required
       script:
+        # - set -e
         - bash setup_dotfiles.sh
         - bash setup/setup_new_mac_machine.sh
-        - bash setup/_macos
-        - vim -c VundleUpdate
+        - sudo bash setup/_macos
+        - vim +BundleInstall +qall
 
 # Good .travis.yml files to learn from
 # https://github.com/ruboto/ruboto/blob/master/.travis.yml
