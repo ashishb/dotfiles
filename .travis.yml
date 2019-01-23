@@ -10,15 +10,15 @@ branches:
 matrix:
   include:
 
-    # - name: Test on GNU/Linux
-    #   os: linux
-    #   dist: trusty
-    #   sudo: false
-    #   script:
-    #     - set -e
-    #     - bash setup_dotfiles.sh
-    #     - bash setup/setup_new_ubuntu_machine.sh
-    #     - vim +BundleInstall +qall
+    - name: Test on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - bash setup_dotfiles.sh
+        - bash setup/setup_new_ubuntu_machine.sh
+        - vim +BundleInstall +qall
 
     - name: Test on Mac OS X
       os: osx
