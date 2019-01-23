@@ -39,11 +39,13 @@ function ghurl()
   # echo pathRelativeToBaseRepo is ${pathRelativeToBaseRepo}
   url=${domain}/${repo}/tree/${remoteBranch}/${pathRelativeToBaseRepo} &&
   # echo url is ${url} &&
-  open ${url}
+  open "${url}"
 }
 
+alias mypullrequests="gh pr --me --link"
+
 # Tree
-if [ ! -x "$(which tree 2>/dev/null)" ]
+if [ ! -x "$(command -v tree 2>/dev/null)" ]
 then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
@@ -53,7 +55,7 @@ command -v xsel 1>/dev/null &&
   alias pbpaste='xsel --clipboard --output'
 
 # Mac-specific settings.
-if [[ `uname -s` == "Darwin" ]]; then
+if [[ $(uname -s) == "Darwin" ]]; then
   # Lock the screen (when going away from keyboard)
   alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
   # Update everything.
