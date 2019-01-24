@@ -49,4 +49,4 @@ bash setup/setup_new_ubuntu_machine.sh && \
 vim +BundleInstall +qall
 ```
 
-Note: My GNU/Linux setup script is stale since I have not using GNU/Linux for a while.
+Note: My GNU/Linux setup scripts are stale since I have not used GNU/Linux in a while.
