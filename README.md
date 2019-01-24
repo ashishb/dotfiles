@@ -1,4 +1,4 @@
-# Dotfiles [![](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)
+# Dotfiles [![](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg) [![Build Status](https://img.shields.io/travis/ashishb/adb-enhanced/master.svg?label=Travis%20CI)](https://travis-ci.org/ashishb/adb-enhanced)
 
 
 1. `setup_dotfiles.sh` - Automate the dotfiles setup with this one (Warning: the
