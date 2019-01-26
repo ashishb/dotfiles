@@ -1,6 +1,3 @@
-if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-  . /usr/local/share/bash-completion/bash_completion
-fi
 # Show auto-completion on first tab (default is second tab).
 bind 'set show-all-if-ambiguous on'
 # No empty command completion.
@@ -34,3 +31,4 @@ _killall()
     return 0
 }
 complete -F _killall killall
+

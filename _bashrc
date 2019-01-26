@@ -40,6 +40,11 @@ HOMEBREW_CASK_OPTS=--no-quarantine
 # Hide Java icon (https://bia.is/android-dev-tip-hide-that-annoying-java-icon/)
 export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
 
+# Due to some issue, this produces "nospace: unbound variable" under `set -o nounset`.
+# Therefore, I have to put it outside that.
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
 # Ref: http://robertmuth.blogspot.com/2012/08/better-bash-scripting-in-15-minutes.html
 set -o nounset
 # Better auto complete.
