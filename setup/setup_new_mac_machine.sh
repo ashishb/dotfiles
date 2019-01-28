@@ -114,6 +114,8 @@ brew cask install wireshark
 brew cask install zipeg  # A zip file reader
 # TODO(ashishb): Add cask for Gyazo, an app for taking and uploading screenshots.
 
+# Battery health info. Not great but still good.
+brew cask install coconutbattery
 # Not available anymore
 # brew cask install battery-time-remaining
 # Create a cask for http://froyosoft.com/soundbooster.php
