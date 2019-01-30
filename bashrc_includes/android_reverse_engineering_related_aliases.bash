@@ -34,6 +34,9 @@ alias android_get_id='adb shell content query --uri content://settings/secure --
 alias android_locale_change="adb shell am start -n 'com.android.settings/.Settings\$LocalePickerActivity'"
 alias android_dev_options="adb shell am start -n com.android.settings/.DevelopmentSettings"
 alias adbt="adb logcat -v time"
+alias aapt="/usr/local/Caskroom/android-sdk/4333796/build-tools/27.0.3/aapt"
+alias aapt2="/usr/local/Caskroom/android-sdk/4333796/build-tools/27.0.3/aapt2"
+alias apksigner="/usr/local/Caskroom/android-sdk/4333796/build-tools/27.0.3/apksigner"
 
 function update_android_id(){
   # Update the android id.
