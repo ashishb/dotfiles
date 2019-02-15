@@ -28,6 +28,7 @@ npm install -g tslist  # Type script linter
 # https://cryptozombies.io
 # https://capturetheether.com/
 # https://github.com/OpenZeppelin/ethernaut
+# https://qed-it.com/2017/07/11/challenge-one-the-functionality-of-zk-snark - ZK Snarks
 
 # Debugger
 # https://medium.com/tenderly/how-to-debug-solidity-smart-contracts-with-tenderly-and-truffle-da995cfe098f
