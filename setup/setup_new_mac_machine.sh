@@ -133,7 +133,8 @@ echo "Installing fonts..."
 brew cask install ${fonts[@]}
 
 # Android tools need Java 8 to run.
-brew cask install java8
+# Source: https://github.com/microsoft/malmo/pull/817/
+brew cask install homebrew/cask-versions/adoptopenjdk8
 # Android development and reverse engineering related installs.
 brew cask install android-studio
 brew install pidcat  # An amazing alternative to logcat
