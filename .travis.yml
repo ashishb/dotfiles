@@ -22,9 +22,10 @@ matrix:
 
     - name: Test on Mac OS X
       os: osx
+      osx_image: xcode10.2
       sudo: required
       script:
-        - set -euo pipefail
+        - set -eo pipefail
         - bash setup_dotfiles.sh
         - bash setup/setup_new_mac_machine.sh
         - sudo bash setup/_macos
