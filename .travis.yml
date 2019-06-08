@@ -24,7 +24,7 @@ matrix:
       os: osx
       sudo: required
       script:
-        - set -eo pipefail
+        - set -euo pipefail
         - bash setup_dotfiles.sh
         - bash setup/setup_new_mac_machine.sh
         - sudo bash setup/_macos
