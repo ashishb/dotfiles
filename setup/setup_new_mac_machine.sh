@@ -84,6 +84,7 @@ brew cask install google-chrome
 # brew cask install bettertouchtool  # A tool for adding shortcuts to apps. I use Spectacle now.
 # brew cask install cheatsheet # Use long press cmd button on any mac app to see shortcuts. I don't use this anymore.
 # brew cask install dash # Offline documentation browser (I don't use it anymore)
+brew cask install selfcontrol  # To block certain websites for productivity
 brew cask install google-backup-and-sync  # New name for Google Drive
 # # For some reason, this installation fails on Travis CI: https://travis-ci.org/ashishb/dotfiles/builds/483579495
 if test ! ${CI}; then
