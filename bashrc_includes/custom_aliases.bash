@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Several custom aliases to improve productivity.
 # force X11 tunneling through ssh
 alias ssh='ssh -Y'
@@ -42,7 +43,8 @@ function ghurl()
   open "${url}"
 }
 
-alias mypullrequests="gh pr --me --link"
+alias myghpr="gh pr --me --link"
+alias myghissues="open https://github.com/issues/assigned"
 
 # Tree
 if [ ! -x "$(command -v tree 2>/dev/null)" ]
