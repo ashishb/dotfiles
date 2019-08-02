@@ -40,7 +40,8 @@
   df = diff --color-words --word-diff-regex=.
   lg = log -p
   hist = log -20 --pretty=format:"%C(yellow)%h%Creset\\%C(green)%ar%C(cyan)%d\\ %Creset%s%C(yellow)\\ [%cn]" --graph --decorate --all
-  stashpullpop = !git stash && git pull origin master && git stash  pop
+  stashpullpop = !git stash && git pull origin master && git stash pop
+  recentbranches = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 [color]
   ui = auto
   branch = auto
