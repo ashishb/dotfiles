@@ -101,7 +101,7 @@ brew cask install diffmerge  # File diffing GUI
 # I moved to Alfred. Alfred is better than QuickSilver.
 # brew cask install quicksilver # Quicksilver is better than Spotlight. 
 brew cask install alfred
-brew cask install skype
+# brew cask install skype  # I don't use Skype anymore
 # I prefer spectacle now.
 # brew cask install slate   # XMonand like window manager. 
 brew cask install spectacle  # Window manager
@@ -119,6 +119,8 @@ brew cask install zipeg || brew cask install zipeg # A zip file reader
 
 # Battery health info. Not great but still good.
 brew cask install coconutbattery
+# Overcome Wi-Fi time restrictions - http://airpass.tiagoalves.me/
+brew cask install airpass
 # Not available anymore
 # brew cask install battery-time-remaining
 # Create a cask for http://froyosoft.com/soundbooster.php
