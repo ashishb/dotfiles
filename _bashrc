@@ -34,10 +34,19 @@ fi
 
 # Disable homrew analytics (https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md)
 HOMEBREW_NO_ANALYTICS=1
+# Disable Gatekeeper's quarantine - https://github.com/Homebrew/homebrew-cask/issues/52128#issuecomment-422436221
+HOMEBREW_CASK_OPTS=--no-quarantine
+
+alias start_web_server="echo Starting webserver at http://$(ipconfig getifaddr en0):8000 && python -m SimpleHTTPServer 8000"
 
 # Hide Java icon (https://bia.is/android-dev-tip-hide-that-annoying-java-icon/)
 export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
 
+# Due to some issue, this produces "nospace: unbound variable" under `set -o nounset`.
+# Therefore, I have to put it outside that.
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
 # Ref: http://robertmuth.blogspot.com/2012/08/better-bash-scripting-in-15-minutes.html
 set -o nounset
 # Better auto complete.
@@ -46,15 +55,16 @@ source $BASHRC_INCLUDES/better_autocomplete.bash
 # command brew help 1>/dev/null 2>&1 && source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 # adb auto-completion.
 source $BASHRC_INCLUDES/adb.bash
-# Disable this for now, it is causing terminal to hang
 # git auto-completion.
-## source $BASHRC_INCLUDES/git-completion.bash
+source $BASHRC_INCLUDES/git-completion.bash
 # p4 auto-completion
 source $BASHRC_INCLUDES/p4_autocomplete.bash
 # gradle auto-completion
 source $BASHRC_INCLUDES/gradle_autocomplete.bash
 # Maven (mvn) auto-completion.
 source $BASHRC_INCLUDES/maven-bash-completion/bash_completion.bash
+# Yarn auto-completion
+source $BASHRC_INCLUDES/yarn-completion/yarn-completion.bash
 # Custom aliases to improve productivity.
 source $BASHRC_INCLUDES/custom_aliases.bash
 # Custom aliases for android reverse engineering.

@@ -31,3 +31,4 @@ _killall()
     return 0
 }
 complete -F _killall killall
+

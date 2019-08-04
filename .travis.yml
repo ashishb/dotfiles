@@ -1,0 +1,37 @@
+branches:
+  except:
+    # These branches are used by Bors-NG and therefore, should not be build by Travis CI.
+    # https://bors.tech/documentation/getting-started/
+    - master.tmp
+    - staging.tmp
+    - trying.tmp
+
+# https://stackoverflow.com/questions/27644586/how-to-set-up-travis-ci-with-multiple-languages
+matrix:
+  include:
+
+    - name: Test on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - bash setup_dotfiles.sh
+        - bash setup/setup_new_ubuntu_machine.sh
+        - vim +BundleInstall +qall
+
+    - name: Test on Mac OS X
+      os: osx
+      osx_image: xcode10.2
+      sudo: required
+      script:
+        - set -eo pipefail
+        - bash setup_dotfiles.sh
+        - bash setup/setup_new_mac_machine.sh
+        - sudo bash setup/_macos
+        - vim +BundleInstall +qall
+
+# Good .travis.yml files to learn from
+# https://github.com/ruboto/ruboto/blob/master/.travis.yml
+# https://raw.githubusercontent.com/BanzaiMan/travis_production_test/bc25099f9bd413c43cee9e7118e8eee4b1448fd6/.travis.yml
+# Android build caching https://medium.com/@bod/cache-your-android-sdk-with-travis-c816b9264708
