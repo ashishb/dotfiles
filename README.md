@@ -10,7 +10,7 @@
 
 3. `_gitconfig` - git config file
 
-4. `_osx` - OS X config file (one time setup file based on Mathias's file)
+4. `_macos` - macOS config file (one time setup file based on Mathias's file)
 
 5. `_screenrc` - several productivity improvements to GNU screen 
 
