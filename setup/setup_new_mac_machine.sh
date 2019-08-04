@@ -30,7 +30,7 @@ if test ! ${CI}; then
 fi
 # Install new version of bash completion for this
 brew install bash-completion@2
-# Install GNU core utilities (those that come with OS X are outdated)
+# Install GNU core utilities (those that come with macOS are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 # coreutils is already installed on Travis CI. Don't fail if we fail to install this.
 brew install coreutils || true
@@ -76,7 +76,7 @@ brew tap raggi/ale && brew install openssl-osx-ca
 
 brew tap caskroom/cask
 brew tap homebrew/cask-versions  # For Java 8
-# Useful OS X softwares.
+# Useful macOS softwares.
 brew cask install google-chrome 
 # Too bulky to use, install it only when required.
 # brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
