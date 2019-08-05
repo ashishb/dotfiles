@@ -23,7 +23,7 @@ ktr () { kotlinc "$1" -include-runtime -d "$1".jar && java -jar "$1".jar "${@:2}
 # line 22 to line 34.
 function ghurl()
 {
-  domain='http://github.com' &&
+  domain='https://github.com' &&
   # Get the repo name and remove ".git" from the end
   repo=$(git config --get remote.origin.url | cut -d: -f2 | rev | cut -d. -f2- | rev) &&
   # Fallback to master branch
@@ -42,6 +42,19 @@ function ghurl()
   # echo url is ${url} &&
   open "${url}"
 }
+
+# Usage: ghpr <pr number>, will open the pull request on github.com. Respects repo name.
+# GitHub uses a single counter for pull requests and issues, so, even an issue can open via this mechanism. 
+function ghpr()
+{
+  domain='https://github.com' &&
+  # Get the repo name and remove ".git" from the end
+  repo=$(git config --get remote.origin.url | cut -d: -f2 | rev | cut -d. -f2- | rev) &&
+  url=${domain}/${repo}/pull/${1} &&
+  # echo url is ${url} &&
+  open "${url}"
+}
+
 
 alias myghpr="gh pr --me --link"
 alias myghissues="open https://github.com/issues/assigned"
