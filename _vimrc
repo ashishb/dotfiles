@@ -177,6 +177,9 @@ Bundle "tpope/vim-git"
 au FileType gitcommit set spell
 Plugin 'jparise/vim-graphql'
 
+" Python
+Plugin 'vim-python/python-syntax'
+
 " Kotlin
 Plugin 'udalov/kotlin-vim'
 au BufNewFile,BufRead *.kt set filetype=kotlin
