@@ -44,7 +44,7 @@ function ghurl()
 }
 
 # Usage: ghpr <pr number>, will open the pull request on github.com. Respects repo name.
-# GitHub uses a single counter for pull requests and issues, so, even an issue can open via this mechanism. 
+# GitHub uses a single counter for pull requests and issues, so, even an issue can open via this mechanism.
 function ghpr()
 {
   domain='https://github.com' &&
