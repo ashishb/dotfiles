@@ -7,6 +7,7 @@ branches:
     - trying.tmp
 
 # https://stackoverflow.com/questions/27644586/how-to-set-up-travis-ci-with-multiple-languages
+# Test on Both GNU/Linux and Mac OS
 matrix:
   include:
 
@@ -16,9 +17,9 @@ matrix:
       sudo: false
       script:
         - set -e
-        - bash setup_dotfiles.sh
-        - bash setup/setup_new_ubuntu_machine.sh
-        - vim +BundleInstall +qall
+        - bash setup_dotfiles.sh  # Test dotfile setup
+        - bash setup/setup_new_ubuntu_machine.sh  # Test Ubuntu-specific setup
+        - vim +PluginInstall +qall  # Install all vim bundles
 
     - name: Test on Mac OS X
       os: osx
@@ -26,12 +27,8 @@ matrix:
       sudo: required
       script:
         - set -eo pipefail
-        - bash setup_dotfiles.sh
-        - bash setup/setup_new_mac_machine.sh
+        - bash setup_dotfiles.sh # Test dotfile setup
+        - bash setup/setup_new_mac_machine.sh  # Test Mac OS-specific setup
         - sudo bash setup/_macos
-        - vim +BundleInstall +qall
+        - vim +PluginInstall +qall  # Install all vim bundles
 
-# Good .travis.yml files to learn from
-# https://github.com/ruboto/ruboto/blob/master/.travis.yml
-# https://raw.githubusercontent.com/BanzaiMan/travis_production_test/bc25099f9bd413c43cee9e7118e8eee4b1448fd6/.travis.yml
-# Android build caching https://medium.com/@bod/cache-your-android-sdk-with-travis-c816b9264708
