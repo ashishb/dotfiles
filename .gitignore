@@ -32,5 +32,12 @@ _vim/bundle/vim-airline-themes/
 _vim/bundle/vim-graphql/
 _vim/bundle/vim-solidity/
 _vim/bundle/typescript-vim/
+_vim/bundle/python-syntax/
+_vim/doc
+_vim/ftdetect
+_vim/ftplugin
+_vim/nerdtree_plugin
+_vim/plugin
+_vim/syntax
 bashrc_includes/local_aliases.bash
 _sshconfig
