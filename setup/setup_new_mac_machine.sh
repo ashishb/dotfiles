@@ -17,7 +17,12 @@ if test ! $(which brew); then
 fi
 # Update homebrew recipes
 brew update
-brew install ack  # A replacement for grep.
+
+brew install ag
+# A better searcher for git repos since it skips over files which are listed in .gitignore
+brew install rg
+# I moved to ag (silver searcher)
+# brew install ack  # A replacement for grep.
 brew install bash # Install latest version of Bash.
 brew install shellcheck  # Linter for shell scripts
 # Configure the new version to be default
