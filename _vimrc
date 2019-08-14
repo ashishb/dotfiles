@@ -52,6 +52,10 @@ set wildmode=list:longest,full
 set visualbell
 " https://stackoverflow.com/questions/3534028/mac-terminal-vim-will-only-use-backspace-when-at-the-end-of-a-line
 set backspace=indent,eol,start
+" Disable modelines as a security caution
+" https://security.stackexchange.com/questions/36001/vim-modeline-vulnerabilities
+set modelines=0
+set nomodeline
 
 " For GNU/Linux
 set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
