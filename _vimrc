@@ -53,6 +53,7 @@ set visualbell
 " https://stackoverflow.com/questions/3534028/mac-terminal-vim-will-only-use-backspace-when-at-the-end-of-a-line
 set backspace=indent,eol,start
 " Disable modelines as a security caution
+" https://security.stackexchange.com/questions/36001/vim-modeline-vulnerabilities
 set modelines=0
 set nomodeline
 
