@@ -4,7 +4,7 @@
 1. `setup_dotfiles.sh` - Automate the dotfiles setup with this one (Warning: the
  script does not always work)
  
-2. `setup/setup_cryptocurrencies.sh` - Cryptocurrencies development related packages (ethereum, solidity, truffle etc.)
+2. `setup/setup_cryptocurrencies.sh` - Cryptocurrencies development related packages ([ethereum](https://www.ethereum.org/), [solidity](https://solidity.readthedocs.io/en/v0.5.11/), [truffle](https://www.trufflesuite.com/) etc.)
 
 2. `_bashrc` - bashrc file (it primarily sources files in bashrc includes)
 
