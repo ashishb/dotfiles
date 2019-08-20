@@ -106,6 +106,7 @@ brew cask install diffmerge  # File diffing GUI
 # I moved to Alfred. Alfred is better than QuickSilver.
 # brew cask install quicksilver # Quicksilver is better than Spotlight. 
 brew cask install alfred
+brew cask install bitbar
 # brew cask install skype  # I don't use Skype anymore
 # I prefer spectacle now.
 # brew cask install slate   # XMonand like window manager. 
