@@ -40,4 +40,3 @@ _vim/nerdtree_plugin
 _vim/plugin
 _vim/syntax
 bashrc_includes/local_aliases.bash
-_sshconfig
