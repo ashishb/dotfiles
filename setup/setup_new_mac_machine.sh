@@ -118,9 +118,13 @@ brew cask install avast-security  # Free Anti-virus protection
 # brew cask install spotify  # An amazing music streaming service
 brew cask install xquartz  # For running X server based apps
 brew cask install wireshark
-# Try twice since this fails with the error message - "curl: (22) The requested URL returned error: 503 Service Unavailable"
-# Example https://travis-ci.org/ashishb/dotfiles/builds/543064482
-brew cask install zipeg || brew cask install zipeg # A zip file reader
+brew cask install zipeg ||  # A zip file reader
+# Even trying twice doesn't work with zipeg. So, just don't fail if zipeg fails on CI.
+# https://travis-ci.org/ashishb/dotfiles/jobs/577997959
+if test ! ${CI}; then
+    echo "Failed to install zipeg on CI. Skipping over zipeg since it is a frequent problem."
+    true
+fi
 # TODO(ashishb): Add cask for Gyazo, an app for taking and uploading screenshots.
 
 # Battery health info. Not great but still good.
