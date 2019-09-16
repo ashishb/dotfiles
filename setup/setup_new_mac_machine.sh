@@ -54,9 +54,10 @@ brew install imagemagick
 # brew install lighthttpd  # Needed for running "git instaweb".
 brew install nmap
 brew install ssh-copy-id  # Easy way to set up key based login.
-# Install sshpass (unofficial since homebrew admins won't allow this formula in
-# the official repo).
-brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
+# Remove sshpass, I no longer use it.
+# # Install sshpass (unofficial since homebrew admins won't allow this formula in
+# # the official repo).
+# brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
 brew install vim  # Better than default vim.
 # wget is already installed on Travis CI
 brew install wget || true
