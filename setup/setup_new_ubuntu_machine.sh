@@ -9,7 +9,7 @@ sudo apt-get -y install git
 sudo apt-get -y install libxss1  # Required for Google-chrome.
 sudo apt-get -y install nmap
 # http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html
-yes | sudo apt-get install oracle-java8-installer  # Required for android.
+sudo apt-get -y install oracle-java8-installer  # Required for android.
 sudo apt-get -y install python-dev
 sudo apt-get -y install python-pip
 sudo apt-get -y install ssh
@@ -18,6 +18,7 @@ sudo apt-get -y install whois
 sudo apt-get -y install xsel
 sudo apt-get -y install zip  # I am surprised, how this can be missing.
 sudo apt-get -y remove thunderbird  # I don't need thunderbird.
+sudo pip install --upgrade pip
 # Use pip instead of easy_install.
 # http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
 sudo pip install pylint
@@ -25,6 +26,10 @@ sudo pip install Pygments
 sudo pip install pdbpp  # A powerful improvement to pdb CLI.
 # Install Google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+if test "${CI}"; then
+    # https://askubuntu.com/questions/1065231/dpkg-deb-error-archive-has-premature-member-control-tar-xz-before-contr/1100361
+    sudo apt-get install dpkg
+fi
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 #### Ubuntu specific settings. ####
