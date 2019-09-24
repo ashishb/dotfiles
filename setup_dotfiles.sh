@@ -39,9 +39,13 @@ ln -s $DIR/_sshconfig ~/.ssh/config || true
 echo "Overwriting $HOME/.inpurtc"
 ln -s $DIR/_inputrc ~/.inputrc || true
 
-echo "Overwriting $HOME/.gitconfig"
+# Disable last two lines which replace https with ssh since it cause Travis CI failures :(
+# This is hacky.
+if test "${CI}"; then
+  tac $DIR/_gitconfig | tail -n +3 | tac > $DIR/_gitconfig
+fi
+echo "Including new config file in $HOME/.gitconfig"
 echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig
-
 echo "Appending $HOME/.hgrc"
 echo "%include $DIR/_hgrc" >> $HOME/.hgrc
 
