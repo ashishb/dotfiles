@@ -201,8 +201,13 @@ au BufNewFile,BufRead *.ts set filetype=typescript
 au BufNewFile,BufRead *.tsx set filetype=typescript
 
 
-" Ignore whitespaces in vimdiff
 if &diff
-    " diff mode
-    set diffopt+=iwhite
+  " Ignore whitespaces in vimdiff
+  " diff mode
+  set diffopt+=iwhite
+  " Make it more readable - https://stackoverflow.com/a/17183382
+  highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17  gui=none guifg=bg guibg=Red
+  highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17  gui=none guifg=bg guibg=Red
+  highlight DiffChange cterm=bold ctermfg=10 ctermbg=17  gui=none guifg=bg guibg=Red
+  highlight DiffText   cterm=bold ctermfg=10 ctermbg=190 gui=none guifg=bg guibg=Red
 endif
