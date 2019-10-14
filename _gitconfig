@@ -11,6 +11,7 @@
 [diff]
 	mnemonicprefix = true
   tool = diffmerge
+	noprefix = true
 [difftool "diffmerge"]
 	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [difftool]
