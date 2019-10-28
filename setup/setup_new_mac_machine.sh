@@ -80,7 +80,6 @@ brew tap raggi/ale && brew install openssl-osx-ca
 # Unstable softwares, right from HEAD of some other repo.
 # brew tap brew homebrew/homebrew-head-only
 
-brew tap caskroom/cask-cask
 brew tap homebrew/cask-versions  # For Java 8
 # Useful macOS softwares.
 brew cask install google-chrome 
