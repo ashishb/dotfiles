@@ -30,7 +30,7 @@ brew install shellcheck  # Linter for shell scripts
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 # This requires password and won't work on Travis CI
 # Source: https://docs.travis-ci.com/user/environment-variables/#default-environment-variables
-if test ! ${CI}; then
+if test ! ${CI:-}; then
     chsh -s /usr/local/bin/bash
 fi
 # Install new version of bash completion for this
@@ -63,9 +63,11 @@ brew install vim  # Better than default vim.
 brew install wget || true
 brew install jq # For JSON parsing in shell
 
+# TODO(ashishb): Is this still required?
 # Fix:
 # https://stackoverflow.com/questions/19215590/why-cant-i-install-any-gems-on-my-mac
-brew tap raggi/ale && brew install openssl-osx-ca
+# brew tap raggi/ale && brew install openssl-osx-ca
+
 # Allows generation from notification from command line (not that useful).
 # brew install terminal-notifier
 
@@ -80,10 +82,10 @@ brew tap raggi/ale && brew install openssl-osx-ca
 # Unstable softwares, right from HEAD of some other repo.
 # brew tap brew homebrew/homebrew-head-only
 
-brew tap caskroom/cask-cask
 brew tap homebrew/cask-versions  # For Java 8
 # Useful macOS softwares.
-brew cask install google-chrome 
+# Install chrome if it is not installed.
+ls /Applications/Google\ Chrome.app || brew cask install google-chrome
 # Too bulky to use, install it only when required.
 # brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
 # brew cask install bartender  # Clutter control from menu bar.
@@ -93,8 +95,9 @@ brew cask install google-chrome
 brew cask install selfcontrol  # To block certain websites for productivity
 brew cask install google-backup-and-sync  # New name for Google Drive
 # # For some reason, this installation fails on Travis CI: https://travis-ci.org/ashishb/dotfiles/builds/483579495
-if test ! ${CI}; then
-    brew cask install instabridge  # Wireless password manager.
+if test ! ${CI:-}; then
+  # Seems like this cash does not exist anymore.
+  brew cask install instabridge  # Wireless password manager.
 fi
 # Great tool but the cask has been deleted - https://github.com/JadenGeller/Helium/issues/207
 # brew cask install jadengeller-helium  # Web browser on top of all other windows
@@ -122,7 +125,7 @@ brew cask install wireshark
 brew cask install zipeg ||  # A zip file reader
 # Even trying twice doesn't work with zipeg. So, just don't fail if zipeg fails on CI.
 # https://travis-ci.org/ashishb/dotfiles/jobs/577997959
-if test ! ${CI}; then
+if test ! ${CI:-}; then
     echo "Failed to install zipeg on CI. Skipping over zipeg since it is a frequent problem."
     true
 fi

@@ -41,7 +41,7 @@ ln -s $DIR/_inputrc ~/.inputrc || true
 
 # Disable last two lines which replace https with ssh since it cause Travis CI failures :(
 # This is hacky.
-if test "${CI}"; then
+if test "${CI:-}"; then
   tac $DIR/_gitconfig | tail -n +3 | tac > $DIR/_gitconfig
 fi
 echo "Including new config file in $HOME/.gitconfig"
