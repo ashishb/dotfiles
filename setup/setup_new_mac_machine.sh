@@ -19,6 +19,8 @@ fi
 brew update
 
 brew install ag
+# A better file finder than find
+brew install fd
 # A better searcher for git repos since it skips over files which are listed in .gitignore
 brew install rg
 # I moved to ag (silver searcher)
