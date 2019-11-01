@@ -96,7 +96,7 @@ brew cask install selfcontrol  # To block certain websites for productivity
 brew cask install google-backup-and-sync  # New name for Google Drive
 # # For some reason, this installation fails on Travis CI: https://travis-ci.org/ashishb/dotfiles/builds/483579495
 if test ! ${CI:-}; then
-  # Seems like this cash does not exist anymore.
+  # Seems like this cask does not exist anymore.
   brew cask install instabridge  # Wireless password manager.
 fi
 # Great tool but the cask has been deleted - https://github.com/JadenGeller/Helium/issues/207
@@ -143,7 +143,7 @@ brew cask install pycharm-ce
 # http://mac.softpedia.com/get/Utilities/Presto-app4mac.shtml - a free and good text auto-expander for Mac
 
 # Install fonts.
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 fonts=(
     font-source-code-pro
     font-roboto
