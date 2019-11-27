@@ -46,6 +46,8 @@ brew install ctags
 brew install exiftool
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
+# Duplicate file search and removal
+brew install fdupes
 # .gitignore boilerplate code (example: "gibo python textmate").
 brew install gibo
 brew install hexedit
