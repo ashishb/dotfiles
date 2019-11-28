@@ -5,7 +5,7 @@ alias ssh='ssh -Y'
 # Some more aliases.
 alias ..='cd ..'
 # Pretty printed python,html,css etc. code.
-alias c="pygmentize -O style=monokai -f console256 -g"
+alias cat=bat
 alias d="du -h -d=1"
 alias df="df -h"
 alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
