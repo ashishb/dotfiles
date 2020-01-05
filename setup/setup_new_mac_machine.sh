@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if test ${CI:-}; then
+    set -x  # For better debugging
+fi
+
 # pip is not installed by default on mac.
 sudo easy_install pip
 # Upgrade pip to the latest version
