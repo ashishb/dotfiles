@@ -11,7 +11,31 @@ branches:
 matrix:
   include:
 
-    - name: Test on GNU/Linux
+    - name: Test setup dotfiles on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - bash setup_dotfiles.sh  # Test dotfile setup
+
+    - name: Test setup Ubuntu on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - bash setup/setup_new_ubuntu_machine.sh  # Test Ubuntu-specific setup
+
+    - name: Test setup vim on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - vim +PluginInstall +qall  # Install all vim bundles
+
+    - name: Test everything on GNU/Linux
       os: linux
       dist: trusty
       sudo: false
@@ -21,7 +45,39 @@ matrix:
         - bash setup/setup_new_ubuntu_machine.sh  # Test Ubuntu-specific setup
         - vim +PluginInstall +qall  # Install all vim bundles
 
-    - name: Test on Mac OS X
+    - name: Test setup dotfiles on Mac OS X
+      os: osx
+      osx_image: xcode10.2
+      sudo: required
+      script:
+        - set -eo pipefail
+        - bash setup_dotfiles.sh # Test dotfile setup
+
+    - name: Test setup new mac machine on Mac OS X
+      os: osx
+      osx_image: xcode10.2
+      sudo: required
+      script:
+        - set -eo pipefail
+        - bash setup/setup_new_mac_machine.sh  # Test Mac OS-specific setup
+
+    - name: Test configure mac os on Mac OS X
+      os: osx
+      osx_image: xcode10.2
+      sudo: required
+      script:
+        - set -eo pipefail
+        - sudo bash setup/_macos
+
+    - name: Test setup vim on Mac OS X
+      os: osx
+      osx_image: xcode10.2
+      sudo: required
+      script:
+        - set -eo pipefail
+        - vim +PluginInstall +qall  # Install all vim bundles
+
+    - name: Test everything on Mac OS X
       os: osx
       osx_image: xcode10.2
       sudo: required
@@ -31,4 +87,3 @@ matrix:
         - bash setup/setup_new_mac_machine.sh  # Test Mac OS-specific setup
         - sudo bash setup/_macos
         - vim +PluginInstall +qall  # Install all vim bundles
-
