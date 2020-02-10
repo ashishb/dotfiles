@@ -11,40 +11,6 @@ branches:
 matrix:
   include:
 
-    - name: Test setup dotfiles on GNU/Linux
-      os: linux
-      dist: trusty
-      sudo: false
-      script:
-        - set -e
-        - bash setup_dotfiles.sh  # Test dotfile setup
-
-    - name: Test setup Ubuntu on GNU/Linux
-      os: linux
-      dist: trusty
-      sudo: false
-      script:
-        - set -e
-        - bash setup/setup_new_ubuntu_machine.sh  # Test Ubuntu-specific setup
-
-    - name: Test setup vim on GNU/Linux
-      os: linux
-      dist: trusty
-      sudo: false
-      script:
-        - set -e
-        - vim +PluginInstall +qall  # Install all vim bundles
-
-    - name: Test everything on GNU/Linux
-      os: linux
-      dist: trusty
-      sudo: false
-      script:
-        - set -e
-        - bash setup_dotfiles.sh  # Test dotfile setup
-        - bash setup/setup_new_ubuntu_machine.sh  # Test Ubuntu-specific setup
-        - vim +PluginInstall +qall  # Install all vim bundles
-
     - name: Test setup dotfiles on Mac OS X
       os: osx
       osx_image: xcode10.2
@@ -86,4 +52,38 @@ matrix:
         - bash setup_dotfiles.sh # Test dotfile setup
         - bash setup/setup_new_mac_machine.sh  # Test Mac OS-specific setup
         - sudo bash setup/_macos
+        - vim +PluginInstall +qall  # Install all vim bundles
+
+    - name: Test setup dotfiles on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - bash setup_dotfiles.sh  # Test dotfile setup
+
+    - name: Test setup Ubuntu on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - bash setup/setup_new_ubuntu_machine.sh  # Test Ubuntu-specific setup
+
+    - name: Test setup vim on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - vim +PluginInstall +qall  # Install all vim bundles
+
+    - name: Test everything on GNU/Linux
+      os: linux
+      dist: trusty
+      sudo: false
+      script:
+        - set -e
+        - bash setup_dotfiles.sh  # Test dotfile setup
+        - bash setup/setup_new_ubuntu_machine.sh  # Test Ubuntu-specific setup
         - vim +PluginInstall +qall  # Install all vim bundles
