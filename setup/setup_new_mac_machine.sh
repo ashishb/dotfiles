@@ -26,6 +26,10 @@ brew analytics off
 # Update homebrew recipes
 brew update
 
+# Required or else, Travis CI fails - https://travis-ci.org/ashishb/dotfiles/jobs/643027546
+if test ${CI:-}; then
+  brew upgrade python
+fi
 brew install ag
 # A better file finder than find
 brew install fd
