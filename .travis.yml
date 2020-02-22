@@ -13,7 +13,7 @@ matrix:
 
     - name: Test setup dotfiles on Mac OS X
       os: osx
-      osx_image: xcode10.2
+      osx_image: xcode11.3
       sudo: required
       script:
         - set -eo pipefail
@@ -21,15 +21,16 @@ matrix:
 
     - name: Test setup new mac machine on Mac OS X
       os: osx
-      osx_image: xcode10.2
+      osx_image: xcode11.3
       sudo: required
       script:
         - set -eo pipefail
+        - export HOMEBREW_NO_AUTO_UPDATE=1
         - bash setup/setup_new_mac_machine.sh  # Test Mac OS-specific setup
 
     - name: Test configure mac os on Mac OS X
       os: osx
-      osx_image: xcode10.2
+      osx_image: xcode11.3
       sudo: required
       script:
         - set -eo pipefail
@@ -37,7 +38,7 @@ matrix:
 
     - name: Test setup vim on Mac OS X
       os: osx
-      osx_image: xcode10.2
+      osx_image: xcode11.3
       sudo: required
       script:
         - set -eo pipefail
@@ -45,7 +46,7 @@ matrix:
 
     - name: Test everything on Mac OS X
       os: osx
-      osx_image: xcode10.2
+      osx_image: xcode11.3
       sudo: required
       script:
         - set -eo pipefail

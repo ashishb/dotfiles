@@ -3,6 +3,8 @@ set -euo pipefail
 
 if test ${CI:-}; then
     set -x  # For better debugging
+    # Source: https://discuss.circleci.com/t/brew-link-step-failing-on-python-dependency/33925/8?u=ashishb
+    export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 
 # pip is not installed by default on mac.
@@ -25,6 +27,9 @@ brew analytics off
 
 # Update homebrew recipes
 brew update
+
+# TODO(ashishb): Trying to debug a failure with python installation
+brew upgrade python
 
 brew install ag
 # A better file finder than find
@@ -97,8 +102,13 @@ brew install jq # For JSON parsing in shell
 
 brew tap homebrew/cask-versions  # For Java 8
 # Useful macOS softwares.
-# Install chrome if it is not installed.
-ls /Applications/Google\ Chrome.app || brew cask install google-chrome
+
+# For some reason, this installation fails on Travis CI
+# https://travis-ci.org/ashishb/dotfiles/jobs/648627652
+if test ! ${CI:-}; then
+  # Install chrome if it is not installed.
+  ls /Applications/Google\ Chrome.app || brew cask install google-chrome
+fi
 # Too bulky to use, install it only when required.
 # brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
 # brew cask install bartender  # Clutter control from menu bar.
