@@ -66,6 +66,7 @@ brew install fdupes
 brew install gibo
 # For re-starting running executable on source file changes
 brew install filewatcher
+>>>>>>> Add filewatcher package
 brew install hexedit
 # Do I need this?
 # brew install jsonpp
