@@ -64,6 +64,8 @@ brew install findutils
 brew install fdupes
 # .gitignore boilerplate code (example: "gibo python textmate").
 brew install gibo
+# For re-starting running executable on source file changes
+brew install filewatcher
 brew install hexedit
 # Do I need this?
 # brew install jsonpp
