@@ -102,7 +102,7 @@ function prompt_command() {
   # http://twitter.com/cowboy/status/150254030654939137
   PS1="" ##\n"
   # svn: [repo:lastchanged]
-  PS1="$PS1$(prompt_svn)"
+  # PS1="$PS1$(prompt_svn)"
   # git: [branch:flags]
   PS1="$PS1$(prompt_git)"
   # misc: [cmd#:hist#]
