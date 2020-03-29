@@ -7,13 +7,14 @@ if test ${CI:-}; then
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 
+# Use Python 3
 # pip is not installed by default on mac.
-sudo easy_install pip
+sudo python3 -m easy_install pip
 # Upgrade pip to the latest version
-sudo pip install --upgrade pip
-sudo pip install pylint
-sudo pip install Pygments
-sudo pip install pdbpp  # A powerful improvement to pdb CLI.
+sudo python3 -m pip install --upgrade pip
+sudo python3 -m pip install pylint
+sudo python3 -m pip install Pygments
+sudo python3 -m pip install pdbpp  # A powerful improvement to pdb CLI.
 
 # Check for Homebrew,
 # Install if we don't have it
