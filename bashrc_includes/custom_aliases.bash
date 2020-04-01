@@ -43,6 +43,15 @@ function ghurl()
   open "${url}"
 }
 
+function stargazer()
+{
+  domain='https://starcharts.herokuapp.com/' &&
+  # Get the repo name and remove ".git" from the end
+  repo=$(git config --get remote.origin.url | cut -d: -f2 | rev | cut -d. -f2- | rev) &&
+  url=${domain}/${repo}
+  open "${url}"
+}
+
 # Usage: ghpr <pr number>, will open the pull request on github.com. Respects repo name.
 # GitHub uses a single counter for pull requests and issues, so, even an issue can open via this mechanism.
 function ghpr()
