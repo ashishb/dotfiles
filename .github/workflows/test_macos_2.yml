@@ -1,0 +1,16 @@
+name: test_macos_2 - Test setup Mac machine
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run setup_new_mach_machine script
+        run: |
+          set -eo pipefail
+          export CI=1
+          bash setup/setup_new_mac_machine.sh  # Test Mac OS-specific setup

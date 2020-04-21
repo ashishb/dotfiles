@@ -1,0 +1,16 @@
+name: test_macos_3 - Test Setup Mac OS
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run _macos script
+        run: |
+          set -eo pipefail
+          export CI=1
+          sudo bash setup/_macos
