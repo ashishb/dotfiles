@@ -1,0 +1,21 @@
+name: test_macos_1 - Test Setup dotfiles
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install coreutils
+        run: |
+          set -eo pipefail
+          export CI=1
+          brew install coreutils  # For tac
+      - name: Run setup dotfiles
+        run: |
+          set -eo pipefail
+          export CI=1
+          bash setup_dotfiles.sh # Test dotfile setup
