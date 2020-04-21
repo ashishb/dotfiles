@@ -1,5 +1,9 @@
-# Dotfiles [![](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg) [![Build Status](https://img.shields.io/travis/ashishb/dotfiles/master.svg?label=CI)](https://travis-ci.org/ashishb/dotfiles)
+# Dotfiles [![](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)
 
+[![test_macos_1 - Test Setup dotfiles](https://github.com/ashishb/dotfiles/workflows/test_macos_1%20-%20Test%20Setup%20dotfiles/badge.svg)](https://github.com/ashishb/dotfiles/actions)
+[![test_macos_2 - Test setup Mac machine](https://github.com/ashishb/dotfiles/workflows/test_macos_2%20-%20Test%20setup%20Mac%20machine/badge.svg)](https://github.com/ashishb/dotfiles/actions)
+[![test_macos_3 - Test Setup Mac OS](https://github.com/ashishb/dotfiles/workflows/test_macos_3%20-%20Test%20Setup%20Mac%20OS/badge.svg)](https://github.com/ashishb/dotfiles/actions)
+[![test_macos_4 - Test Setup Vim on Mac OS](https://github.com/ashishb/dotfiles/workflows/test_macos_4%20-%20Test%20Setup%20Vim%20on%20Mac%20OS/badge.svg)](https://github.com/ashishb/dotfiles/actions)
 
 1. `setup_dotfiles.sh` - Automate the dotfiles setup with this one (Warning: the
  script does not always work)
