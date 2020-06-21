@@ -165,7 +165,9 @@ brew cask install airpass
 # brew cask install battery-time-remaining
 # Create a cask for http://froyosoft.com/soundbooster.php
 brew cask install pycharm-ce
-# TODO(ashishb) Create a cask for xtype
+# Run GitHub actions locally
+brew install nektos/tap/act
+# TODO(ashishb) Create a cask for xtype - no point, I use phase express now
 # http://mac.softpedia.com/get/Utilities/Presto-app4mac.shtml - a free and good text auto-expander for Mac
 
 # Install fonts.
