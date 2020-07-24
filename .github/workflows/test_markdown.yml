@@ -1,0 +1,21 @@
+name: test_markdown - Test Markdown
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install mdl
+        run: |
+          set -eo pipefail
+          export CI=1
+          gem install mdl
+      - name: Run lint dotfiles
+        run: |
+          set -eo pipefail
+          export CI=1
+          mdl -r ~MD013,~MD029,~MD033 README.md
