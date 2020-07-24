@@ -28,6 +28,11 @@
 
 11. `bashrc_includes` - contains several bash improvements (git friendly prompt, adb auto completion, p4 auto completion, git auto completion, android reverse engineering aliases etc.)
 
+## Sponsor
+
+<a href="https://tracking.gitads.io/?repo=dotfiles"> <img src="https://images.gitads.io/dotfiles" alt="GitAds"/> </a>
+
+
 ## Usage
 
 ### For setting up Mac OS:
