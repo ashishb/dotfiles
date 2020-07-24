@@ -7,7 +7,7 @@
 
 1. `setup_dotfiles.sh` - Automate the dotfiles setup with this one (Warning: the
  script does not always work)
- 
+
 2. `setup/setup_cryptocurrencies.sh` - Cryptocurrencies development related packages ([ethereum](https://www.ethereum.org/), [solidity](https://solidity.readthedocs.io/en/v0.5.11/), [truffle](https://www.trufflesuite.com/) etc.)
 
 2. `_bashrc` - bashrc file (it primarily sources files in bashrc includes)
@@ -16,7 +16,7 @@
 
 4. `_macos` - macOS config file (one time setup file based on Mathias's file)
 
-5. `_screenrc` - several productivity improvements to GNU screen 
+5. `_screenrc` - several productivity improvements to GNU screen
 
 6. `scripts` - some random scripts
 
@@ -32,10 +32,9 @@
 
 <a href="https://tracking.gitads.io/?repo=dotfiles"> <img src="https://images.gitads.io/dotfiles" alt="GitAds"/> </a>
 
-
 ## Usage
 
-### For setting up Mac OS:
+### For setting up Mac OS
 
 ```bash
 git clone https://github.com/ashishb/dotfiles && \
@@ -47,7 +46,7 @@ bash setup/_macos && \
 vim +BundleInstall +qall
 ```
 
-### For setting up GNU/Linux:
+### For setting up GNU/Linux
 
 ```bash
 git clone https://github.com/ashishb/dotfiles && \
