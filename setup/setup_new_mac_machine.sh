@@ -149,6 +149,7 @@ brew cask install avast-security  # Free Anti-virus protection
 brew cask install xquartz  # For running X server based apps
 brew cask install wireshark
 brew cask install zipeg ||  # A zip file reader
+brew cask install fanny  # CPU temprature install monitor
 # Even trying twice doesn't work with zipeg. So, just don't fail if zipeg fails on CI.
 # https://travis-ci.org/ashishb/dotfiles/jobs/577997959
 if test ! ${CI:-}; then
