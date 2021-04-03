@@ -83,6 +83,8 @@ brew install vim  # Better than default vim.
 # wget is already installed on Travis CI
 brew install wget || true
 brew install jq # For JSON parsing in shell
+# https://stackoverflow.com/questions/11834297/how-can-i-remove-silence-from-an-mp3-programmatically
+brew install sox  # To remove silence from music
 
 # TODO(ashishb): Is this still required?
 # Fix:
