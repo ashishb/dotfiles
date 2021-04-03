@@ -201,4 +201,6 @@ brew install jd-gui # For java decompilation.
 # Android emulator is good enough now, therefore, I won't be using genymotion anymore.
 # brew install virtualbox  # Needed for GenyMotion.
 # brew install genymotion  # Emulator for android.
-brew cleanup
+# This one seems to fail on GitHub Actions
+# https://github.com/ashishb/dotfiles/runs/2258896886
+brew cleanup || true
