@@ -8,8 +8,6 @@ if test ${CI:-}; then
 fi
 
 # Use Python 3
-# pip is not installed by default on mac.
-sudo python3 -m easy_install pip
 # Upgrade pip to the latest version
 sudo python3 -m pip install --upgrade pip
 sudo python3 -m pip install pylint

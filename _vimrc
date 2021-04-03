@@ -123,7 +123,7 @@ set background=dark
 " Show indentation clearly.
 Bundle 'Yggdroot/indentLine'
 Bundle "eventualbuddha/vim-protobuf"
-Bundle "rmanalan/jshint.vim"
+" Bundle "rmanalan/jshint.vim"
 Bundle "pangloss/vim-javascript"
 " Bundle "nathanaelkane/vim-indent-guides"
 let g:indentLine_char = '|'
@@ -153,13 +153,14 @@ highlight GitGutterChangeDelete ctermfg=yellow
 " setlocal completefunc=javacomplete#CompleteParamsInfo 
 Bundle "akhaku/vim-java-unused-imports"
 " JSON syntax coloring.
-au BufNewFile,BufRead *.json set filetype=json
+" au BufNewFile,BufRead *.json set filetype=json
 " Smali syntax coloring
 au BufNewFile,BufRead *.smali set filetype=smali
 " Disable for now, since it makes the syntax convoluted by hiding various
 " elements like double-quotes
 " Bundle "elzr/vim-json"
-Bundle "tpope/vim-markdown"
+" Disable since it is slow
+" Bundle "tpope/vim-markdown"
 
 " Disable this since it is slow.
 " " Groovy syntax highlighting
