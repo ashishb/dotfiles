@@ -110,46 +110,46 @@ brew tap homebrew/cask-versions  # For Java 8
 # https://travis-ci.org/ashishb/dotfiles/jobs/648627652
 if test ! ${CI:-}; then
   # Install chrome if it is not installed.
-  ls /Applications/Google\ Chrome.app || brew cask install google-chrome
+  ls /Applications/Google\ Chrome.app || brew install google-chrome
 fi
 # Too bulky to use, install it only when required.
-# brew cask install adobe-reader  # Unavoidable since some pdf forms require this.
-# brew cask install bartender  # Clutter control from menu bar.
-# brew cask install bettertouchtool  # A tool for adding shortcuts to apps. I use Spectacle now.
-# brew cask install cheatsheet # Use long press cmd button on any mac app to see shortcuts. I don't use this anymore.
-# brew cask install dash # Offline documentation browser (I don't use it anymore)
-brew cask install selfcontrol  # To block certain websites for productivity
-brew cask install google-backup-and-sync  # New name for Google Drive
+# brew install adobe-reader  # Unavoidable since some pdf forms require this.
+# brew install bartender  # Clutter control from menu bar.
+# brew install bettertouchtool  # A tool for adding shortcuts to apps. I use Spectacle now.
+# brew install cheatsheet # Use long press cmd button on any mac app to see shortcuts. I don't use this anymore.
+# brew install dash # Offline documentation browser (I don't use it anymore)
+brew install selfcontrol  # To block certain websites for productivity
+brew install google-backup-and-sync  # New name for Google Drive
 # # For some reason, this installation fails on Travis CI: https://travis-ci.org/ashishb/dotfiles/builds/483579495
 if test ! ${CI:-}; then
   # Seems like this cask does not exist anymore.
-  brew cask install instabridge  # Wireless password manager.
+  brew install instabridge  # Wireless password manager.
 fi
 # Great tool but the cask has been deleted - https://github.com/JadenGeller/Helium/issues/207
-# brew cask install jadengeller-helium  # Web browser on top of all other windows
-brew cask install iterm2
-brew cask install kindle  # Kindle reader
-brew cask install macdown  # Mark-down editor
-brew cask install music-manager  # Google music manager
-brew cask install radiant-player  # Unofficial native app for Google Music
-brew cask install diffmerge  # File diffing GUI
+# brew install jadengeller-helium  # Web browser on top of all other windows
+brew install iterm2
+brew install kindle  # Kindle reader
+brew install macdown  # Mark-down editor
+brew install music-manager  # Google music manager
+brew install radiant-player  # Unofficial native app for Google Music
+brew install diffmerge  # File diffing GUI
 # I moved to Alfred. Alfred is better than QuickSilver.
-# brew cask install quicksilver # Quicksilver is better than Spotlight. 
-brew cask install alfred
-brew cask install bitbar
-# brew cask install skype  # I don't use Skype anymore
+# brew install quicksilver # Quicksilver is better than Spotlight.
+brew install alfred
+brew install bitbar
+# brew install skype  # I don't use Skype anymore
 # I prefer spectacle now.
-# brew cask install slate   # XMonand like window manager. 
-brew cask install spectacle  # Window manager
+# brew install slate   # XMonand like window manager.
+brew install spectacle  # Window manager
 # Cask is not working anymore. I moved to avast
-# brew cask install sophos-anti-virus-home-edition  # Free Anti-virus protection
-brew cask install avast-security  # Free Anti-virus protection
+# brew install sophos-anti-virus-home-edition  # Free Anti-virus protection
+brew install avast-security  # Free Anti-virus protection
 # Not using it anymore.
-# brew cask install spotify  # An amazing music streaming service
-brew cask install xquartz  # For running X server based apps
-brew cask install wireshark
-brew cask install zipeg ||  # A zip file reader
-brew cask install fanny  # CPU temprature install monitor
+# brew install spotify  # An amazing music streaming service
+brew install xquartz  # For running X server based apps
+brew install wireshark
+brew install zipeg ||  # A zip file reader
+brew install fanny  # CPU temprature install monitor
 # Even trying twice doesn't work with zipeg. So, just don't fail if zipeg fails on CI.
 # https://travis-ci.org/ashishb/dotfiles/jobs/577997959
 if test ! ${CI:-}; then
@@ -159,13 +159,13 @@ fi
 # TODO(ashishb): Add cask for Gyazo, an app for taking and uploading screenshots.
 
 # Battery health info. Not great but still good.
-brew cask install coconutbattery
+brew install coconutbattery
 # Overcome Wi-Fi time restrictions - http://airpass.tiagoalves.me/
-brew cask install airpass
+brew install airpass
 # Not available anymore
-# brew cask install battery-time-remaining
+# brew install battery-time-remaining
 # Create a cask for http://froyosoft.com/soundbooster.php
-brew cask install pycharm-ce
+brew install pycharm-ce
 # Run GitHub actions locally
 brew install nektos/tap/act
 # TODO(ashishb) Create a cask for xtype - no point, I use phase express now
@@ -178,27 +178,27 @@ fonts=(
     font-roboto
 )
 echo "Installing fonts..."
-brew cask install ${fonts[@]}
+brew install ${fonts[@]}
 
 # Android tools need Java 8 to run.
 # Source: https://github.com/microsoft/malmo/pull/817/
-brew cask install homebrew/cask-versions/adoptopenjdk8
+brew install homebrew/cask-versions/adoptopenjdk8
 # Android development and reverse engineering related installs.
-brew cask install android-studio
+brew install android-studio
 brew install pidcat  # An amazing alternative to logcat
 # PNG compressor
 brew install zopfli
 # Not required anymore since they are part of Android Studio.
-# brew cask install android-sdk && android update sdk --no-ui --filter 'platform-tools' 
-# brew cask install android-ndk # Not required anymore since they are part of Android Studio.
+# brew install android-sdk && android update sdk --no-ui --filter 'platform-tools'
+# brew install android-ndk # Not required anymore since they are part of Android Studio.
 # Not required anymore, since Android uses gradle.
 # brew install ant  # For building android projects.
 brew install apktool  # For android reverse engineering.
 brew install dex2jar  # For android reverse engineering.
 brew install jadx  # Java decompiler
-brew cask install jad  # Java decompiler
-brew cask install jd-gui # For java decompilation.
+brew install jad  # Java decompiler
+brew install jd-gui # For java decompilation.
 # Android emulator is good enough now, therefore, I won't be using genymotion anymore.
-# brew cask install virtualbox  # Needed for GenyMotion.
-# brew cask install genymotion  # Emulator for android.
+# brew install virtualbox  # Needed for GenyMotion.
+# brew install genymotion  # Emulator for android.
 brew cleanup
