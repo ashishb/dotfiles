@@ -28,7 +28,7 @@ brew analytics off
 brew update
 
 # TODO(ashishb): Trying to debug a failure with python installation
-brew upgrade python
+# brew upgrade python
 
 brew install ag
 # A better file finder than find
