@@ -39,6 +39,9 @@ HOMEBREW_CASK_OPTS=--no-quarantine
 
 alias start_web_server="echo Starting webserver at http://$(ipconfig getifaddr en0):8000 && python -m SimpleHTTPServer 8000"
 
+# export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v12)
+
 # Hide Java icon (https://bia.is/android-dev-tip-hide-that-annoying-java-icon/)
 export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
 
