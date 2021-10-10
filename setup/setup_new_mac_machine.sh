@@ -180,11 +180,12 @@ fonts=(
 echo "Installing fonts..."
 brew install ${fonts[@]}
 
-# Android tools need Java 8 to run.
+# Android tools used to need Java 8 to run.
 # Source: https://github.com/microsoft/malmo/pull/817/
-brew install homebrew/cask-versions/adoptopenjdk8
+# brew install homebrew/cask-versions/adoptopenjdk8
 # Android development and reverse engineering related installs.
 brew install android-studio
+brew install fastlane  # Android release from CLI
 brew install pidcat  # An amazing alternative to logcat
 # PNG compressor
 brew install zopfli
