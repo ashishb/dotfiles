@@ -119,7 +119,7 @@ fi
 # brew install cheatsheet # Use long press cmd button on any mac app to see shortcuts. I don't use this anymore.
 # brew install dash # Offline documentation browser (I don't use it anymore)
 brew install selfcontrol  # To block certain websites for productivity
-brew install google-backup-and-sync  # New name for Google Drive
+brew install google-drive
 # # For some reason, this installation fails on Travis CI: https://travis-ci.org/ashishb/dotfiles/builds/483579495
 if test ! ${CI:-}; then
   # Seems like this cask does not exist anymore.
