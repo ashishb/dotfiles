@@ -197,7 +197,7 @@ brew install zopfli
 brew install apktool  # For android reverse engineering.
 brew install dex2jar  # For android reverse engineering.
 brew install jadx  # Java decompiler
-brew install jad  # Java decompiler
+# brew install jad  # Java decompiler. JAD has been discontinued.
 brew install jd-gui # For java decompilation.
 # Android emulator is good enough now, therefore, I won't be using genymotion anymore.
 # brew install virtualbox  # Needed for GenyMotion.
