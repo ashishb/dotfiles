@@ -1,4 +1,4 @@
-name: TestUbuntu
+name: Test Ubuntu
 
 on: [push]
 

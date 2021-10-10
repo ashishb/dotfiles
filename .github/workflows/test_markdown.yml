@@ -1,4 +1,4 @@
-name: test_markdown - Test Markdown
+name: Test Markdown
 
 on: [push]
 

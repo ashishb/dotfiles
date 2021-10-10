@@ -1,4 +1,4 @@
-name: test_macos_2 - Test setup Mac machine
+name: Test setup Mac machine
 
 on: [push]
 

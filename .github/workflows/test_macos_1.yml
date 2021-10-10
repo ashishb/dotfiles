@@ -1,4 +1,4 @@
-name: test_macos_1 - Test Setup dotfiles
+name: Test Setup dotfiles on Mac OS
 
 on: [push]
 
