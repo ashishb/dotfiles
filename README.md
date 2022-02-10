@@ -1,9 +1,10 @@
 # Dotfiles [![](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)](https://img.shields.io/badge/Quality-A%2B-brightgreen.svg)
 
-[![Test Setup dotfiles](https://github.com/ashishb/dotfiles/workflows/test_macos_1%20-%20Test%20Setup%20dotfiles/badge.svg)](https://github.com/ashishb/dotfiles/actions)
-[![Test setup Mac machine](https://github.com/ashishb/dotfiles/workflows/test_macos_2%20-%20Test%20setup%20Mac%20machine/badge.svg)](https://github.com/ashishb/dotfiles/actions)
-[![Test Setup Mac OS](https://github.com/ashishb/dotfiles/workflows/test_macos_3%20-%20Test%20Setup%20Mac%20OS/badge.svg)](https://github.com/ashishb/dotfiles/actions)
-[![Test Setup Vim on Mac OS](https://github.com/ashishb/dotfiles/workflows/test_macos_4%20-%20Test%20Setup%20Vim%20on%20Mac%20OS/badge.svg)](https://github.com/ashishb/dotfiles/actions)
+[![Test Setup Mac OS](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_3.yml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_3.yml)
+[![Test setup Mac machine](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_2.yml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_2.yml)
+[![Test Setup dotfiles on Mac OS](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_1.yml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_1.yml)
+[![Test Setup Vim on Mac OS](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_4.yml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_4.yml)
+[![Test Ubuntu](https://github.com/ashishb/dotfiles/actions/workflows/test_ubuntu.yml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/test_ubuntu.yml) [![Test Markdown](https://github.com/ashishb/dotfiles/actions/workflows/test_markdown.yml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/test_markdown.yml)
 
 1. `setup_dotfiles.sh` - Automate the dotfiles setup with this one (Warning: the
  script does not always work)
