@@ -1,6 +1,3 @@
 Host *
     StrictHostKeyChecking no
 
-Host ashishb-test17
-  User ashishb
-  HostName 34.86.94.218
