@@ -141,6 +141,11 @@ brew install airpass
 # brew install battery-time-remaining
 # Create a cask for http://froyosoft.com/soundbooster.php
 brew install pycharm-ce
+# Go language
+brew install golang
+brew install goland
+# Install docker
+brew install homebrew/cask/docker
 # Run GitHub actions locally
 brew install act
 # TODO(ashishb) Create a cask for xtype - no point, I use phase express now
@@ -188,3 +193,4 @@ fi
 
 # For re-starting running executable on source file changes
 sudo gem install filewatcher
+sudo gem install mdl
