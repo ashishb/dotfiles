@@ -32,6 +32,9 @@ if [[ `uname -s` == "Darwin" ]]; then
   fi
 fi
 
+# Makefile auto-completion
+complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
+
 # Disable homrew analytics (https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md)
 HOMEBREW_NO_ANALYTICS=1
 # Disable Gatekeeper's quarantine - https://github.com/Homebrew/homebrew-cask/issues/52128#issuecomment-422436221
