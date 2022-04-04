@@ -130,7 +130,6 @@ brew install avast-security  # Free Anti-virus protection
 # brew install spotify  # An amazing music streaming service
 brew install xquartz  # For running X server based apps
 brew install wireshark
-brew install zipeg # A zip file reader
 brew install fanny
 # TODO(ashishb): Add cask for Gyazo, an app for taking and uploading screenshots.
 
