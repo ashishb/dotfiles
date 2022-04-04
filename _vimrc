@@ -83,9 +83,9 @@ Bundle 'tpope/vim-fugitive'
 " let g:syntastic_java_javac_classpath = '/usr/local/Cellar/android-sdk/22.6.2/platforms/android-19/android.jar'
 " For snippets.
 " vim-addon-mw-utils and tlib_vim are needed by snipmate.
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+" Bundle "MarcWeber/vim-addon-mw-utils"
+" Bundle "tomtom/tlib_vim"
+" Bundle "garbas/vim-snipmate"
 " An awesome collection of snippets.
 Bundle "honza/vim-snippets"
 " Enable rainbow-colored parentheses.
