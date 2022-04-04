@@ -18,7 +18,9 @@ sudo python3 -m pip install pdbpp  # A powerful improvement to pdb CLI.
 # Install if we don't have it
 if test ! $(which brew); then
     echo "Installing homebrew..."
-      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ashishb/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Turn off analytics
@@ -26,9 +28,6 @@ brew analytics off
 
 # Update homebrew recipes
 brew update
-
-# TODO(ashishb): Trying to debug a failure with python installation
-# brew upgrade python
 
 brew install ag
 # A better file finder than find
@@ -39,20 +38,12 @@ brew install rg
 # brew install ack  # A replacement for grep.
 brew install bash # Install latest version of Bash.
 brew install shellcheck  # Linter for shell scripts
-# Configure the new version to be default
-# Source: https://github.com/mathiasbynens/dotfiles/issues/544#issuecomment-104935642
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-# This requires password and won't work on Travis CI
-# Source: https://docs.travis-ci.com/user/environment-variables/#default-environment-variables
-if test ! ${CI:-}; then
-    chsh -s /usr/local/bin/bash
-fi
 # Install new version of bash completion for this
 brew install bash-completion@2
 # Install GNU core utilities (those that come with macOS are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 # coreutils is already installed on Travis CI. Don't fail if we fail to install this.
-brew install coreutils || true
+brew install coreutils
 brew install bat  # Better than cat. Supports syntax highlighting.
 brew install ctags
 # This is useful for extracting EXIF data out of images
@@ -63,8 +54,6 @@ brew install findutils
 brew install fdupes
 # .gitignore boilerplate code (example: "gibo python textmate").
 brew install gibo
-# For re-starting running executable on source file changes
-gem install filewatcher
 brew install hexedit
 # Do I need this?
 # brew install jsonpp
@@ -120,18 +109,11 @@ fi
 # brew install dash # Offline documentation browser (I don't use it anymore)
 brew install selfcontrol  # To block certain websites for productivity
 brew install google-drive
-# # For some reason, this installation fails on Travis CI: https://travis-ci.org/ashishb/dotfiles/builds/483579495
-if test ! ${CI:-}; then
-  # Seems like this cask does not exist anymore.
-  brew install instabridge  # Wireless password manager.
-fi
 # Great tool but the cask has been deleted - https://github.com/JadenGeller/Helium/issues/207
 # brew install jadengeller-helium  # Web browser on top of all other windows
 brew install iterm2
 brew install kindle  # Kindle reader
 brew install macdown  # Mark-down editor
-brew install music-manager  # Google music manager
-brew install radiant-player  # Unofficial native app for Google Music
 brew install diffmerge  # File diffing GUI
 # I moved to Alfred. Alfred is better than QuickSilver.
 # brew install quicksilver # Quicksilver is better than Spotlight.
@@ -148,14 +130,8 @@ brew install avast-security  # Free Anti-virus protection
 # brew install spotify  # An amazing music streaming service
 brew install xquartz  # For running X server based apps
 brew install wireshark
-brew install zipeg ||  # A zip file reader
-brew install fanny  # CPU temprature install monitor
-# Even trying twice doesn't work with zipeg. So, just don't fail if zipeg fails on CI.
-# https://travis-ci.org/ashishb/dotfiles/jobs/577997959
-if test ! ${CI:-}; then
-    echo "Failed to install zipeg on CI. Skipping over zipeg since it is a frequent problem."
-    true
-fi
+brew install zipeg # A zip file reader
+brew install fanny
 # TODO(ashishb): Add cask for Gyazo, an app for taking and uploading screenshots.
 
 # Battery health info. Not great but still good.
@@ -204,4 +180,16 @@ brew install jd-gui # For java decompilation.
 # brew install genymotion  # Emulator for android.
 # This one seems to fail on GitHub Actions
 # https://github.com/ashishb/dotfiles/runs/2258896886
-brew cleanup || true
+# brew cleanup || true
+
+# Configure the new version to be default
+# Source: https://github.com/mathiasbynens/dotfiles/issues/544#issuecomment-104935642
+sudo bash -c 'echo /bin/bash >> /etc/shells'
+# This requires password and won't work on Travis CI
+# Source: https://docs.travis-ci.com/user/environment-variables/#default-environment-variables
+if test ! ${CI:-}; then
+  chsh -s /bin/bash
+fi
+
+# For re-starting running executable on source file changes
+sudo gem install filewatcher
