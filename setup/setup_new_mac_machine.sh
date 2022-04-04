@@ -142,7 +142,7 @@ brew install airpass
 # Create a cask for http://froyosoft.com/soundbooster.php
 brew install pycharm-ce
 # Run GitHub actions locally
-brew install nektos/tap/act
+brew install act
 # TODO(ashishb) Create a cask for xtype - no point, I use phase express now
 # http://mac.softpedia.com/get/Utilities/Presto-app4mac.shtml - a free and good text auto-expander for Mac
 
