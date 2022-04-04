@@ -147,13 +147,9 @@ brew install act
 # http://mac.softpedia.com/get/Utilities/Presto-app4mac.shtml - a free and good text auto-expander for Mac
 
 # Install fonts.
-brew tap homebrew/cask-fonts
-fonts=(
-    font-source-code-pro
-    font-roboto
-)
 echo "Installing fonts..."
-brew install ${fonts[@]}
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
 
 # Android tools used to need Java 8 to run.
 # Source: https://github.com/microsoft/malmo/pull/817/
