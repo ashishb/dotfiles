@@ -144,8 +144,12 @@ brew install pycharm-ce
 # Go language
 brew install golang
 brew install goland
+brew install golangci-lint
+# go get -u golang.org/x/lint/golint  # Install go lint
 # Install docker
 brew install homebrew/cask/docker
+# Docker file linter
+brew install hadolint
 # Run GitHub actions locally
 brew install act
 # TODO(ashishb) Create a cask for xtype - no point, I use phase express now
