@@ -2,13 +2,17 @@ name: Test Setup Vim on Mac OS
 
 on: [push]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  test_mac_vim:
 
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install new vim
         run: |
           set -eo pipefail
