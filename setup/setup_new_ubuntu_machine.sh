@@ -19,7 +19,7 @@ sudo apt-get -y install ant \
   bat \
   fd-find \
   ripgrep \
-  golang-goA
+  golang-go
 
 # Install Python 3.9
 sudo add-apt-repository -y ppa:deadsnakes/ppa && sudo apt -y install python3.9 python3-pip
