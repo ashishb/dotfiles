@@ -2,19 +2,28 @@
 set -e
 
 sudo apt-get update
-# Install dev tools.
-sudo apt-get -y install ant
-sudo apt-get -y install curl
-sudo apt-get -y install git
-sudo apt-get -y install libxss1  # Required for Google-chrome.
-sudo apt-get -y install nmap
-sudo apt-get -y install python-dev
-sudo apt-get -y install python3-pip
-sudo apt-get -y install ssh
-sudo apt-get -y install vim
-sudo apt-get -y install whois
-sudo apt-get -y install xsel
-sudo apt-get -y install zip  # I am surprised, how this can be missing.
+# Install dev tools
+# libxss1 is required for Google-chrome
+# On Linux, bat is installed as batcat
+sudo apt-get -y install ant \
+  curl \
+  git \
+  libxss1 \
+  nmap \
+  ssh \
+  vim \
+  whois \
+  xsel \
+  zip \
+  tmux \
+  bat \
+  fd-find \
+  ripgrep \
+  golang-goA
+
+# Install Python 3.9
+sudo add-apt-repository -y ppa:deadsnakes/ppa && sudo apt -y install python3.9 python3-pip
+
 # For some reason, this fails now
 # We don't need Java 8 on Linux right now anyways as I don't use Linux for
 # Android development
