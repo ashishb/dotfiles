@@ -21,6 +21,8 @@ sudo apt-get -y install ant \
   ripgrep \
   golang-go
 
+# Install latest version of Go - https://github.com/golang/go/wiki/Ubuntu
+# sudo add-apt-repository -y ppa:longsleep/golang-backports && sudo apt update && sudo apt -y install golang-go
 # Install Python 3.9
 sudo add-apt-repository -y ppa:deadsnakes/ppa && sudo apt -y install python3.9 python3-pip
 
