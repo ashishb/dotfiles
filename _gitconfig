@@ -36,6 +36,7 @@
 [alias]
   st = status
   ci = commit
+  cip = !git commit --amend && git push -f
   br = branch
   co = checkout
   df = diff --color-words --word-diff-regex=.
@@ -63,5 +64,5 @@
   changed = green
   untracked = cyan reverse
   branch = magenta
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+# [url "git@github.com:"]
+# 	insteadOf = https://github.com/
