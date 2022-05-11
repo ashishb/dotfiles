@@ -17,6 +17,8 @@ npm install -g solhint
 # Use Type script in lieu of Javascript for code maintainability
 npm install -g typescript
 npm install -g tslist  # Type script linter
+# EVM decompiler
+sudo pip3 install panoramix-decompiler
 
 # brew install kubernetes-cli
 # brew install kubernetes-helm
