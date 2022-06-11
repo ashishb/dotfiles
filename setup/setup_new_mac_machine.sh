@@ -122,7 +122,9 @@ brew install bitbar
 # brew install skype  # I don't use Skype anymore
 # I prefer spectacle now.
 # brew install slate   # XMonand like window manager.
-brew install spectacle  # Window manager
+# Spectable is no longer maintained, switch to rectangle
+# brew install spectacle  # Window manager
+brew install rectangle
 # Cask is not working anymore. I moved to avast
 # brew install sophos-anti-virus-home-edition  # Free Anti-virus protection
 brew install avast-security  # Free Anti-virus protection
