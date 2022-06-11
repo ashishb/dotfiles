@@ -143,8 +143,11 @@ brew install airpass
 # brew install battery-time-remaining
 # Create a cask for http://froyosoft.com/soundbooster.php
 brew install pycharm-ce
-# Go language
-brew install golang
+# Go language - this fails on CI
+# https://github.com/ashishb/dotfiles/runs/6838155133?check_suite_focus=true
+if test ! ${CI:-}; then
+  brew install golang
+fi
 brew install goland
 brew install golangci-lint
 # go get -u golang.org/x/lint/golint  # Install go lint
