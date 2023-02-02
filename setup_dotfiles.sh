@@ -46,8 +46,9 @@ if test "${CI:-}"; then
 fi
 echo "Including new config file in $HOME/.gitconfig"
 echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig
-echo "Appending $HOME/.hgrc"
-echo "%include $DIR/_hgrc" >> $HOME/.hgrc
+# Disable hgrc, I haven't use mercurial in a long while
+# echo "Appending $HOME/.hgrc"
+# echo "%include $DIR/_hgrc" >> $HOME/.hgrc
 
 FILE="$HOME/.gradle/gradle.properties"
 echo "Overwriting $FILE"
