@@ -1,6 +1,11 @@
+---
 name: Test Setup Mac OS
 
-on: [push]
+on:  # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - ".github/workflows/test_macos_3.yml"
+      - "setup/_macos"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
