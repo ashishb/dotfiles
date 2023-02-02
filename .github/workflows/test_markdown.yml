@@ -1,6 +1,10 @@
+---
 name: Test Markdown
 
-on: [push]
+on:  # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - "**.md"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -12,15 +16,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby
-    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-    # change this to (see https://github.com/ruby/setup-ruby#versioning):
-    # uses: ruby/setup-ruby@v1
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.6
-    - name: Install dependencies
-      run: gem install mdl
-    - name: Run tests
-      run: mdl -r ~MD013,~MD029,~MD033 README.md
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        # To automatically get bug fixes and new Ruby versions for
+        # ruby/setup-ruby,
+        # change this to (see https://github.com/ruby/setup-ruby#versioning):
+        # uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+      - name: Install dependencies
+        run: gem install mdl
+      - name: Run tests
+        run: mdl -r ~MD013,~MD029,~MD033 README.md
