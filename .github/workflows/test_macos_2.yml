@@ -1,6 +1,11 @@
+---
 name: Test setup Mac machine
 
-on: [push]
+on:  # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - ".github/workflows/test_macos_2.yml"
+      - "setup/setup_new_mac_machine.sh"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -13,7 +18,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Run setup_new_mach_machine script
+      - name: Run Setup new Mach machine script
         run: |
           set -eo pipefail
           export CI=1
