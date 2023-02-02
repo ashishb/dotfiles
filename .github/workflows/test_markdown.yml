@@ -1,9 +1,10 @@
 ---
-name: Test Markdown
+name: Lint Markdown
 
 on:  # yamllint disable-line rule:truthy
   push:
     paths:
+      - ".github/workflows/test_markdown.yml"
       - "**.md"
 
 concurrency:
@@ -11,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  lint_markdown:
 
     runs-on: ubuntu-latest
 
@@ -24,7 +25,7 @@ jobs:
         # uses: ruby/setup-ruby@v1
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.0
       - name: Install dependencies
         run: gem install mdl
       - name: Run tests
