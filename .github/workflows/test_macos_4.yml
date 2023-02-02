@@ -1,6 +1,12 @@
+---
 name: Test Setup Vim on Mac OS
 
-on: [push]
+on:  # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - ".github/workflows/test_macos_4.yml"
+      - "setup_dotfiles.sh"
+      - "_vimrc"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
