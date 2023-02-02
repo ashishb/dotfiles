@@ -1,6 +1,13 @@
+---
 name: Test Ubuntu
 
-on: [push]
+on:  # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - ".github/workflows/test_ubuntu.yml"
+      - "setup_dotfiles.sh"
+      - "_vimrc"
+      - "setup/setup_new_ubuntu_machine.sh"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
