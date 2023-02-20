@@ -1,0 +1,41 @@
+---
+# Run this locally with act - https://github.com/nektos/act
+# act -j markdown-lint
+name: Lint Markdown files
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [master]
+    paths:
+      - '**.md'
+      - '.github/workflows/markdown-lint.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - '**.md'
+      - '.github/workflows/markdown-lint.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        # See https://github.com/ruby/setup-ruby#versioning
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+
+      - name: Install dependencies
+        run: gem install mdl
+
+      - name: Run tests
+        run: mdl -r ~MD013,~MD029,~MD033 README.md
