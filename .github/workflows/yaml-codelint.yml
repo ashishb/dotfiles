@@ -1,6 +1,6 @@
 ---
 # Run this locally with act - https://github.com/nektos/act
-# act -j yamllint
+# act -j yaml-lint
 name: Lint YAML Code
 
 on:  # yamllint disable-line rule:truthy
@@ -24,7 +24,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  yamllint:
+  yaml-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
