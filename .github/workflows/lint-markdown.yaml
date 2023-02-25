@@ -1,26 +1,26 @@
 ---
 # Run this locally with act - https://github.com/nektos/act
-# act -j markdown-lint
-name: Lint Markdown files
+# act -j lintMarkdown
+name: Lint Markdown
 
 on:  # yamllint disable-line rule:truthy
   push:
     branches: [master]
     paths:
       - '**.md'
-      - '.github/workflows/markdown-lint.yml'
+      - '.github/workflows/lint-markdown.yml'
   pull_request:
     branches: [master]
     paths:
       - '**.md'
-      - '.github/workflows/markdown-lint.yml'
+      - '.github/workflows/lint-markdown.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  markdown-lint:
+  lintMarkdown:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
