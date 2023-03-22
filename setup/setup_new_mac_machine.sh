@@ -29,13 +29,16 @@ brew analytics off
 # Update homebrew recipes
 brew update
 
-brew install ag
-# A better file finder than find
-brew install fd
 # A better searcher for git repos since it skips over files which are listed in .gitignore
 brew install rg
+# rg is much better
+# brew install ag
+# A better file finder than find
 # I moved to ag (silver searcher)
 # brew install ack  # A replacement for grep.
+
+# Better than find
+brew install fd
 brew install bash # Install latest version of Bash.
 brew install shellcheck  # Linter for shell scripts
 # Install new version of bash completion for this
@@ -127,7 +130,10 @@ brew install bitbar
 brew install rectangle
 # Cask is not working anymore. I moved to avast
 # brew install sophos-anti-virus-home-edition  # Free Anti-virus protection
-brew install avast-security  # Free Anti-virus protection
+# Seems to fail on GitHub CI
+if test ! ${CI:-}; then
+  brew install avast-security  # Free Anti-virus protection
+fi
 # Not using it anymore.
 # brew install spotify  # An amazing music streaming service
 brew install xquartz  # For running X server based apps
@@ -147,9 +153,10 @@ brew install pycharm-ce
 # https://github.com/ashishb/dotfiles/runs/6838155133?check_suite_focus=true
 if test ! ${CI:-}; then
   brew install golang
+  # This unlinks the existing Go 1.17 and fails on CI
+  brew install golangci-lint
 fi
 brew install goland
-brew install golangci-lint
 # go get -u golang.org/x/lint/golint  # Install go lint
 # Install docker
 brew install homebrew/cask/docker

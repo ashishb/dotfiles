@@ -1,8 +1,14 @@
 ---
-name: Test setup Mac machine
+name: Test setup Mac machine with packages
 
 on:  # yamllint disable-line rule:truthy
+  pull_request:
+    branches: ["main", "master"]
+    paths:
+      - ".github/workflows/test_macos_2.yml"
+      - "setup/setup_new_mac_machine.sh"
   push:
+    branches: ["main", "master"]
     paths:
       - ".github/workflows/test_macos_2.yml"
       - "setup/setup_new_mac_machine.sh"
@@ -12,14 +18,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test_mac_setup:
+  testMacSetup:
 
     runs-on: macos-latest
+    timeout-minutes: 60
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Run Setup new Mach machine script
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Setup new Mac machine script
         run: |
           set -eo pipefail
           export CI=1
-          bash setup/setup_new_mac_machine.sh  # Test Mac OS-specific setup
+          # Test Mac OS package installation
+          bash setup/setup_new_mac_machine.sh
