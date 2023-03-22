@@ -3,6 +3,7 @@ name: Test Setup Mac OS-specific config
 
 on:  # yamllint disable-line rule:truthy
   push:
+    branches: ["main", "master"]
     paths:
       - ".github/workflows/test_macos_3.yml"
       - "setup/_macos"
