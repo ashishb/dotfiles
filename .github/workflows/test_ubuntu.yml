@@ -1,7 +1,13 @@
 ---
-name: Test Ubuntu
+name: Test complete dotfile setup on Ubuntu
 
 on:  # yamllint disable-line rule:truthy
+  pull_request:
+    paths:
+      - ".github/workflows/test_ubuntu.yml"
+      - "setup_dotfiles.sh"
+      - "_vimrc"
+      - "setup/setup_new_ubuntu_machine.sh"
   push:
     paths:
       - ".github/workflows/test_ubuntu.yml"
@@ -14,9 +20,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  testAllOnUbuntu:
 
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v3
