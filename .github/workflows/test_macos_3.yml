@@ -1,5 +1,5 @@
 ---
-name: Test Setup Mac OS
+name: Test Setup Mac OS-specific config
 
 on:  # yamllint disable-line rule:truthy
   push:
@@ -12,12 +12,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  macOsConfig:
 
     runs-on: macos-latest
+    timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Run _macos script
         run: |
           set -eo pipefail
