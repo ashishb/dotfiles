@@ -30,6 +30,7 @@
   lineNumber = true
 [push]
   default = simple
+  autoSetupRemote = true
 [pull]
 	conflictstyle = diff3
 	rebase = true
