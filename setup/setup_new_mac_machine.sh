@@ -197,6 +197,9 @@ brew install jd-gui # For java decompilation.
 
 # Bluetooth CLI for mac
 brew install blueutil
+# FOSS text-expander for Mac OS
+brew tap espanso/espanso
+brew install espanso
 
 # This one seems to fail on GitHub Actions
 # https://github.com/ashishb/dotfiles/runs/2258896886
