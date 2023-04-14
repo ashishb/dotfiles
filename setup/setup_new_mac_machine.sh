@@ -200,6 +200,8 @@ brew install blueutil
 # FOSS text-expander for Mac OS
 brew tap espanso/espanso
 brew install espanso
+# Productivity note-taking app in Markdown
+brew install obsidian
 
 # This one seems to fail on GitHub Actions
 # https://github.com/ashishb/dotfiles/runs/2258896886
