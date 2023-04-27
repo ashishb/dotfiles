@@ -202,6 +202,8 @@ brew tap espanso/espanso
 brew install espanso
 # Productivity note-taking app in Markdown
 brew install obsidian
+# Mac menubar app for meeting
+brew install meetingbar
 
 # This one seems to fail on GitHub Actions
 # https://github.com/ashishb/dotfiles/runs/2258896886
