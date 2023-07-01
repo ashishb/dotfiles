@@ -40,11 +40,14 @@
   cip = !git commit --amend && git push -f
   br = branch
   co = checkout
+  # Checks out the default branch - master or main
+  com = !git checkout $(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
   df = diff --color-words --word-diff-regex=.
   lg = log -p
   hist = log -20 --pretty=format:"%C(yellow)%h%Creset\\%C(green)%ar%C(cyan)%d\\ %Creset%s%C(yellow)\\ [%cn]" --graph --decorate --all
-  spp = !git stash && git pull origin master && git stash pop
-  pom = pull origin master
+  # Pull the default branch - master or main
+  pom = !git pull origin $(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
+  spp = !git stash && git pom && git stash pop
   recentbranches = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 [color]
   ui = auto
