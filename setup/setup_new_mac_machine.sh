@@ -162,6 +162,8 @@ brew install goland
 brew install homebrew/cask/docker
 # Docker file linter
 brew install hadolint
+# Nice diff for git - https://github.com/dandavison/delta
+brew install git-delta
 # Run GitHub actions locally
 brew install act
 # TODO(ashishb) Create a cask for xtype - no point, I use phase express now

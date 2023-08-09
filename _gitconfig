@@ -3,8 +3,20 @@
 	autosetuprebase = always
 [core]
   editor = vim
+  pager = delta
   # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
   whitespace = space-before-tab,indent-with-non-tab,trailing-space
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    # features = collared-trogon
+	  syntax-theme = Solarized (dark)
+    line-numbers = true
+    decorations = true
+    # side-by-side = true
+
 [user]
 	name = Ashish Bhatia
 	email = ashishb@ashishb.net
@@ -12,6 +24,7 @@
 	mnemonicprefix = true
   tool = diffmerge
 	noprefix = true
+  colorMoved = default
 [difftool "diffmerge"]
 	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [difftool]
@@ -20,6 +33,7 @@
   # Include summaries of merged commits in newly created merge commit messages
   log = true
   tool = p4mergetool
+  conflictstyle = diff3
 [mergetool "p4mergetool"]
 	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
 	trustExitCode = false
