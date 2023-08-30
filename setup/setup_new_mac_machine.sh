@@ -162,6 +162,8 @@ brew install goland
 brew install homebrew/cask/docker
 # Docker file linter
 brew install hadolint
+# YAML file linter
+brew install yamllint
 # Nice diff for git - https://github.com/dandavison/delta
 brew install git-delta
 # Run GitHub actions locally
