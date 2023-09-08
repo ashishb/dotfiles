@@ -99,3 +99,15 @@ if [[ $(uname -s) == "Darwin" ]]; then
   export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 fi
 
+# Resize and shrink photos before uploading them to my website
+function resize_for_website {
+  full_filename="$1"
+  filename=$(basename -- "$full_filename")
+  extension="${filename##*.}"
+  filename_no_extension="${filename%.*}"
+  resized_file_name="${filename_no_extension}_resized.${extension}"
+  convert "${full_filename}" -resize 1500x1500 "$resized_file_name"
+  echo "Resized ${filename} to ${resized_file_name}"
+  du -shc "${filename}" "${resized_file_name}"
+}
+export -f resize_for_website
