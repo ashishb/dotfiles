@@ -88,12 +88,16 @@ Bundle 'tpope/vim-fugitive'
 " Bundle "garbas/vim-snipmate"
 " An awesome collection of snippets.
 Bundle "honza/vim-snippets"
+
 " Enable rainbow-colored parentheses.
 Bundle "kien/rainbow_parentheses.vim"
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" This seems to be failing with
+" `Not an editor command: RainbowParenthesesToggle`
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
+
 " Disable SearchComplete - it is buggy and interferes with ability to arrow
 " up/down the search histroy.
 " Enable tab based auto-completion in search command.
