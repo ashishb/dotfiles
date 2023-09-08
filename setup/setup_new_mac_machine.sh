@@ -47,6 +47,7 @@ brew install bash-completion@2
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 # coreutils is already installed on Travis CI. Don't fail if we fail to install this.
 brew install coreutils
+brew install mmv # Move multiple files
 brew install bat  # Better than cat. Supports syntax highlighting.
 brew install ctags
 # This is useful for extracting EXIF data out of images
