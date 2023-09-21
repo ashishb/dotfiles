@@ -209,6 +209,8 @@ brew install espanso
 brew install obsidian
 # Mac menubar app for meeting
 brew install meetingbar
+# Media Player for Mac
+brew install vlc
 
 # This one seems to fail on GitHub Actions
 # https://github.com/ashishb/dotfiles/runs/2258896886
