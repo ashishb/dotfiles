@@ -14,6 +14,8 @@ alias publicip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias localip="ipconfig getifaddr en0"
 # List all make targets.
 alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\1/p'"
+# Ref: https://serverfault.com/a/1123925/1053189
+alias delete_unused_cloud_run="gcloud run revisions list --filter=\"status.conditions.type:Active AND status.conditions.status:'False'\" --format='value(metadata.name)' | xargs -r -L1 gcloud run revisions delete --quiet"
 
 # Usage: kotin_run foo.kt <args-list> to compile foo.kt into foo.kt.jar and run it with the optional <args-list>
 ktr () { kotlinc "$1" -include-runtime -d "$1".jar && java -jar "$1".jar "${@:2}"; }
