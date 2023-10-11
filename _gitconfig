@@ -1,6 +1,8 @@
 # vi: ft=gitconfig
 [branch]
 	autosetuprebase = always
+[commit]
+	gpgsign = true
 [core]
   editor = vim
   pager = delta
