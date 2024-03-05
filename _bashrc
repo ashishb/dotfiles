@@ -44,6 +44,7 @@ export HOMEBREW_CASK_OPTS=--no-quarantine
 
 alias start_web_server='echo Starting webserver at http://$(ipconfig getifaddr en0):8000 && python -m SimpleHTTPServer 8000'
 alias docker_image_size_mac='Docker image size:" "$(du -shc ~/Library/Containers/com.docker.docker/ | tail -n 1 | cut -f1)'
+alias docker_cache_size='du -shc /Users/ashishb/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw'
 
 # export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 # export JAVA_HOME=$(/usr/libexec/java_home -v12)
