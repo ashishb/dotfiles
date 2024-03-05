@@ -23,6 +23,7 @@
 	name = Ashish Bhatia
 	email = ashishb@ashishb.net
 [diff]
+  algorithm = histogram
 	mnemonicprefix = true
   tool = diffmerge
 	noprefix = true
@@ -47,6 +48,7 @@
 [push]
   default = simple
   autoSetupRemote = true
+	followtags = true
 [pull]
 	conflictstyle = diff3
 	rebase = true
@@ -85,5 +87,13 @@
   changed = green
   untracked = cyan reverse
   branch = magenta
-# [url "git@github.com:"]
-# 	insteadOf = https://github.com/
+[transfer]
+	fsckobjects = true
+[fetch]
+	fsckobjects = true
+	prune = true
+	prunetags = true
+[receive]
+	fsckObjects = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
