@@ -25,6 +25,12 @@ brew update
 # Install it early on as other packages might depend on it and might install
 # a different version of Python otherwise
 brew install python@3.12
+# Poetry package manager
+brew install poetry
+
+brew install rust
+# Find unused poetry packages (warning: this does return false positives!)
+cargo install poetry-udeps --locked
 
 # A better searcher for git repos since it skips over files which are listed in .gitignore
 brew install rg
