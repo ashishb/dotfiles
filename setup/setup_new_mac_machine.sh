@@ -93,7 +93,6 @@ brew install sox  # To remove silence from music
 # Unstable softwares, right from HEAD of some other repo.
 # brew tap brew homebrew/homebrew-head-only
 
-brew tap homebrew/cask-versions  # For Java 8
 # Useful macOS softwares.
 
 # For some reason, this installation fails on Travis CI
@@ -174,9 +173,6 @@ echo "Installing fonts..."
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 
-# Android tools used to need Java 8 to run.
-# Source: https://github.com/microsoft/malmo/pull/817/
-# brew install homebrew/cask-versions/adoptopenjdk8
 # Android development and reverse engineering related installs.
 brew install android-studio
 brew install fastlane  # Android release from CLI
