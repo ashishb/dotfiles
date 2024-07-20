@@ -38,7 +38,7 @@ echo "Include $DIR/_sshconfig" >> ~/.ssh/config
 
 echo "Overwriting $HOME/.inpurtc"
 # https://unix.stackexchange.com/a/179294
-echo "$include $DIR/_inputrc" >> ~/.inputrc
+echo "\$include $DIR/_inputrc" >> ~/.inputrc
 
 # Disable last two lines which replace https with ssh since it cause Travis CI failures :(
 # This is hacky.
