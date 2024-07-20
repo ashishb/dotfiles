@@ -36,9 +36,6 @@ sudo apt-get -y remove thunderbird  # I don't need thunderbird.
 sudo pip install --upgrade pip
 # Use pip instead of easy_install.
 # http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
-sudo pip install pylint
-sudo pip install Pygments
-sudo pip install pdbpp  # A powerful improvement to pdb CLI.
 sudo apt-get install google-chrome-stable
 
 #### Ubuntu specific settings. ####

@@ -7,13 +7,6 @@ if test ${CI:-}; then
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 
-# Use Python 3
-# Upgrade pip to the latest version
-sudo python3 -m pip install --upgrade pip
-sudo python3 -m pip install pylint
-sudo python3 -m pip install Pygments
-sudo python3 -m pip install pdbpp  # A powerful improvement to pdb CLI.
-
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
@@ -28,6 +21,10 @@ brew analytics off
 
 # Update homebrew recipes
 brew update
+
+# Install it early on as other packages might depend on it and might install
+# a different version of Python otherwise
+brew install python@3.12
 
 # A better searcher for git repos since it skips over files which are listed in .gitignore
 brew install rg
