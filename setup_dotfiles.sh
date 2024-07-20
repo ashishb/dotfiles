@@ -34,10 +34,11 @@ echo "source $DIR/_screenrc" > $HOME/.screenrc
 echo "Overwriting $HOME/.ssh/config"
 touch $DIR/_sshconfig
 mkdir -p $HOME/.ssh
-ln -s $DIR/_sshconfig ~/.ssh/config || true
+echo "Include $DIR/_sshconfig" >> ~/.ssh/config
 
 echo "Overwriting $HOME/.inpurtc"
-ln -s $DIR/_inputrc ~/.inputrc || true
+# https://unix.stackexchange.com/a/179294
+echo "$include $DIR/_inputrc" >> ~/.inputrc
 
 # Disable last two lines which replace https with ssh since it cause Travis CI failures :(
 # This is hacky.
