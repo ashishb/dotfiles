@@ -170,7 +170,6 @@ brew install act
 
 # Install fonts.
 echo "Installing fonts..."
-brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 
 # Android development and reverse engineering related installs.
