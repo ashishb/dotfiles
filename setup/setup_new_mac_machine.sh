@@ -79,6 +79,7 @@ brew install wget || true
 brew install jq # For JSON parsing in shell
 # https://stackoverflow.com/questions/11834297/how-can-i-remove-silence-from-an-mp3-programmatically
 brew install sox  # To remove silence from music
+brew install google-cloud-sdk
 
 # TODO(ashishb): Is this still required?
 # Fix:
