@@ -20,6 +20,10 @@ export PATH=$PATH:$DIR/scripts
 export PATH=/opt/homebrew/bin:$PATH
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$PATH:/Users/ashishb/.cargo/bin"
+export PATH="$PATH:/Applications/PyCharm CE.app/Contents/MacOS"
+export PATH="$PATH:$HOME/.local/bin"
+alias charm=pycharm
+alias rbm=rubymine
 
 # A function to change title (works in iTerm).
 function title {
