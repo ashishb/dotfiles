@@ -1,4 +1,7 @@
 # vi: ft=gitconfig
+# Include this in your ~/.gitconfig via
+# [include]
+#   path = <path to this _gitconfig file>
 [branch]
 	autosetuprebase = always
 [commit]
