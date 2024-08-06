@@ -24,6 +24,7 @@ export PATH="$PATH:/Applications/PyCharm CE.app/Contents/MacOS"
 export PATH="$PATH:$HOME/.local/bin"
 alias charm=pycharm
 alias rbm=rubymine
+alias gl=goland
 
 # A function to change title (works in iTerm).
 function title {
