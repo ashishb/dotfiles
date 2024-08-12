@@ -171,6 +171,12 @@ brew install yamllint
 # GPG for signing git commits
 # https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
 brew install gpg
+# GitHub Command-line tool
+brew install gh
+# GitHub CLI Copilot Extension
+# This cannot be auto installed without `gh login` first
+# gh extension install github/gh-copilot
+
 # Nice diff for git - https://github.com/dandavison/delta
 brew install git-delta
 # Run GitHub actions locally
