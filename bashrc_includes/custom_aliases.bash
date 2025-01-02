@@ -14,6 +14,8 @@ alias publicip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias localip="ipconfig getifaddr en0"
 # List all make targets.
 alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\1/p'"
+alias jq_non_empty="jq 'del(..|select(. == null))' | jq 'del(..|select(. == 0))' | jq 'del(..|select(. == \"\"))'"
+
 # Ref: https://serverfault.com/a/1123925/1053189
 alias delete_unused_cloud_run="gcloud run revisions list --filter=\"status.conditions.type:Active AND status.conditions.status:'False'\" --format='value(metadata.name)' | xargs -r -L1 gcloud run revisions delete --quiet"
 
@@ -108,7 +110,7 @@ function resize_for_website {
   extension="${filename##*.}"
   filename_no_extension="${filename%.*}"
   resized_file_name="${filename_no_extension}_resized.${extension}"
-  convert "${full_filename}" -resize 1500x1500 "$resized_file_name"
+  magick "${full_filename}" -resize 1500x1500 "$resized_file_name"
   echo "Resized ${filename} to ${resized_file_name}"
   du -shc "${filename}" "${resized_file_name}"
 }
