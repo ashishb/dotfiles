@@ -17,7 +17,8 @@ BASHRC_INCLUDES=$DIR/bashrc_includes
 export PATH=$PATH:$DIR/scripts
 
 # Bring homebrew, Ruby, and Rust binary packages into path
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$PATH:/Users/ashishb/.cargo/bin"
 export PATH="$PATH:$HOME/go/bin/"
