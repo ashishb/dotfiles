@@ -76,32 +76,32 @@ if [ -f /usr/local/share/bash-completion/bash_completion ]; then
 fi
 # Ref: http://robertmuth.blogspot.com/2012/08/better-bash-scripting-in-15-minutes.html
 set -o nounset
+
 # Better auto complete.
 source $BASHRC_INCLUDES/better_autocomplete.bash
-# Not required anymore - brew auto-completion (if brew is present).
-# command brew help 1>/dev/null 2>&1 && source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 # adb auto-completion.
 source $BASHRC_INCLUDES/adb.bash
 # git auto-completion.
 source $BASHRC_INCLUDES/git-completion.bash
-# p4 auto-completion
-source $BASHRC_INCLUDES/p4_autocomplete.bash
-# gradle auto-completion
-source $BASHRC_INCLUDES/gradle_autocomplete.bash
-# Maven (mvn) auto-completion.
-source $BASHRC_INCLUDES/maven-bash-completion/bash_completion.bash
 # Yarn auto-completion
 source $BASHRC_INCLUDES/yarn-completion/yarn-completion.bash
 # Custom aliases to improve productivity.
 source $BASHRC_INCLUDES/custom_aliases.bash
-# Custom aliases for android reverse engineering.
-source $BASHRC_INCLUDES/android_reverse_engineering_related_aliases.bash
 # Source local aliases.
 touch $BASHRC_INCLUDES/local_aliases.bash && source $BASHRC_INCLUDES/local_aliases.bash
 set +o nounset
-
 # Keep these two files out of nounset (I will fix them some day).
 # An interesting bash prompt.
 source $BASHRC_INCLUDES/50_prompt.bash
 # Source 'z' - easy jumping around without providing full path names.
 source $BASHRC_INCLUDES/z/z.sh
+
+# Obsolete ones
+# # p4 auto-completion
+# source $BASHRC_INCLUDES/p4_autocomplete.bash
+# # Maven (mvn) auto-completion.
+# source $BASHRC_INCLUDES/maven-bash-completion/bash_completion.bash
+# # gradle auto-completion
+# source $BASHRC_INCLUDES/gradle_autocomplete.bash
+# # Custom aliases for android reverse engineering.
+# source $BASHRC_INCLUDES/android_reverse_engineering_related_aliases.bash
