@@ -27,10 +27,13 @@ jobs:
   lintYaml:
     runs-on: ubuntu-latest
     timeout-minutes: 15
- 
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
       - name: Check YAML files with linter
         uses: ibiqlik/action-yamllint@v3
         with:
