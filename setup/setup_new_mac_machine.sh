@@ -119,7 +119,9 @@ brew install google-drive
 # Great tool but the cask has been deleted - https://github.com/JadenGeller/Helium/issues/207
 # brew install jadengeller-helium  # Web browser on top of all other windows
 brew install iterm2
-brew install kindle  # Kindle reader
+# Kindle cask has been discontinued
+# Ref: https://github.com/Homebrew/homebrew-cask/blob/HEAD/Casks/k/kindle.rb
+# brew install kindle  # Kindle reader
 brew install macdown  # Mark-down editor
 brew install diffmerge  # File diffing GUI
 # I moved to Alfred. Alfred is better than QuickSilver.
