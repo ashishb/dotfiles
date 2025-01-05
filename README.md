@@ -2,6 +2,7 @@
 
 [![Lint Markdown](https://github.com/ashishb/dotfiles/actions/workflows/lint-markdown.yaml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/lint-markdown.yaml)
 [![Lint YAML](https://github.com/ashishb/dotfiles/actions/workflows/lint-yaml.yaml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/lint-yaml.yaml)
+[![Lint GitHub Actions](https://github.com/ashishb/dotfiles/actions/workflows/lint-github-actions.yaml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/lint-github-actions.yaml)
 
 [![Test Setup Mac OS](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_3.yml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_3.yml)
 [![Test setup Mac machine](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_2.yml/badge.svg)](https://github.com/ashishb/dotfiles/actions/workflows/test_macos_2.yml)
