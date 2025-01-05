@@ -221,6 +221,8 @@ brew install meetingbar
 brew install vlc
 # Useful ruler for Mac screen measurements
 brew install free-ruler
+# Javascript package management
+brew install yarn
 
 # This one seems to fail on GitHub Actions
 # https://github.com/ashishb/dotfiles/runs/2258896886
