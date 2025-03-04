@@ -1,0 +1,35 @@
+format = '''[$time]($style)[$git_branch]($style)[$git_status]($style)[$directory]($style) '''
+add_newline = false
+
+[time]
+format = '\[[$time]($style)\]'
+# format = '[\[$(date +%H:%M:%S)\]]'
+style = 'green'
+disabled = false
+
+[git_branch]
+format = '\[[$branch]($style)\]'
+style = 'blue'
+
+# Ref: https://starship.rs/config/#git-status
+[git_status]
+conflicted = " 💥 "
+diverged = ""  # I don't care about this
+untracked = ""  # I don't care about this
+
+[directory]
+format = '\[[$path]($style)\]'
+style = 'yellow'
+fish_style_pwd_dir_length = 3
+
+[golang]
+format = 'via [$symbol($version )($mod_version )]($style)'
+
+[status]
+style = 'blue'
+symbol = '🔴 '
+success_symbol = '🟢'
+#format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
+format = '\[[$int]($style)\]'
+map_symbol = true
+disabled = false

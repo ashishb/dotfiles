@@ -23,6 +23,7 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$PATH:/Users/ashishb/.cargo/bin"
 export PATH="$PATH:$HOME/go/bin/"
 export PATH="$PATH:/Applications/PyCharm CE.app/Contents/MacOS"
+export PATH="$PATH:/Applications/GoLand.app/Contents/MacOS"
 export PATH="$PATH:$HOME/.local/bin"
 alias charm=pycharm
 alias rbm=rubymine
@@ -92,7 +93,8 @@ touch $BASHRC_INCLUDES/local_aliases.bash && source $BASHRC_INCLUDES/local_alias
 set +o nounset
 # Keep these two files out of nounset (I will fix them some day).
 # An interesting bash prompt.
-source $BASHRC_INCLUDES/50_prompt.bash
+#source $BASHRC_INCLUDES/50_prompt.bash
+eval "$(starship init bash)"
 # Source 'z' - easy jumping around without providing full path names.
 source $BASHRC_INCLUDES/z/z.sh
 
