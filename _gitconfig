@@ -4,8 +4,11 @@
 #   path = <path to this _gitconfig file>
 [branch]
 	autosetuprebase = always
+[column]
+  ui = auto
 [commit]
 	gpgsign = true
+  verbose = true
 [core]
   editor = vim
   pager = delta
@@ -35,6 +38,11 @@
 	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
+[init]
+  defaultBranch = master
+# Produces interactive prompt that I don't like
+#[help]
+#  autocorrect = prompt
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
