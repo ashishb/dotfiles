@@ -12,6 +12,7 @@ function special_echo {
 function error_echo {
   echo -e '\E[0;31m'"$1\033[0m"
 }
+
 # This detection only works for mac and linux.
 if [ "$(uname)" == "Darwin" ]; then
   special_echo "Setting up $HOME/.bashrc"
@@ -36,9 +37,10 @@ touch $DIR/_sshconfig
 mkdir -p $HOME/.ssh
 echo "Include $DIR/_sshconfig" >> ~/.ssh/config
 
-echo "Overwriting $HOME/.inpurtc"
+FILE="$HOME/.inputrc"
+echo "Overwriting $FILE"
 # https://unix.stackexchange.com/a/179294
-echo "\$include $DIR/_inputrc" >> ~/.inputrc
+echo "\$include $DIR/_inputrc" >> $FILE
 
 # Disable last two lines which replace https with ssh since it cause Travis CI failures :(
 # This is hacky.
@@ -55,6 +57,11 @@ FILE="$HOME/.gradle/gradle.properties"
 echo "Overwriting $FILE"
 mkdir -p $HOME/.gradle
 ln -s $DIR/gradle.properties $FILE || true
+
+FILE="$HOME/.config/starship.toml"
+echo "Overwriting $FILE"
+mkdir -p ~/.config
+ln -s $DIR/scripts/starship.toml $FILE
 
 
 echo "Configuring global gitignore file"
