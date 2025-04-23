@@ -1,6 +1,19 @@
+# Enable case-insensitive tab completion
+set completion-ignore-case On
+
+# Show all possible completions immediately if ambiguous
+set show-all-if-ambiguous On
+
+# Display file types with colors (like `ls --color`)
+set colored-stats On
+
+# Set the length of the common prefix displayed during completion
+set completion-prefix-display-length 3
+
+# Disable the terminal bell sound
+set bell-style none
+
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-set show-all-if-ambiguous on
-set completion-ignore-case on
 "\e[1;5D": backward-word
 "\e[1;5C": forward-word
