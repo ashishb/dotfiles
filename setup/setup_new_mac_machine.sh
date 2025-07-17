@@ -212,7 +212,7 @@ brew install jd-gui # For java decompilation.
 # brew install genymotion  # Emulator for android.
 
 # Bluetooth CLI for mac
-brew install blueutil
+# brew install blueutil  # Useless for now
 # FOSS text-expander for Mac OS
 brew tap espanso/espanso
 brew install espanso
@@ -226,6 +226,7 @@ brew install vlc
 brew install free-ruler
 # Javascript package management
 brew install yarn
+brew install harper  # FOSS Grammarly alternative
 
 # This one seems to fail on GitHub Actions
 # https://github.com/ashishb/dotfiles/runs/2258896886
