@@ -10,6 +10,7 @@
 	gpgsign = true
   verbose = true
 [core]
+	attributesfile = /Users/ashishb/src/dotfiles/_gitattributes
   editor = vim
   pager = delta
   # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
@@ -30,14 +31,22 @@
 	email = ashishb@ashishb.net
 [diff]
   algorithm = histogram
-	mnemonicprefix = true
-  tool = diffmerge
-	noprefix = true
+  # external = difft
+  mnemonicprefix = true
+  tool = diffsitter
+  noprefix = true
   colorMoved = default
+
+[difftool]
+	prompt = false  # Run the difftool immediately, don't ask 'are you sure' each time.
 [difftool "diffmerge"]
 	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
+[difftool "diffsitter"]
+        cmd = diffsitter "$LOCAL" "$REMOTE"
+[difftool "difftastic"]
+    # See `man git-difftool` for a description of MERGED, LOCAL and REMOTE.
+    cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"
+
 [init]
   defaultBranch = master
 # Produces interactive prompt that I don't like
@@ -48,6 +57,9 @@
   log = true
   tool = p4mergetool
   conflictstyle = diff3
+[merge "mergiraf"]
+    name = mergiraf
+    driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 [mergetool "p4mergetool"]
 	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
 	trustExitCode = false
