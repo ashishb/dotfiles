@@ -24,6 +24,7 @@ export PATH="$PATH:/Users/ashishb/.cargo/bin"
 export PATH="$PATH:$HOME/go/bin/"
 export PATH="$PATH:/Applications/PyCharm CE.app/Contents/MacOS"
 export PATH="$PATH:/Applications/GoLand.app/Contents/MacOS"
+export PATH="$PATH:/Applications/Android Studio.app/Contents/MacOS"
 export PATH="$PATH:$HOME/.local/bin"
 alias charm=pycharm
 alias rbm=rubymine
