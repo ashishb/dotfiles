@@ -15,6 +15,11 @@ alias localip="ipconfig getifaddr en0"
 # List all make targets.
 alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\1/p'"
 alias jq_non_empty="jq 'del(..|select(. == null))' | jq 'del(..|select(. == 0))' | jq 'del(..|select(. == \"\"))'"
+# --net=host is to map all web service from docker image to host image
+alias npm='docker run --rm -it -v ${PWD}:${PWD} --net=host --workdir=${PWD} node:25-bookworm-slim npm'
+alias npx='docker run --rm -v ${PWD}:${PWD} --net=host --workdir=${PWD} node:25-bookworm-slim npx'
+
+alias htmlhint="npx htmlhint"
 
 # Ref: https://serverfault.com/a/1123925/1053189
 alias delete_unused_cloud_run="gcloud run revisions list --filter=\"status.conditions.type:Active AND status.conditions.status:'False'\" --format='value(metadata.name)' | xargs -r -L1 gcloud run revisions delete --quiet"
@@ -97,7 +102,6 @@ if [[ $(uname -s) == "Darwin" ]]; then
   # Update everything.
   alias update='sudo softwareupdate -i -a; brew update;
     brew upgrade; brew cleanup;
-    sudo npm update npm -g; sudo npm update -g;
     sudo gem update --system; sudo gem update'
   # Set the iTerm tab title to current dir.
   export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
