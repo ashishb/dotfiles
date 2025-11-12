@@ -16,8 +16,17 @@ alias localip="ipconfig getifaddr en0"
 alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\1/p'"
 alias jq_non_empty="jq 'del(..|select(. == null))' | jq 'del(..|select(. == 0))' | jq 'del(..|select(. == \"\"))'"
 # --net=host is to map all web service from docker image to host image
-alias npm='docker run --rm -it -v ${PWD}:${PWD} --net=host --workdir=${PWD} node:25-bookworm-slim npm'
-alias npx='docker run --rm -v ${PWD}:${PWD} --net=host --workdir=${PWD} node:25-bookworm-slim npx'
+alias npm='docker run --rm -it -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npm'
+alias npx='docker run --rm -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npx'
+# alias uv='docker run --rm -it -v "${PWD}":"${PWD}" ghcr.io/astral-sh/uv:debian uv --directory="${PWD}"'
+alias pyupdate='go run github.com/ashishb/pyupdate/src/cmd/pyupdate@latest'
+# audiowaveform - https://github.com/bbc/audiowaveform#docker
+alias awf='docker run --rm -v `pwd`:/tmp -w /tmp realies/audiowaveform'
+
+
+# function uv() {
+#   docker run --rm -it -user $(id -u):$(id -g) -v "${PWD}:${PWD}" -v "${HOME}/.cache/uv:${HOME}/.cache/uv" ghcr.io/astral-sh/uv:debian uv --directory="${PWD}" "$@"
+# }
 
 alias htmlhint="npx htmlhint"
 
@@ -49,15 +58,6 @@ function ghurl()
   # echo pathRelativeToBaseRepo is ${pathRelativeToBaseRepo}
   url=${domain}/${repo}/tree/${remoteBranch}/${pathRelativeToBaseRepo} &&
   # echo url is ${url} &&
-  open "${url}"
-}
-
-function stargazer()
-{
-  domain='https://starcharts.herokuapp.com/' &&
-  # Get the repo name and remove ".git" from the end
-  repo=$(git config --get remote.origin.url | cut -d: -f2 | rev | cut -d. -f2- | rev) &&
-  url=${domain}/${repo}
   open "${url}"
 }
 
@@ -108,17 +108,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
 fi
 
 # Resize and shrink photos before uploading them to my website
-function resize_for_website {
-  full_filename="$1"
-  filename=$(basename -- "$full_filename")
-  extension="${filename##*.}"
-  filename_no_extension="${filename%.*}"
-  resized_file_name="${filename_no_extension}_resized.${extension}"
-  magick "${full_filename}" -resize 1500x1500 "$resized_file_name"
-  echo "Resized ${filename} to ${resized_file_name}"
-  du -shc "${filename}" "${resized_file_name}"
-}
-export -f resize_for_website
+alias resize_for_website='go run github.com/ashishb/wp2hugo/src/wp2hugo/cmd/hugomanager@latest shrink-images --in-place --hugo-dir="${PWD}"'
 
 # https://stackoverflow.com/a/73108928
 function dockersize {
