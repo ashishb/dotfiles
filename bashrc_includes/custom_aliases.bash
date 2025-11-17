@@ -18,6 +18,7 @@ alias jq_non_empty="jq 'del(..|select(. == null))' | jq 'del(..|select(. == 0))'
 # --net=host is to map all web service from docker image to host image
 alias npm='docker run --rm -it -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npm'
 alias npx='docker run --rm -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npx'
+alias yarn='docker run --rm -it -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim yarn'
 # alias uv='docker run --rm -it -v "${PWD}":"${PWD}" ghcr.io/astral-sh/uv:debian uv --directory="${PWD}"'
 alias pyupdate='go run github.com/ashishb/pyupdate/src/cmd/pyupdate@latest'
 # audiowaveform - https://github.com/bbc/audiowaveform#docker
@@ -114,4 +115,3 @@ alias resize_for_website='go run github.com/ashishb/wp2hugo/src/wp2hugo/cmd/hugo
 function dockersize {
   docker manifest inspect -v "$1" | jq -c 'if type == "array" then .[] else . end | select(.Descriptor.platform.architecture != "unknown")' |  jq -r '[ ( .Descriptor.platform | [ .os, .architecture, .variant, ."os.version" ] | del(..|nulls) | join("/") ), ( [ ( .OCIManifest // .SchemaV2Manifest ).layers[].size ] | add ) ] | join(" ")' | numfmt --to iec --format '%.2f' --field 2 | sort | column -t ;
 }
-

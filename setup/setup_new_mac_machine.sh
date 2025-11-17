@@ -225,7 +225,7 @@ brew install vlc
 # Useful ruler for Mac screen measurements
 brew install free-ruler
 # Javascript package management
-brew install yarn
+# brew install yarn  # I have shifted to dockerized `yarn` for safety for now
 brew install harper  # FOSS Grammarly alternative
 
 # This one seems to fail on GitHub Actions
