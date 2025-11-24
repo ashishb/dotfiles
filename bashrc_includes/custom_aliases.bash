@@ -16,9 +16,9 @@ alias localip="ipconfig getifaddr en0"
 alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\1/p'"
 alias jq_non_empty="jq 'del(..|select(. == null))' | jq 'del(..|select(. == 0))' | jq 'del(..|select(. == \"\"))'"
 # --net=host is to map all web service from docker image to host image
-alias npm='docker run --rm -it -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npm'
-alias npx='docker run --rm -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npx'
-alias yarn='docker run --rm -it -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim yarn'
+alias npm='docker run --rm --init -it --user=$(id -u):$(id -g) -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npm'
+alias npx='docker run --rm --init --user=$(id -u):$(id -g) -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npx'
+alias yarn='docker run --rm --init -it --user=$(id -u):$(id -g) --mount=target=/usr/local/share/.cache/yarn/ -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim yarn'
 # alias uv='docker run --rm -it -v "${PWD}":"${PWD}" ghcr.io/astral-sh/uv:debian uv --directory="${PWD}"'
 alias pyupdate='go run github.com/ashishb/pyupdate/src/cmd/pyupdate@latest'
 # audiowaveform - https://github.com/bbc/audiowaveform#docker
