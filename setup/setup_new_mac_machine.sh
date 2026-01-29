@@ -170,7 +170,7 @@ brew install homebrew/cask/docker
 # Docker file linter
 brew install hadolint
 # YAML file linter
-brew install yamllint
+# brew install yamllint
 # GPG for signing git commits
 # https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
 brew install gpg
@@ -243,4 +243,4 @@ fi
 
 # For re-starting running executable on source file changes
 sudo gem install filewatcher
-sudo gem install mdl
+# sudo gem install mdl

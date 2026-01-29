@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+asb -n gem exec mdl "$@"

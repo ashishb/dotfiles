@@ -15,21 +15,16 @@ alias localip="ipconfig getifaddr en0"
 # List all make targets.
 alias make_list="make -qp | sed -n -e 's/^\([^.#[:space:]][^:[:space:]]*\): .*/\1/p'"
 alias jq_non_empty="jq 'del(..|select(. == null))' | jq 'del(..|select(. == 0))' | jq 'del(..|select(. == \"\"))'"
-# --net=host is to map all web service from docker image to host image
-alias npm='docker run --rm --init -it --user=$(id -u):$(id -g) -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npm'
-alias npx='docker run --rm --init --user=$(id -u):$(id -g) -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim npx'
-alias yarn='docker run --rm --init -it --user=$(id -u):$(id -g) --mount=target=/usr/local/share/.cache/yarn/ -v "${PWD}":"${PWD}" --net=host --workdir=${PWD} node:25-bookworm-slim yarn'
-# alias uv='docker run --rm -it -v "${PWD}":"${PWD}" ghcr.io/astral-sh/uv:debian uv --directory="${PWD}"'
 alias pyupdate='go run github.com/ashishb/pyupdate/src/cmd/pyupdate@latest'
 # audiowaveform - https://github.com/bbc/audiowaveform#docker
 alias awf='docker run --rm -v `pwd`:/tmp -w /tmp realies/audiowaveform'
-
-
-# function uv() {
-#   docker run --rm -it -user $(id -u):$(id -g) -v "${PWD}:${PWD}" -v "${HOME}/.cache/uv:${HOME}/.cache/uv" ghcr.io/astral-sh/uv:debian uv --directory="${PWD}" "$@"
-# }
-
-alias htmlhint="npx htmlhint"
+# Aliases works only in interactive shells, so, there are in _local_bin and "~/.local/bin" is soft-linked into it
+# alias yamllint="asb uvx yamllint"
+# alias claude="asb npx @anthropic-ai/claude-code"
+# alias npm="asb npm"
+# alias npx="asb npx"
+# alias yarn="asb yarn"
+# alias htmlhint="npx htmlhint"
 
 # Ref: https://serverfault.com/a/1123925/1053189
 alias delete_unused_cloud_run="gcloud run revisions list --filter=\"status.conditions.type:Active AND status.conditions.status:'False'\" --format='value(metadata.name)' | xargs -r -L1 gcloud run revisions delete --quiet"

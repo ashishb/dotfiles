@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+asb npx https://github.com/google-gemini/gemini-cli "$@"
