@@ -30,7 +30,6 @@ sudo apt-get -y install ant \
 # sudo apt-get -y install oracle-java8-installer  # Required for android.
 
 sudo apt-get -y remove thunderbird  # I don't need Thunderbird.
-sudo pip install --upgrade pip
 # Use pip instead of easy_install.
 # http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install
 sudo apt-get install google-chrome-stable
