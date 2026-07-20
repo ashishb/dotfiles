@@ -105,6 +105,7 @@ fi
 
 # Resize and shrink photos before uploading them to my website
 alias resize_for_website='go run github.com/ashishb/wp2hugo/src/wp2hugo/cmd/hugomanager@latest shrink-images --in-place --hugo-dir="${PWD}"'
+alias resize_audio_files='go run github.com/ashishb/wp2hugo/src/wp2hugo/cmd/hugomanager@latest shrink-audio-files --in-place -d="${PWD}" --max-bitrate=64_000'
 
 # https://stackoverflow.com/a/73108928
 function dockersize {
