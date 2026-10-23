@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-asb npx @anthropic-ai/claude-code
+asb npx @anthropic-ai/claude-code "$@"
 
